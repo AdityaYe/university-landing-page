@@ -1,0 +1,143 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { Menu, X, Search } from "lucide-react";
+
+const navLinks = ["Programmes", "Admissions", "Campus", "About", "Contact"];
+
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 120);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-[#F7F5F2]/95 backdrop-blur-xl shadow-sm"
+          : "bg-transparent"
+      }`}
+    >
+      <nav className="w-[92%] max-w-7xl mx-auto h-24 flex items-center justify-between">
+        {/* Left Side */}
+        <div className="relative w-85 h-35 flex items-center">
+          {/* Large Hero Logo */}
+          <div
+            className={`absolute left-0 top-4 transition-all duration-500 ${
+              scrolled ? "opacity-0" : "opacity-100"
+            }`}
+          >
+            <div className="relative mt-3.5 w-70 h-20">
+              <Image
+                src="/images/logo/jg-un-1-logo.png"
+                alt="JG University Compact Logo"
+                fill
+                className="object-contain object-left"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* Compact Navbar Logo */}
+          <div
+            className={`absolute left-0 transition-all duration-300 ${
+              scrolled ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <div className="relative w-70 h-20">
+              <Image
+                src="/images/logo/jg-un-2-logo.png"
+                alt="JG University Compact Logo"
+                fill
+                className="object-contain object-left"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Center Nav */}
+        <ul
+          className={`hidden lg:flex items-center gap-10 transition-colors duration-200 ${
+            scrolled ? "text-[#1B1B1B]" : "text-white"
+          }`}
+        >
+          {navLinks.map((link) => (
+            <li key={link}>
+              <a
+                href="#"
+                className={`text-sm tracking-wide transition ${
+                  scrolled ? "hover:text-(--accent)" : "hover:text-white/70"
+                }`}
+              >
+                {link}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Right Side */}
+        <div className="hidden lg:flex items-center gap-4">
+          {/* Search */}
+          <div
+            className={`flex items-center w-[260px] h-12 px-5 rounded-full border transition-all duration-500 ${
+              scrolled
+                ? "border-black/10 bg-black/[0.03]"
+                : "border-white/20 bg-white/10 backdrop-blur-xl"
+            }`}
+          >
+            <Search
+              size={18}
+              className={`shrink-0 ${
+                scrolled ? "text-[#1B1B1B]" : "text-white"
+              }`}
+            />
+
+            <input
+              type="text"
+              placeholder="Search..."
+              className={`bg-transparent outline-none ml-4 w-full placeholder:transition-colors ${
+                scrolled
+                  ? "text-[#1B1B1B] placeholder:text-black/40"
+                  : "text-white placeholder:text-white/60"
+              }`}
+            />
+          </div>
+
+          {/* Apply Button */}
+          <button
+            className={`px-7 py-3 rounded-full transition-all duration-500 ${
+              scrolled
+                ? "bg-[#D4A514] text-white hover:opacity-90"
+                : "border border-white/20 bg-white/10 backdrop-blur-xl text-white hover:bg-white/20"
+            }`}
+          >
+            Admission
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <button
+          className={`lg:hidden transition-colors duration-500 ${
+            scrolled ? "text-[#1B1B1B]" : "text-white"
+          }`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X /> : <Menu />}
+        </button>
+      </nav>
+    </header>
+  );
+}
