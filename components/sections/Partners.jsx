@@ -1,61 +1,115 @@
-import Container from "../ui/Container";
-import SectionHeading from "../ui/SectionHeading";
+"use client";
 
-const companies = [
-  "Google",
-  "Microsoft",
-  "Amazon",
-  "Adobe",
-  "Meta",
-  "Netflix",
-  "IBM",
-  "Infosys",
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+import Container from "../ui/Container";
+
+const partners = [
+  {
+    name: "Coding Pro",
+    logo: "/images/partners/codingpro--image.png",
+  },
+  {
+    name: "IBM",
+    logo: "/images/partners/ibm--image.png",
+  },
+  {
+    name: "ISRO",
+    logo: "/images/partners/isro--image.png",
+  },
+  {
+    name: "Yudiz",
+    logo: "/images/partners/yudiz--image.png",
+  },
+  {
+    name: "Space Applications Centre",
+    logo: "/images/partners/sac--image.png",
+  },
+  {
+    name: "Samyak Infotech",
+    logo: "/images/partners/samyak--image.png",
+  },
+  {
+    name: "Aventure Systems",
+    logo: "/images/partners/aventure--image.png",
+  },
+  {
+    name: "Asian-African Chamber of Commerce & Industry",
+    logo: "/images/partners/african-asian--image.png",
+  },
+  {
+    name: "Virtual Height",
+    logo: "/images/partners/virtual-height--image.png",
+  },
+  {
+    name: "DEV IT",
+    logo: "/images/partners/devit--image.png",
+  },
 ];
 
 export default function Partners() {
   return (
-    <section id="partners" className="py-32">
+    <section className="bg-[#F7F5F2] py-20 overflow-hidden">
       <Container>
-        <SectionHeading
-          badge="Industry Connections"
-          title="Trusted By Leading Companies"
-          description="Our students collaborate with and get hired by globally recognized companies and innovative startups."
-        />
+        {/* HEADER */}
+        <div className="flex items-center justify-between mb-10">
+          <span className="uppercase tracking-[0.25em] text-sm text-[#B68D40]">
+            Partners
+          </span>
+        </div>
 
-        {/* Logo Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {companies.map((company, index) => (
-            <div
-              key={index}
-              className="rounded-3xl border border-white/10 bg-white/5 p-8 flex items-center justify-center"
+        {/* PARTNER STRIP */}
+        <div className="relative">
+          {/* TOP BORDER */}
+          <div className="absolute top-10 left-0 w-full h-px bg-black/10" />
+
+          {/* BOTTOM BORDER */}
+          <div className="absolute bottom-10 left-0 w-full h-px bg-black/10" />
+
+          {/* Gradient Fade Left */}
+          <div className="absolute left-0 top-0 h-full w-52 bg-gradient-to-r from-[#F7F5F2] to-transparent z-20 pointer-events-none" />
+
+          {/* Gradient Fade Right */}
+          <div className="absolute right-0 top-0 h-full w-52 bg-gradient-to-l from-[#F7F5F2] to-transparent z-20 pointer-events-none" />
+
+          {/* Logos */}
+          <div className="overflow-hidden py-16">
+            <motion.div
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{
+                duration: 24,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="flex items-center gap-16 w-max"
             >
-              <h3 className="text-2xl font-semibold text-gray-300">
-                {company}
-              </h3>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom Stats */}
-        <div className="grid md:grid-cols-3 gap-8 mt-20">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 text-center">
-            <h3 className="text-5xl font-bold">250+</h3>
-
-            <p className="mt-4 text-gray-400">Hiring Partners</p>
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 text-center">
-            <h3 className="text-5xl font-bold">95%</h3>
-
-            <p className="mt-4 text-gray-400">Placement Success</p>
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 text-center">
-            <h3 className="text-5xl font-bold">40LPA</h3>
-
-            <p className="mt-4 text-gray-400">Highest Package</p>
+              {[...partners, ...partners].map((partner, index) => (
+                <div
+                  key={index}
+                  className={`relative shrink-0 ${
+                    partner.width || "w-80"
+                  } ${partner.height || "h-40"}`}
+                >
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    fill
+                    className="object-contain opacity-90 transition-all duration-500"
+                  />
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
+
+        {/* DESCRIPTION */}
+        <p className="mt-8 mx-auto text-sm text-center leading-relaxed text-black/40 max-w-3xl">
+          JG University collaborates with leading organizations,
+          technology companies, research institutions, and
+          innovation-driven enterprises to create industry-ready
+          learning experiences.
+        </p>
       </Container>
     </section>
   );

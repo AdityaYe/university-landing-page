@@ -11,6 +11,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 120);
     };
@@ -24,7 +25,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 w-full z-100 transition-all duration-500 ${
         scrolled
           ? "bg-[#F7F5F2]/95 backdrop-blur-xl shadow-sm"
           : "bg-transparent"
@@ -42,7 +43,7 @@ export default function Navbar() {
             <div className="relative mt-3.5 w-70 h-20">
               <Image
                 src="/images/logo/jg-un-1-logo.png"
-                alt="JG University Compact Logo"
+                alt="JG University Logo"
                 fill
                 className="object-contain object-left"
                 priority
@@ -70,7 +71,7 @@ export default function Navbar() {
 
         {/* Center Nav */}
         <ul
-          className={`hidden lg:flex items-center gap-10 transition-colors duration-200 ${
+          className={`hidden lg:flex items-center gap-10 transition-colors duration-300 ${
             scrolled ? "text-[#1B1B1B]" : "text-white"
           }`}
         >
@@ -79,7 +80,7 @@ export default function Navbar() {
               <a
                 href="#"
                 className={`text-sm tracking-wide transition ${
-                  scrolled ? "hover:text-(--accent)" : "hover:text-white/70"
+                  scrolled ? "hover:text-[#B68D40]" : "hover:text-white/70"
                 }`}
               >
                 {link}
@@ -95,12 +96,12 @@ export default function Navbar() {
             className={`flex items-center w-[260px] h-12 px-5 rounded-full border transition-all duration-500 ${
               scrolled
                 ? "border-black/10 bg-black/[0.03]"
-                : "border-white/20 bg-white/10 backdrop-blur-xl"
+                : "border-white/20 bg-transparent"
             }`}
           >
             <Search
               size={18}
-              className={`shrink-0 ${
+              className={`shrink-0 transition-colors duration-300 ${
                 scrolled ? "text-[#1B1B1B]" : "text-white"
               }`}
             />
@@ -108,7 +109,7 @@ export default function Navbar() {
             <input
               type="text"
               placeholder="Search..."
-              className={`bg-transparent outline-none ml-4 w-full placeholder:transition-colors ${
+              className={`bg-transparent outline-none ml-4 w-full transition-colors duration-300 ${
                 scrolled
                   ? "text-[#1B1B1B] placeholder:text-black/40"
                   : "text-white placeholder:text-white/60"
@@ -116,12 +117,12 @@ export default function Navbar() {
             />
           </div>
 
-          {/* Apply Button */}
+          {/* Admission Button */}
           <button
-            className={`px-7 py-3 rounded-full transition-all duration-500 ${
+            className={`px-7 py-3 rounded-full transition-all duration-500 transform-gpu will-change-transform ${
               scrolled
                 ? "bg-[#D4A514] text-white hover:opacity-90"
-                : "border border-white/20 bg-white/10 backdrop-blur-xl text-white hover:bg-white/20"
+                : "border border-white/20 bg-white/10 text-white hover:bg-white/20"
             }`}
           >
             Admission
@@ -130,7 +131,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <button
-          className={`lg:hidden transition-colors duration-500 ${
+          className={`lg:hidden transition-colors duration-300 ${
             scrolled ? "text-[#1B1B1B]" : "text-white"
           }`}
           onClick={() => setMenuOpen(!menuOpen)}

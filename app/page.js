@@ -9,14 +9,13 @@ import ScrollProgress from "../components/ui/ScrollProgress";
 import CampusLife from "../components/sections/CampusLife";
 import Features from "../components/sections/Features";
 import Partners from "../components/sections/Partners";
-import Faculty from "../components/sections/Faculty";
 import Events from "../components/sections/Events";
 import FAQ from "../components/sections/FAQ";
 import Contact from "../components/sections/Contact";
 
 export default function Home() {
   return (
-    <main className="bg-[var(--background)] text-[var(--text-primary)] overflow-hidden">
+    <main className="bg-(--background) text-(--text-primary) overflow-hidden">
       <ScrollProgress />
       
       <Hero />
@@ -25,7 +24,6 @@ export default function Home() {
       <Programmes />
       <Features />
       <Partners />
-      <Faculty />
       <Events />
       <CampusLife />
       <Testimonials />
