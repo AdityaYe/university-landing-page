@@ -36,14 +36,17 @@ export default function Hero() {
         {/* Buttons */}
         <div className="mt-12 flex flex-wrap gap-5">
           {/* Primary */}
-          <button className="px-7 py-3.5 rounded-full bg-white text-black hover:bg-white/90 transition">
-            Explore Programs
-          </button>
+            <a href="#programmes">
+              <button className="h-14 px-7 rounded-full bg-white text-black hover:bg-white/90 transition">
+                Explore Programmes
+              </button>
+            </a>
 
-          {/* Secondary */}
-          <button className="px-7 py-3.5 rounded-full border border-white/30 bg-white/10 backdrop-blur-xl text-white hover:bg-white/20 transition">
-            Why us?
-          </button>
+            <a href="#features">
+              <button className="h-14 px-7 rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-white hover:bg-white/15 transition-all duration-500">
+                Learn More
+              </button>
+            </a>
         </div>
       </div>
     </section>

@@ -125,7 +125,7 @@ export default function Features() {
 
   return (
     <>
-      <section ref={sectionRef} className="bg-[#F7F5F2] py-32 overflow-hidden">
+      <section id="features" ref={sectionRef} className="bg-[#F7F5F2] py-32 overflow-hidden">
         <Container>
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-16 items-start">
             {/* LEFT */}

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 import Container from "../ui/Container";
+import AdmissionModal from "../ui/AdmissionModal";
 
 export default function CTA() {
   return (
@@ -51,14 +52,18 @@ export default function CTA() {
                 {/* BUTTONS */}
                 <div className="mt-12 flex flex-wrap gap-5">
                   {/* PRIMARY */}
-                  <button className="px-8 py-4 rounded-full bg-[#D4A514] text-white text-sm tracking-wide hover:opacity-90 transition-all duration-500">
-                    Apply Now
-                  </button>
+                  <AdmissionModal />
 
                   {/* SECONDARY */}
-                  <button className="px-8 py-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl text-white text-sm tracking-wide hover:bg-white/20 transition-all duration-500">
-                    Visit Campus
-                  </button>
+                  <a
+                    href="https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x395e8353dee254bb:0x6909d82c9319e0a0!3e0?g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button  className="px-8 py-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl text-white text-sm tracking-wide hover:bg-white/20 transition-all duration-500">
+                      Visit Campus
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>

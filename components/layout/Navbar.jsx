@@ -3,22 +3,23 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Search } from "lucide-react";
 
 const navLinks = [
   {
     label: "Programmes",
-    href: "/#programmes",
+    section: "programmes",
   },
 
   {
     label: "Campus Life",
-    href: "/#campus-life",
+    section: "campus-life",
   },
 
   {
     label: "Testimonials",
-    href: "/#testimonials",
+    section: "testimonials",
   },
 
   {
@@ -28,7 +29,10 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   const [menuOpen, setMenuOpen] = useState(false);
+
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -43,55 +47,74 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // HANDLE SECTION NAVIGATION
+  const handleSectionNavigation = (sectionId) => {
+    // IF NOT ON HOMEPAGE
+    if (pathname !== "/") {
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+
+    // HOMEPAGE SCROLL
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-100 transition-all duration-500 ${
+      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
         scrolled
           ? "bg-[#F7F5F2]/95 backdrop-blur-xl shadow-sm"
           : "bg-transparent"
       }`}
     >
       <nav className="w-[92%] max-w-7xl mx-auto h-24 flex items-center justify-between">
-        {/* Left Side */}
+        {/* LEFT */}
         <div className="relative w-85 h-35 flex items-center">
-          {/* Large Hero Logo */}
-          <div
-            className={`absolute left-0 top-4 transition-all duration-500 ${
-              scrolled ? "opacity-0" : "opacity-100"
-            }`}
-          >
-            <div className="relative mt-3.5 w-70 h-20">
-              <Image
-                src="/images/logo/jg-un-1-logo.png"
-                alt="JG University Logo"
-                fill
-                className="object-contain object-left"
-                priority
-              />
+          {/* LARGE HERO LOGO */}
+          <Link href="/#hero">
+            <div
+              className={`absolute left-0 top-4 transition-all duration-500 ${
+                scrolled ? "opacity-0" : "opacity-100"
+              }`}
+            >
+              <div className="relative mt-3.5 w-70 h-20">
+                <Image
+                  src="/images/logo/jg-un-1-logo.png"
+                  alt="JG University Logo"
+                  fill
+                  className="object-contain object-left"
+                  priority
+                />
+              </div>
             </div>
-          </div>
 
-          {/* Compact Navbar Logo */}
-          <div
-            className={`absolute left-0 transition-all duration-300 ${
-              scrolled ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <Link href="/#hero">
-            <div className="relative w-70 h-20">
-              <Image
-                src="/images/logo/jg-un-2-logo.png"
-                alt="JG University Compact Logo"
-                fill
-                className="object-contain object-left"
-                priority
-              />
+          {/* COMPACT LOGO */}
+            <div
+              className={`absolute -mt-10 left-0 transition-all duration-300 ${
+                scrolled ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <div className="relative w-70 h-20">
+                <Image
+                  src="/images/logo/jg-un-2-logo.png"
+                  alt="JG University Compact Logo"
+                  fill
+                  className="object-contain object-left"
+                  priority
+                />
+              </div>
             </div>
             </Link>
-          </div>
         </div>
 
-        {/* Center Nav */}
+        {/* CENTER NAV */}
         <ul
           className={`hidden lg:flex items-center gap-10 transition-colors duration-300 ${
             scrolled ? "text-[#1B1B1B]" : "text-white"
@@ -99,21 +122,32 @@ export default function Navbar() {
         >
           {navLinks.map((link) => (
             <li key={link.label}>
-              <a
-                href={link.href}
-                className={`text-sm tracking-wide transition ${
-                  scrolled ? "hover:text-[#B68D40]" : "hover:text-white/70"
-                }`}
-              >
-                {link.label}
-              </a>
+              {link.href ? (
+                <Link
+                  href={link.href}
+                  className={`text-sm tracking-wide transition ${
+                    scrolled ? "hover:text-[#B68D40]" : "hover:text-white/70"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <button
+                  onClick={() => handleSectionNavigation(link.section)}
+                  className={`text-sm tracking-wide transition ${
+                    scrolled ? "hover:text-[#B68D40]" : "hover:text-white/70"
+                  }`}
+                >
+                  {link.label}
+                </button>
+              )}
             </li>
           ))}
         </ul>
 
-        {/* Right Side */}
+        {/* RIGHT */}
         <div className="hidden lg:flex items-center gap-4">
-          {/* Search */}
+          {/* SEARCH */}
           <div
             className={`flex items-center w-[260px] h-12 px-5 rounded-full border transition-all duration-500 ${
               scrolled
@@ -139,7 +173,7 @@ export default function Navbar() {
             />
           </div>
 
-          {/* Admission Button */}
+          {/* ADMISSION BUTTON */}
           <Link href="/admissions">
             <button
               className={`px-7 py-3 rounded-full transition-all duration-500 transform-gpu will-change-transform ${
@@ -153,7 +187,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu */}
+        {/* MOBILE MENU */}
         <button
           className={`lg:hidden transition-colors duration-300 ${
             scrolled ? "text-[#1B1B1B]" : "text-white"

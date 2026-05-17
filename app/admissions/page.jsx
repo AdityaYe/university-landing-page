@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -11,8 +12,10 @@ import {
 } from "lucide-react";
 
 import Container from "../../components/ui/Container";
+import AdmissionModal from "../../components/ui/AdmissionModal";
 
 export default function AdmissionsPage() {
+  const [activeProgramme, setActiveProgramme] = useState("ug");
   return (
     <main className="bg-[#F7F5F2] overflow-hidden">
       {/* HERO */}
@@ -52,9 +55,7 @@ export default function AdmissionsPage() {
               </p>
 
               <div className="mt-10 flex flex-wrap gap-5">
-                <button className="h-14 px-7 rounded-full bg-[#D4A514] text-white hover:scale-[1.03] transition-all duration-500">
-                  Apply Now
-                </button>
+                <AdmissionModal />
 
                 <a
                   href="/brochures/jg-university-brochure.pdf"
@@ -71,237 +72,349 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      {/* PROCESS INTRO */}
-      <section className="py-24">
-        <Container>
-          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-14 items-end">
-            {/* LEFT */}
-            <div>
-              <span className="uppercase tracking-[0.25em] text-sm text-[#B68D40]">
-                Admission Process
-              </span>
-
-              <h2 className="mt-6 text-[4rem] leading-[0.95] text-[#111111]">
-                Designed to recognize potential beyond academics.
-              </h2>
-            </div>
-
-            {/* RIGHT */}
-            <div>
-              <p className="text-lg leading-relaxed text-black/60">
-                Our admission process enables us to give careful attention to
-                every individual application. At every stage, our team evaluates
-                academic potential, communication, curiosity, and readiness to
-                contribute meaningfully to the university ecosystem.
-              </p>
-
-              <p className="mt-6 text-lg leading-relaxed text-black/60">
-                Through a flexible and student-focused approach, we aim to
-                create a seamless admission experience while identifying
-                learners who are eager to grow, innovate and give back to the
-                community.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* UG PROCESS */}
+      {/* PROGRAMME SELECTOR */}
       <section className="pb-24">
         <Container>
-          <div className="flex items-end justify-between gap-10 flex-wrap">
-            <div>
-              <span className="uppercase tracking-[0.22em] text-xs text-[#B68D40]">
-                Undergraduate Admissions
-              </span>
-
-              <h3 className="mt-4 text-5xl leading-[1] text-[#111111]">
-                UG Programmes
-              </h3>
-            </div>
-
-            <p className="max-w-xl text-black/60 leading-relaxed">
-              A streamlined process focused on understanding each student’s
-              aspirations, academic readiness and potential.
-            </p>
-          </div>
-
-          {/* STEPS */}
-          <div className="mt-14 grid md:grid-cols-2 xl:grid-cols-4 gap-5">
-            {[
-              {
-                number: "01",
-                title: "Application for Admission",
-                description:
-                  "Candidates complete the application form and submit essential academic details.",
-              },
-
-              {
-                number: "02",
-                title: "Personal Interaction",
-                description:
-                  "A one-on-one interaction and assessment round is conducted with university representatives.",
-              },
-
-              {
-                number: "03",
-                title: "Offer of Admission",
-                description:
-                  "Selected candidates receive admission confirmation through message or email.",
-              },
-
-              {
-                number: "04",
-                title: "Admission Confirmation",
-                description:
-                  "Students secure their admission by completing the fee payment process.",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.05,
-                }}
-                viewport={{ once: true }}
-                className={`rounded-[2.5rem] p-8 min-h-[320px] flex flex-col justify-between ${
-                  index % 2 === 0 ? "bg-[#111111] text-white" : "bg-white"
-                }`}
-              >
-                <span
-                  className={`text-sm ${
-                    index % 2 === 0 ? "text-white/40" : "text-black/30"
-                  }`}
-                >
-                  {item.number}
-                </span>
-
-                <div>
-                  <h3 className="text-3xl leading-tight">{item.title}</h3>
-
-                  <p
-                    className={`mt-5 leading-relaxed ${
-                      index % 2 === 0 ? "text-white/65" : "text-black/60"
-                    }`}
-                  >
-                    {item.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* PG + PHD */}
-      <section className="pb-24">
-        <Container>
-          <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-8">
-            {/* LEFT PANEL */}
-            <motion.div
-              initial={{ opacity: 0, y: 35 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-              className="bg-[#111111] text-white rounded-[3rem] p-10 flex flex-col justify-between min-h-[620px]"
-            >
-              <div>
-                <span className="uppercase tracking-[0.22em] text-xs text-[#D4A514]">
-                  Postgraduate & Research
-                </span>
-
-                <h2 className="mt-6 text-5xl leading-[1]">
-                  Advanced learning for future leaders and researchers.
-                </h2>
-
-                <p className="mt-6 text-white/65 text-lg leading-relaxed">
-                  Our postgraduate and doctoral admission process combines
-                  aptitude evaluation, academic assessment and personal
-                  interaction to identify candidates prepared for higher-level
-                  learning and research.
-                </p>
-              </div>
-
-              <div className="space-y-5">
-                <div className="border-t border-white/10 pt-5">
-                  <p className="text-sm uppercase tracking-[0.18em] text-white/40">
-                    Eligible Programmes
-                  </p>
-
-                  <p className="mt-2 text-xl">MBA · MCA · M.Com · Ph.D</p>
-                </div>
-
-                <div className="border-t border-white/10 pt-5">
-                  <p className="text-sm uppercase tracking-[0.18em] text-white/40">
-                    Entrance Test
-                  </p>
-
-                  <p className="mt-2 text-xl">
-                    JGET – JG University Entrance Test
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* RIGHT */}
-            <div className="space-y-5">
+          {/* TABS */}
+          <div className="bg-white rounded-[2.8rem] p-3 border border-black/5">
+            <div className="grid md:grid-cols-3 gap-3">
               {[
                 {
-                  title: "JG University Entrance Test (JGET)",
-                  description:
-                    "JGET evaluates aptitude, analytical ability and subject knowledge for postgraduate and doctoral admissions.",
+                  id: "ug",
+                  title: "UG Programmes",
+                  subtitle: "Undergraduate Admissions",
                 },
 
                 {
-                  title: "Exemptions",
-                  description:
-                    "Candidates with CAT, CMAT, GMAT, XAT, NMAT, MAT, SNAP, GRE and equivalent qualifications may receive exemption from JGET.",
+                  id: "pg",
+                  title: "PG Programmes",
+                  subtitle: "Postgraduate Admissions",
                 },
 
                 {
-                  title: "Personal Interaction & Assessment",
-                  description:
-                    "Shortlisted candidates participate in personal interaction rounds with university representatives.",
-                },
-
-                {
-                  title: "Offer & Confirmation",
-                  description:
-                    "Successful candidates receive admission offers and can confirm their seats through fee payment.",
+                  id: "phd",
+                  title: "Ph.D Programmes",
+                  subtitle: "Research & Doctoral Studies",
                 },
               ].map((item, index) => (
-                <motion.div
+                <button
                   key={index}
-                  initial={{ opacity: 0, y: 35 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.6,
-                    delay: index * 0.05,
-                  }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-[2.5rem] p-8"
+                  onClick={() => setActiveProgramme(item.id)}
+                  className={`group relative overflow-hidden rounded-[2rem] px-8 py-8 text-left transition-all duration-500 ${
+                    activeProgramme === item.id
+                      ? "bg-[#111111] text-white"
+                      : "bg-[#F7F5F2] hover:bg-[#EFE9DE]"
+                  }`}
                 >
-                  <div className="flex items-start justify-between gap-5">
+                  <div
+                    className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
+                      activeProgramme === item.id
+                        ? "bg-white/5"
+                        : "bg-gradient-to-br from-[#D4A514]/10 to-transparent"
+                    }`}
+                  />
+
+                  <div className="relative z-10">
+                    <p
+                      className={`text-xs uppercase tracking-[0.22em] ${
+                        activeProgramme === item.id
+                          ? "text-white/40"
+                          : "text-black/35"
+                      }`}
+                    >
+                      {item.subtitle}
+                    </p>
+
+                    <h3
+                      className={`mt-4 text-[2rem] leading-[1] ${
+                        activeProgramme === item.id
+                          ? "text-white"
+                          : "text-[#111111]"
+                      }`}
+                    >
+                      {item.title}
+                    </h3>
+
+                    <div
+                      className={`mt-8 h-[2px] w-full transition-all duration-500 ${
+                        activeProgramme === item.id
+                          ? "bg-[#D4A514]"
+                          : "bg-black/8 group-hover:bg-[#B68D40]"
+                      }`}
+                    />
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* UG CONTENT */}
+          {activeProgramme === "ug" && (
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mt-20"
+            >
+              <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-14 items-end">
+                <div>
+                  <span className="uppercase tracking-[0.25em] text-sm text-[#B68D40]">
+                    Undergraduate Admissions
+                  </span>
+
+                  <h2 className="mt-6 text-[4rem] leading-[0.95] text-[#111111]">
+                    UG Programmes
+                  </h2>
+                </div>
+
+                <div>
+                  <p className="text-lg leading-relaxed text-black/60">
+                    Candidates applying for undergraduate programmes go through
+                    a carefully designed admission process focused on academic
+                    readiness, communication skills, and potential.
+                  </p>
+
+                  <p className="mt-6 text-lg leading-relaxed text-black/60">
+                    The admission process includes application submission,
+                    personal interaction, selection notification and admission
+                    confirmation.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-14 grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+                {[
+                  {
+                    number: "01",
+                    title: "Application for Admission",
+                    description:
+                      "Candidates complete the application form and submit essential academic details.",
+                  },
+
+                  {
+                    number: "02",
+                    title: "Personal Interaction & Assessment",
+                    description:
+                      "A one-on-one interaction round is conducted with university representatives.",
+                  },
+
+                  {
+                    number: "03",
+                    title: "Offer of Admission",
+                    description:
+                      "Selected candidates receive admission confirmation through message or email.",
+                  },
+
+                  {
+                    number: "04",
+                    title: "Admission Confirmation",
+                    description:
+                      "Students secure admission through successful fee payment.",
+                  },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className={`rounded-[2.5rem] p-8 min-h-[320px] flex flex-col justify-between ${
+                      index % 2 === 0 ? "bg-[#111111] text-white" : "bg-white"
+                    }`}
+                  >
+                    <span
+                      className={`text-sm ${
+                        index % 2 === 0 ? "text-white/40" : "text-black/30"
+                      }`}
+                    >
+                      {item.number}
+                    </span>
+
+                    <div>
+                      <h3 className="text-3xl leading-tight">{item.title}</h3>
+
+                      <p
+                        className={`mt-5 leading-relaxed ${
+                          index % 2 === 0 ? "text-white/65" : "text-black/60"
+                        }`}
+                      >
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+
+          {/* PG CONTENT */}
+          {activeProgramme === "pg" && (
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mt-20"
+            >
+              <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-14 items-end">
+                <div>
+                  <span className="uppercase tracking-[0.25em] text-sm text-[#B68D40]">
+                    Postgraduate Admissions
+                  </span>
+
+                  <h2 className="mt-6 text-[4rem] leading-[0.95] text-[#111111]">
+                    PG Programmes
+                  </h2>
+                </div>
+
+                <div>
+                  <p className="text-lg leading-relaxed text-black/60">
+                    Postgraduate admissions at JG University are designed to
+                    assess analytical ability, aptitude and academic
+                    preparedness through JGET and personal assessment rounds.
+                  </p>
+
+                  <p className="mt-6 text-lg leading-relaxed text-black/60">
+                    Candidates with CAT, CMAT, XAT, NMAT, MAT, SNAP, GRE and
+                    equivalent examinations may receive exemption from JGET.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-14 grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+                {[
+                  {
+                    number: "01",
+                    title: "Application for Admission",
+                    description:
+                      "Candidates submit applications for MBA, MCA and M.Com programmes.",
+                  },
+
+                  {
+                    number: "02",
+                    title: "JGET Examination",
+                    description:
+                      "JG University Entrance Test evaluates aptitude and academic readiness.",
+                  },
+
+                  {
+                    number: "03",
+                    title: "Result Announcement",
+                    description:
+                      "JGET results are officially announced through the university website.",
+                  },
+
+                  {
+                    number: "04",
+                    title: "Personal Interaction",
+                    description:
+                      "Candidates participate in detailed interaction and assessment rounds.",
+                  },
+
+                  {
+                    number: "05",
+                    title: "Offer of Admission",
+                    description:
+                      "Selected candidates receive official admission offers.",
+                  },
+
+                  {
+                    number: "06",
+                    title: "Admission Confirmation",
+                    description:
+                      "Seats are secured after successful fee payment.",
+                  },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-white rounded-[2.5rem] p-8 min-h-[290px] flex flex-col justify-between"
+                  >
+                    <span className="text-sm text-black/30">{item.number}</span>
+
                     <div>
                       <h3 className="text-3xl leading-tight text-[#111111]">
                         {item.title}
                       </h3>
 
-                      <p className="mt-5 text-black/60 leading-relaxed">
+                      <p className="mt-5 leading-relaxed text-black/60">
                         {item.description}
                       </p>
                     </div>
-
-                    <span className="text-black/20 text-sm shrink-0">
-                      0{index + 1}
-                    </span>
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+
+          {/* PHD CONTENT */}
+          {activeProgramme === "phd" && (
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mt-20 bg-[#111111] text-white rounded-[3rem] p-10 md:p-14"
+            >
+              <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-14">
+                <div>
+                  <span className="uppercase tracking-[0.22em] text-xs text-[#D4A514]">
+                    Research & Innovation
+                  </span>
+
+                  <h2 className="mt-6 text-5xl leading-[1]">Ph.D Programmes</h2>
+
+                  <p className="mt-6 text-white/65 text-lg leading-relaxed">
+                    Our doctoral admission process is designed to identify
+                    candidates prepared for advanced academic research and
+                    contribution to their respective fields.
+                  </p>
+                </div>
+
+                <div className="space-y-5">
+                  {[
+                    {
+                      title: "JGET for Ph.D Admissions",
+                      description:
+                        "JGET assesses research aptitude, subject knowledge and readiness for doctoral-level study.",
+                    },
+
+                    {
+                      title: "Eligibility & Exemptions",
+                      description:
+                        "NET, SLET and MPhil qualified candidates may receive exemption from JGET.",
+                    },
+
+                    {
+                      title: "Research Assessment",
+                      description:
+                        "Candidates participate in interaction rounds focused on research interests and academic potential.",
+                    },
+
+                    {
+                      title: "Admission Confirmation",
+                      description:
+                        "Selected applicants secure admission upon successful completion of formalities and fee payment.",
+                    },
+                  ].map((item, index) => (
+                    <div
+                      key={index}
+                      className="border border-white/10 rounded-[2rem] p-7"
+                    >
+                      <div className="flex items-start justify-between gap-5">
+                        <div>
+                          <h3 className="text-2xl leading-tight">
+                            {item.title}
+                          </h3>
+
+                          <p className="mt-4 text-white/60 leading-relaxed">
+                            {item.description}
+                          </p>
+                        </div>
+
+                        <span className="text-white/25 text-sm">
+                          0{index + 1}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
         </Container>
       </section>
 
@@ -344,9 +457,7 @@ export default function AdmissionsPage() {
               </p>
 
               <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
-                <button className="h-16 px-8 rounded-full bg-[#D4A514] text-white hover:scale-[1.03] transition-all">
-                  Apply Now
-                </button>
+                <AdmissionModal />
 
                 <a
                   href="/brochures/jg-university-brochure.pdf"
