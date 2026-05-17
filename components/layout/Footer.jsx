@@ -2,18 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowUpRight,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { ArrowUpRight, Mail, Phone, MapPin } from "lucide-react";
 
-import {
-  FaInstagram,
-  FaLinkedinIn,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 
 import Container from "../ui/Container";
 import { programmes } from "../../data/programmes";
@@ -80,7 +71,7 @@ export default function Footer() {
             </div>
 
             {/* RIGHT */}
-            <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-10">
+            <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-10">
               {/* UG */}
               <div>
                 <p className="uppercase tracking-[0.22em] text-xs text-white/40">
@@ -113,6 +104,30 @@ export default function Footer() {
 
                 <div className="mt-7 space-y-4">
                   {pgProgrammes.map((programme) => (
+                    <Link
+                      key={programme.slug}
+                      href={`/programmes/${programme.slug}`}
+                      className="group flex items-center justify-between text-white/70 hover:text-white transition-all"
+                    >
+                      <span>{programme.title}</span>
+
+                      <ArrowUpRight
+                        size={16}
+                        className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                      />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* PHD */}
+              <div>
+                <p className="uppercase tracking-[0.22em] text-xs text-white/40">
+                  Doctoral
+                </p>
+
+                <div className="mt-7 space-y-4">
+                  {phdProgrammes.map((programme) => (
                     <Link
                       key={programme.slug}
                       href={`/programmes/${programme.slug}`}
@@ -188,17 +203,17 @@ export default function Footer() {
                     {[
                       {
                         icon: FaInstagram,
-                        href: "#",
+                        href: "https://www.instagram.com/jguniversity",
                       },
 
                       {
                         icon: FaLinkedinIn,
-                        href: "#",
+                        href: "https://www.linkedin.com/company/jg-university/",
                       },
 
                       {
                         icon: FaYoutube,
-                        href: "#",
+                        href: "https://www.youtube.com/channel/UCyR1OyKN8l2Srj5G0H1WRyg/featured",
                       },
                     ].map((item, index) => {
                       const Icon = item.icon;
@@ -207,9 +222,11 @@ export default function Footer() {
                         <a
                           key={index}
                           href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="w-11 h-11 rounded-full border border-white/10 bg-white/5 hover:bg-[#D4A514] hover:border-[#D4A514] transition-all duration-500 flex items-center justify-center"
                         >
-                          <Icon size={18} />
+                          <Icon size={16} />
                         </a>
                       );
                     })}
