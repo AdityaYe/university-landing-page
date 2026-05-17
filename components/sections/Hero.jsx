@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative h-screen min-h-[900px] overflow-hidden pb-40">
       {/* Background Image */}
       <Image
-        src="/images/hero/hero-campus.jpg"
+        src="/images/hero/jg-campus-image.png"
         alt="JG University Campus"
         fill
         priority
@@ -42,7 +42,7 @@ export default function Hero() {
 
           {/* Secondary */}
           <button className="px-7 py-3.5 rounded-full border border-white/30 bg-white/10 backdrop-blur-xl text-white hover:bg-white/20 transition">
-            Discover Campus
+            Why us?
           </button>
         </div>
       </div>

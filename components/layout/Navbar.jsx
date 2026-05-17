@@ -2,16 +2,36 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Menu, X, Search } from "lucide-react";
 
-const navLinks = ["Programmes", "Admissions", "Campus", "About", "Contact"];
+const navLinks = [
+  {
+    label: "Programmes",
+    href: "/#programmes",
+  },
+
+  {
+    label: "Campus Life",
+    href: "/#campus-life",
+  },
+
+  {
+    label: "Testimonials",
+    href: "/#testimonials",
+  },
+
+  {
+    label: "Contact",
+    href: "/contact",
+  },
+];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-
     const handleScroll = () => {
       setScrolled(window.scrollY > 120);
     };
@@ -57,6 +77,7 @@ export default function Navbar() {
               scrolled ? "opacity-100" : "opacity-0"
             }`}
           >
+            <Link href="/#hero">
             <div className="relative w-70 h-20">
               <Image
                 src="/images/logo/jg-un-2-logo.png"
@@ -66,6 +87,7 @@ export default function Navbar() {
                 priority
               />
             </div>
+            </Link>
           </div>
         </div>
 
@@ -76,14 +98,14 @@ export default function Navbar() {
           }`}
         >
           {navLinks.map((link) => (
-            <li key={link}>
+            <li key={link.label}>
               <a
-                href="#"
+                href={link.href}
                 className={`text-sm tracking-wide transition ${
                   scrolled ? "hover:text-[#B68D40]" : "hover:text-white/70"
                 }`}
               >
-                {link}
+                {link.label}
               </a>
             </li>
           ))}
@@ -118,15 +140,17 @@ export default function Navbar() {
           </div>
 
           {/* Admission Button */}
-          <button
-            className={`px-7 py-3 rounded-full transition-all duration-500 transform-gpu will-change-transform ${
-              scrolled
-                ? "bg-[#D4A514] text-white hover:opacity-90"
-                : "border border-white/20 bg-white/10 text-white hover:bg-white/20"
-            }`}
-          >
-            Admission
-          </button>
+          <Link href="/admissions">
+            <button
+              className={`px-7 py-3 rounded-full transition-all duration-500 transform-gpu will-change-transform ${
+                scrolled
+                  ? "bg-[#D4A514] text-white hover:opacity-90"
+                  : "border border-white/20 bg-white/10 text-white hover:bg-white/20"
+              }`}
+            >
+              Admission
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Menu */}

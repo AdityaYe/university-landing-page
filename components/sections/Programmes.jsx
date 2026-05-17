@@ -236,7 +236,7 @@ export default function Programmes() {
         : filteredProgrammes;
 
   return (
-    <section className="bg-[#F7F5F2] py-32">
+    <section id="programmes" className="bg-[#F7F5F2] py-32">
       <div className="w-[92%] max-w-7xl mx-auto">
         {/* Header */}
         <div className="grid lg:grid-cols-2 gap-12 items-end">
