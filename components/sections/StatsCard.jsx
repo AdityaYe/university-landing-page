@@ -20,14 +20,17 @@ export default function StatsCard() {
       number: "25+",
       label: "Years of Excellence",
     },
+
     {
       number: "120+",
       label: "Programs Offered",
     },
+
     {
       number: "12K+",
       label: "Students Enrolled",
     },
+
     {
       number: "300+",
       label: "Expert Faculty",
@@ -35,14 +38,10 @@ export default function StatsCard() {
   ];
 
   return (
-    <section
-      className={`relative z-30 transition-all duration-700 ${
-        scrolled ? "-mt-20" : "-mt-10"
-      }`}
-    >
+    <section className="relative z-30 -mt-32 sm:-mt-28 md:-mt-24 lg:-mt-20 pb-10">
       <div className="w-[92%] max-w-6xl mx-auto">
         <div
-          className={`grid grid-cols-2 md:grid-cols-4 rounded-[2rem] overflow-hidden border transition-all duration-700 ${
+          className={`grid grid-cols-2 md:grid-cols-4 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border transition-all duration-700 ${
             scrolled
               ? "bg-[#F7F5F2]/95 border-black/5 shadow-[0_10px_40px_rgba(0,0,0,0.08)] backdrop-blur-2xl"
               : "bg-white/10 border-white/10 backdrop-blur-2xl"
@@ -51,7 +50,7 @@ export default function StatsCard() {
           {stats.map((item, index) => (
             <div
               key={index}
-              className={`p-10 text-center transition-all duration-700 ${
+              className={`p-7 sm:p-8 md:p-10 text-center transition-all duration-700 ${
                 index !== stats.length - 1
                   ? scrolled
                     ? "md:border-r border-black/10"
@@ -65,17 +64,18 @@ export default function StatsCard() {
                   : ""
               }`}
             >
-              {/* Hidden Before Scroll */}
               <div
                 className={`overflow-hidden transition-all duration-700 ${
                   scrolled ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <h3 className="text-5xl font-light text-[#1B1B1B]">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-light text-[#1B1B1B]">
                   {item.number}
                 </h3>
 
-                <p className="mt-4 text-[#6B6B6B]">{item.label}</p>
+                <p className="mt-3 md:mt-4 text-sm sm:text-base text-[#6B6B6B] leading-relaxed">
+                  {item.label}
+                </p>
               </div>
             </div>
           ))}

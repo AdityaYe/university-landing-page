@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F7F5F2;
-  --secondary-bg: #ECE8E1;
+  --background: #f7f5f2;
+  --secondary-bg: #ece8e1;
 
-  --text-primary: #1B1B1B;
-  --text-secondary: #5E5A55;
+  --text-primary: #1b1b1b;
+  --text-secondary: #5e5a55;
 
-  --accent: #A67C52;
-  --dark-accent: #2D3B36;
+  --accent: #a67c52;
+  --dark-accent: #2d3b36;
 }
 
 html {
@@ -35,4 +35,13 @@ h6 {
 ::selection {
   background: var(--accent);
   color: white;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

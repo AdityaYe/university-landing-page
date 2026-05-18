@@ -28,7 +28,7 @@ const ecosystemFeatures = [
     icon: BrainCircuit,
     title: "Interdisciplinary Learning",
     description:
-      "Students collaborate across diverse domains to solve problems through multiple perspectives and methods of thinking.",
+      "Students from diverse academic backgrounds collaborate to solve problems through multiple perspectives, ideas, and approaches.",
     dark: true,
   },
 
@@ -36,51 +36,52 @@ const ecosystemFeatures = [
     icon: GraduationCap,
     title: "Experiential Education",
     description:
-      "Hands-on learning through industry projects, internships, workshops, and immersive practical exposure.",
+      "Real-world projects, practical exposure, and immersive learning experiences designed to build hands-on expertise.",
   },
 
   {
     icon: Lightbulb,
     title: "Whole Brain Pedagogy",
     description:
-      "A future-focused academic model blending creativity, technical mastery, innovation, and critical thinking.",
+      "A future-focused learning approach combining technical excellence, creativity, critical thinking, and innovation.",
+    dark: true,
   },
 
   {
     icon: BriefcaseBusiness,
-    title: "Industry-Led Faculty",
+    title: "Industry & Academic Mentorship",
     description:
-      "Learn from accomplished academicians and industry professionals with real-world expertise.",
-    dark: true,
+      "Learn from experienced faculty members with strong academic foundations and real-world industry expertise.",
   },
 
   {
     icon: Globe,
-    title: "Global Academic Exposure",
+    title: "Global Academic Collaboration",
     description:
-      "Collaborations with international universities for curriculum, exchange opportunities, and academic growth.",
+      "Collaborations with international universities for curriculum development, academic delivery, and student exchange opportunities.",
+    dark: true,
   },
 
   {
     icon: FlaskConical,
-    title: "Research & Innovation",
+    title: "Industry-Led Learning",
     description:
-      "Course-embedded capstone projects, research-driven learning, and innovation-focused academic culture.",
-    dark: true,
+      "Hands-on learning through emerging technologies, industry use-cases, and course-embedded capstone projects.",
   },
 
   {
     icon: Rocket,
     title: "Career Acceleration",
     description:
-      "Cross-sector internships, on-the-job training opportunities, and strong placement support systems.",
+      "Cross-sector internships, on-the-job training opportunities, and industry exposure designed for career readiness.",
+    dark: true,
   },
 
   {
     icon: Building2,
-    title: "24×7 Learning Ecosystem",
+    title: "24×7 Learning Environment",
     description:
-      "Continuous access to advanced infrastructure, labs, collaborative spaces, and learning facilities.",
+      "Continuous accessibility to campus facilities, collaborative spaces, and advanced learning infrastructure.",
   },
 ];
 
@@ -125,7 +126,11 @@ export default function Features() {
 
   return (
     <>
-      <section id="features" ref={sectionRef} className="bg-[#F7F5F2] py-32 overflow-hidden">
+      <section
+        id="features"
+        ref={sectionRef}
+        className="bg-[#F7F5F2] py-32 overflow-hidden"
+      >
         <Container>
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-16 items-start">
             {/* LEFT */}
@@ -146,7 +151,10 @@ export default function Features() {
             </div>
 
             {/* RIGHT */}
-            <div ref={cardsRef} className="grid md:grid-cols-2 gap-5 will-change-transform">
+            <div
+              ref={cardsRef}
+              className="grid md:grid-cols-2 gap-5 will-change-transform"
+            >
               {ecosystemFeatures.map((item, index) => {
                 const Icon = item.icon;
 
@@ -218,7 +226,7 @@ export default function Features() {
         </Container>
       </section>
       {/* LEADERSHIP INTRO */}
-      <section className="bg-[#F7F5F2] -mt-200 pt-8 pb-16 relative z-50 isolation-isolate">
+      <section className="bg-[#F7F5F2] -mt-150 pt-8 pb-16 relative z-50 isolation-isolate">
         <Container>
           <div className="max-w-4xl">
             <span className="uppercase tracking-[0.25em] text-sm text-[#B68D40]">

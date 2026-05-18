@@ -1,9 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
+
 import { usePathname } from "next/navigation";
+
 import { Menu, X, Search } from "lucide-react";
 
 const navLinks = [
@@ -47,15 +50,31 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // HANDLE SECTION NAVIGATION
+  // LOCK BODY SCROLL
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
+  // SECTION NAVIGATION
   const handleSectionNavigation = (sectionId) => {
-    // IF NOT ON HOMEPAGE
+    setMenuOpen(false);
+
     if (pathname !== "/") {
-      window.location.href = `/#${sectionId}`;
+      sessionStorage.setItem("scroll-target", sectionId);
+
+      window.location.href = "/";
+
       return;
     }
 
-    // HOMEPAGE SCROLL
     const section = document.getElementById(sectionId);
 
     if (section) {
@@ -67,131 +86,172 @@ export default function Navbar() {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
-        scrolled
-          ? "bg-[#F7F5F2]/95 backdrop-blur-xl shadow-sm"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="w-[92%] max-w-7xl mx-auto h-24 flex items-center justify-between">
-        {/* LEFT */}
-        <div className="relative w-85 h-35 flex items-center">
-          {/* LARGE HERO LOGO */}
-          <Link href="/#hero">
-            <div
-              className={`absolute left-0 top-4 transition-all duration-500 ${
-                scrolled ? "opacity-0" : "opacity-100"
-              }`}
-            >
-              <div className="relative mt-3.5 w-70 h-20">
-                <Image
-                  src="/images/logo/jg-un-1-logo.png"
-                  alt="JG University Logo"
-                  fill
-                  className="object-contain object-left"
-                  priority
-                />
-              </div>
-            </div>
-
-            {/* COMPACT LOGO */}
-            <div
-              className={`absolute -mt-10 left-0 transition-all duration-300 ${
-                scrolled ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              <div className="relative w-70 h-20">
-                <Image
-                  src="/images/logo/jg-un-2-logo.png"
-                  alt="JG University Compact Logo"
-                  fill
-                  className="object-contain object-left"
-                  priority
-                />
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        {/* CENTER NAV */}
-        <ul
-          className={`hidden lg:flex items-center gap-10 transition-colors duration-300 ${
-            scrolled ? "text-[#1B1B1B]" : "text-white"
-          }`}
-        >
-          {navLinks.map((link) => (
-            <li key={link.label}>
-              <button
-                onClick={() => {
-                  if (link.route) {
-                    window.location.href = link.route;
-                  } else {
-                    handleSectionNavigation(link.section);
-                  }
-                }}
-                className={`text-sm tracking-wide transition-all duration-300 ${
-                  scrolled ? "hover:text-[#B68D40]" : "hover:text-white/70"
+    <>
+      <header
+        className={`fixed top-0 left-0 isolate w-full z-[9999] transition-all duration-500 ${
+          scrolled
+            ? "bg-[#F7F5F2]/95 backdrop-blur-xl shadow-sm"
+            : "bg-transparent"
+        }`}
+      >
+        <nav className="w-[92%] max-w-7xl mx-auto h-20 lg:h-24 flex items-center justify-between">
+          {/* LEFT */}
+          <div className="relative flex items-center">
+            <Link href="/#hero">
+              {/* HERO LOGO */}
+              <div
+                className={`absolute left-0 top-0 transition-all duration-500 ${
+                  scrolled ? "opacity-0 pointer-events-none" : "opacity-100"
                 }`}
               >
-                {link.label}
-              </button>
-            </li>
-          ))}
-        </ul>
+                <div className="relative w-44 md:w-56 lg:w-70 h-14 md:h-16 lg:h-20">
+                  <Image
+                    src="/images/logo/jg-un-1-logo.png"
+                    alt="JG University"
+                    fill
+                    className="object-contain object-left"
+                    priority
+                  />
+                </div>
+              </div>
 
-        {/* RIGHT */}
-        <div className="hidden lg:flex items-center gap-4">
-          {/* SEARCH */}
-          <div
-            className={`flex items-center w-[260px] h-12 px-5 rounded-full border transition-all duration-500 ${
-              scrolled
-                ? "border-black/10 bg-black/[0.03]"
-                : "border-white/20 bg-transparent"
-            }`}
-          >
-            <Search
-              size={18}
-              className={`shrink-0 transition-colors duration-300 ${
-                scrolled ? "text-[#1B1B1B]" : "text-white"
-              }`}
-            />
-
-            <input
-              type="text"
-              placeholder="Search..."
-              className={`bg-transparent outline-none ml-4 w-full transition-colors duration-300 ${
-                scrolled
-                  ? "text-[#1B1B1B] placeholder:text-black/40"
-                  : "text-white placeholder:text-white/60"
-              }`}
-            />
+              {/* COMPACT LOGO */}
+              <div
+                className={`transition-all duration-500 ${
+                  scrolled ? "opacity-100" : "opacity-0 pointer-events-none"
+                }`}
+              >
+                <div className="relative w-44 md:w-56 lg:w-70 h-14 md:h-16 lg:h-20">
+                  <Image
+                    src="/images/logo/jg-un-2-logo.png"
+                    alt="JG University"
+                    fill
+                    className="object-contain object-left"
+                    priority
+                  />
+                </div>
+              </div>
+            </Link>
           </div>
 
-          {/* ADMISSION BUTTON */}
-          <Link href="/admissions">
-            <button
-              className={`px-7 py-3 rounded-full transition-all duration-500 transform-gpu will-change-transform ${
+          {/* DESKTOP NAV */}
+          <ul
+            className={`hidden xl:flex items-center gap-10 transition-colors duration-300 ${
+              scrolled ? "text-[#1B1B1B]" : "text-white"
+            }`}
+          >
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <button
+                  onClick={() => {
+                    if (link.route) {
+                      window.location.href = link.route;
+                    } else {
+                      handleSectionNavigation(link.section);
+                    }
+                  }}
+                  className={`text-sm tracking-wide transition-all duration-300 ${
+                    scrolled ? "hover:text-[#B68D40]" : "hover:text-white/70"
+                  }`}
+                >
+                  {link.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+
+          {/* DESKTOP RIGHT */}
+          <div className="hidden xl:flex items-center gap-4">
+            {/* SEARCH */}
+            <div
+              className={`flex items-center w-[240px] h-12 px-5 rounded-full border transition-all duration-500 ${
                 scrolled
-                  ? "bg-[#D4A514] text-white hover:opacity-90"
-                  : "border border-white/20 bg-white/10 text-white hover:bg-white/20"
+                  ? "border-black/10 bg-black/[0.03]"
+                  : "border-white/20 bg-transparent"
               }`}
             >
-              Admission
-            </button>
-          </Link>
-        </div>
+              <Search
+                size={18}
+                className={`shrink-0 transition-colors duration-300 ${
+                  scrolled ? "text-[#1B1B1B]" : "text-white"
+                }`}
+              />
 
-        {/* MOBILE MENU */}
-        <button
-          className={`lg:hidden transition-colors duration-300 ${
-            scrolled ? "text-[#1B1B1B]" : "text-white"
-          }`}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <X /> : <Menu />}
-        </button>
-      </nav>
-    </header>
+              <input
+                type="text"
+                placeholder="Search..."
+                className={`bg-transparent outline-none ml-4 w-full text-sm transition-colors duration-300 ${
+                  scrolled
+                    ? "text-[#1B1B1B] placeholder:text-black/40"
+                    : "text-white placeholder:text-white/60"
+                }`}
+              />
+            </div>
+
+            {/* ADMISSION */}
+            <Link href="/admissions">
+              <button
+                className={`px-7 py-3 rounded-full transition-all duration-500 ${
+                  scrolled
+                    ? "bg-[#D4A514] text-white hover:opacity-90"
+                    : "border border-white/20 bg-white/10 text-white hover:bg-white/20"
+                }`}
+              >
+                Admission
+              </button>
+            </Link>
+          </div>
+
+          {/* MOBILE MENU BUTTON */}
+          <button
+            className={`xl:hidden transition-colors duration-300 ${
+              scrolled ? "text-[#1B1B1B]" : "text-white"
+            }`}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <Menu size={30} />
+          </button>
+        </nav>
+      </header>
+
+      {/* MOBILE DROPDOWN */}
+      <div
+        className={`fixed top-20 left-0 w-full xl:hidden z-[9998] transition-all duration-500 overflow-hidden ${
+          menuOpen ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="bg-[#111111]/95 backdrop-blur-2xl border-t border-white/10">
+          <div className="w-[92%] mx-auto py-8">
+            {/* LINKS */}
+            <div className="flex flex-col">
+              {navLinks.map((link, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    setMenuOpen(false);
+
+                    if (link.route) {
+                      window.location.href = link.route;
+                    } else {
+                      handleSectionNavigation(link.section);
+                    }
+                  }}
+                  className="h-16 border-b border-white/10 text-left text-white text-lg hover:text-[#D4A514] transition-all duration-300"
+                >
+                  {link.label}
+                </button>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <Link href="/admissions" onClick={() => setMenuOpen(false)}>
+              <button className="w-full mt-7 h-14 rounded-full bg-[#D4A514] text-white">
+                Apply for Admission
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
