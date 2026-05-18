@@ -1,36 +1,177 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JG University — Modern University Website
 
-## Getting Started
+A modern cinematic university website built using **Next.js 15**, **React**, **Tailwind CSS**, and **Framer Motion**.
 
-First, run the development server:
+Designed with a premium editorial aesthetic focused on immersive visuals, smooth interactions, and a future-ready digital university experience.
+
+---
+
+## Features
+
+- Modern editorial-style landing page
+- Smooth scrolling navigation
+- Dynamic programme pages using App Router
+- Fully responsive premium UI
+- Interactive admissions modal
+- Dedicated admissions page
+- Dedicated contact page
+- Testimonials section
+- Campus experience showcase
+- Animated hero sections
+- Data-driven architecture
+- Reusable UI components
+- Optimized Next.js image handling
+- Smooth transitions and motion design
+
+---
+
+## Tech Stack
+
+- Next.js 15
+- React
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- React Icons
+
+---
+
+# Folder Structure
+
+```txt
+app
+├── admissions
+├── contact
+├── programmes
+│   ├── [slug]
+│   └── page.jsx
+├── globals.css
+├── layout.js
+└── page.js
+
+components
+├── layout
+├── sections
+└── ui
+
+data
+└── programmes.js
+
+public
+├── brochures
+├── images
+└── videos
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/jg-university.git
+```
+
+Navigate into the project:
+
+```bash
+cd jg-university
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Production Build
 
-To learn more about Next.js, take a look at the following resources:
+Build the project:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run production server:
 
-## Deploy on Vercel
+```bash
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+This project is optimized for deployment on:
+
+- **Vercel**
+
+Deploy instantly by importing the GitHub repository into Vercel.
+
+---
+
+## Core Sections
+
+- Hero Section
+- Features Section
+- Programmes Showcase
+- Campus Life
+- Testimonials
+- Admissions
+- Contact
+- Footer
+
+---
+
+## Dynamic Programmes System
+
+All programme pages are generated dynamically using:
+
+```txt
+data/programmes.js
+```
+
+Each programme contains:
+
+- Overview
+- Eligibility
+- Highlights
+- Careers
+- Fee Structure
+- Stats
+- Specialisations
+- Advantages
+
+---
+
+## Future Improvements
+
+- Full search system
+- Backend admissions integration
+- CMS integration
+- Authentication
+- Student portal
+- Advanced filtering
+- SEO optimization
+- Analytics integration
+
+---
+
+## License
+
+This project is for educational and portfolio purposes.
