@@ -115,7 +115,7 @@ npm start
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 This project is optimized for deployment on:
 
@@ -138,7 +138,7 @@ Deploy instantly by importing the GitHub repository into Vercel.
 
 ---
 
-## 📚 Dynamic Programmes System
+## Dynamic Programmes System
 
 All programme pages are generated dynamically using:
 
