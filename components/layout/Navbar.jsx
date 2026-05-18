@@ -24,7 +24,7 @@ const navLinks = [
 
   {
     label: "Contact",
-    href: "/contact",
+    route: "/contact",
   },
 ];
 
@@ -95,7 +95,7 @@ export default function Navbar() {
               </div>
             </div>
 
-          {/* COMPACT LOGO */}
+            {/* COMPACT LOGO */}
             <div
               className={`absolute -mt-10 left-0 transition-all duration-300 ${
                 scrolled ? "opacity-100" : "opacity-0"
@@ -111,7 +111,7 @@ export default function Navbar() {
                 />
               </div>
             </div>
-            </Link>
+          </Link>
         </div>
 
         {/* CENTER NAV */}
@@ -122,25 +122,20 @@ export default function Navbar() {
         >
           {navLinks.map((link) => (
             <li key={link.label}>
-              {link.href ? (
-                <Link
-                  href={link.href}
-                  className={`text-sm tracking-wide transition ${
-                    scrolled ? "hover:text-[#B68D40]" : "hover:text-white/70"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ) : (
-                <button
-                  onClick={() => handleSectionNavigation(link.section)}
-                  className={`text-sm tracking-wide transition ${
-                    scrolled ? "hover:text-[#B68D40]" : "hover:text-white/70"
-                  }`}
-                >
-                  {link.label}
-                </button>
-              )}
+              <button
+                onClick={() => {
+                  if (link.route) {
+                    window.location.href = link.route;
+                  } else {
+                    handleSectionNavigation(link.section);
+                  }
+                }}
+                className={`text-sm tracking-wide transition-all duration-300 ${
+                  scrolled ? "hover:text-[#B68D40]" : "hover:text-white/70"
+                }`}
+              >
+                {link.label}
+              </button>
             </li>
           ))}
         </ul>
