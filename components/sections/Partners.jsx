@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 import Container from "../ui/Container";
@@ -49,6 +50,31 @@ const partners = [
 ];
 
 export default function Partners() {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+
+    if (!container) return;
+
+    let animationFrame;
+
+    const autoScroll = () => {
+      container.scrollLeft += 0.35;
+
+      // seamless loop
+      if (container.scrollLeft >= container.scrollWidth / 2) {
+        container.scrollLeft = 0;
+      }
+
+      animationFrame = requestAnimationFrame(autoScroll);
+    };
+
+    animationFrame = requestAnimationFrame(autoScroll);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, []);
+
   return (
     <section className="bg-[#F7F5F2] py-10 sm:py-12 lg:py-20 overflow-hidden">
       <Container>
@@ -73,13 +99,16 @@ export default function Partners() {
           {/* Gradient Fade Right */}
           <div className="absolute right-0 top-0 h-full w-16 sm:w-28 lg:w-52 bg-gradient-to-l from-[#F7F5F2] to-transparent z-20 pointer-events-none" />
 
-          {/* Logos: touch scroller for mobile/tablet */}
-          <div className="overflow-x-auto no-scrollbar py-8 pr-6 touch-pan-x lg:hidden">
-            <div className="flex w-max snap-x snap-mandatory items-center gap-9 sm:gap-12">
-              {partners.map((partner, index) => (
+          {/* MOBILE/TABLET AUTO SCROLL */}
+          <div
+            ref={scrollRef}
+            className="overflow-x-auto no-scrollbar whitespace-nowrap touch-pan-x lg:hidden"
+          >
+            <div className="flex w-max items-center gap-9 py-8 pr-6 sm:gap-12">
+              {[...partners, ...partners].map((partner, index) => (
                 <div
                   key={index}
-                  className="relative h-20 w-40 shrink-0 snap-center sm:h-24 sm:w-52"
+                  className="relative h-20 w-40 shrink-0 sm:h-24 sm:w-52"
                 >
                   <Image
                     src={partner.logo}
@@ -92,7 +121,7 @@ export default function Partners() {
             </div>
           </div>
 
-          {/* Logos: desktop marquee */}
+          {/* DESKTOP MARQUEE */}
           <div className="hidden overflow-hidden py-16 lg:block">
             <motion.div
               animate={{ x: ["0%", "-50%"] }}
@@ -124,10 +153,9 @@ export default function Partners() {
 
         {/* DESCRIPTION */}
         <p className="mt-4 lg:mt-8 mx-auto text-xs sm:text-sm text-center leading-relaxed text-black/40 max-w-3xl">
-          JG University collaborates with leading organizations,
-          technology companies, research institutions, and
-          innovation-driven enterprises to create industry-ready
-          learning experiences.
+          JG University collaborates with leading organizations, technology
+          companies, research institutions, and innovation-driven enterprises to
+          create industry-ready learning experiences.
         </p>
       </Container>
     </section>

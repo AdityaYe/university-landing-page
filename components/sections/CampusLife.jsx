@@ -43,33 +43,32 @@ export default function Campus() {
 
     if (!track) return;
 
-    const media = gsap.matchMedia();
+    let animationFrame;
 
-    media.add("(min-width: 1024px)", () => {
-      const totalWidth = track.scrollWidth / 2;
+    const autoScroll = () => {
+      // mobile/tablet slower
+      const speed = window.innerWidth < 1024 ? 0.45 : 0.7;
 
-      const tween = gsap.to(track, {
-        x: -totalWidth,
+      track.scrollLeft += speed;
 
-        duration: 28,
+      // seamless reset
+      if (track.scrollLeft >= track.scrollWidth / 2) {
+        track.scrollLeft = 0;
+      }
 
-        ease: "none",
-
-        repeat: -1,
-      });
-
-      return () => {
-        tween.kill();
-      };
-    });
-
-    return () => {
-      media.revert();
+      animationFrame = requestAnimationFrame(autoScroll);
     };
+
+    animationFrame = requestAnimationFrame(autoScroll);
+
+    return () => cancelAnimationFrame(animationFrame);
   }, []);
 
   return (
-    <section id="campus-life" className="relative bg-[#F7F5F2] py-14 sm:py-16 lg:py-24 overflow-hidden">
+    <section
+      id="campus-life"
+      className="relative bg-[#F7F5F2] py-14 sm:py-16 lg:py-24 overflow-hidden"
+    >
       <Container>
         {/* HERO */}
         <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-10 items-end">
@@ -117,17 +116,17 @@ export default function Campus() {
         </div>
 
         {/* HORIZONTAL STRIP */}
-        <div className="relative mt-8 lg:mt-14 overflow-x-auto lg:overflow-hidden border-y border-black/10 py-3 no-scrollbar touch-pan-x">
+        <div
+          ref={trackRef}
+          className="relative mt-8 lg:mt-14 overflow-x-auto border-y border-black/10 py-3 no-scrollbar touch-pan-x"
+        >
           {/* LEFT FADE */}
           <div className="absolute left-0 top-0 hidden h-full w-24 bg-gradient-to-r from-[#F7F5F2] to-transparent z-20 pointer-events-none lg:block" />
 
           {/* RIGHT FADE */}
           <div className="absolute right-0 top-0 hidden h-full w-24 bg-gradient-to-l from-[#F7F5F2] to-transparent z-20 pointer-events-none lg:block" />
 
-          <div
-            ref={trackRef}
-            className="flex gap-3 lg:gap-4 w-max lg:will-change-transform"
-          >
+          <div className="flex gap-3 lg:gap-4 w-max whitespace-nowrap">
             {[...horizontalImages, ...horizontalImages].map((image, index) => (
               <div
                 key={index}
