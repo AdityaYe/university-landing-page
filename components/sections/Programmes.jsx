@@ -237,21 +237,21 @@ export default function Programmes() {
         : filteredProgrammes;
 
   return (
-    <section id="programmes" className="bg-[#F7F5F2] py-20 md:py-28">
+    <section id="programmes" className="bg-[#F7F5F2] py-14 sm:py-16 md:py-28">
       <div className="w-[92%] max-w-7xl mx-auto">
         {/* HEADER */}
-        <div className="grid lg:grid-cols-2 gap-10 md:gap-12 items-end">
+        <div className="grid lg:grid-cols-2 gap-5 md:gap-12 items-end">
           <div>
-            <p className="text-[#B68A3D] uppercase tracking-[0.25em] text-sm">
+            <p className="text-[#B68A3D] uppercase tracking-[0.22em] md:tracking-[0.25em] text-[11px] md:text-sm">
               Programmes
             </p>
 
-            <h2 className="mt-5 md:mt-6 text-[2.8rem] md:text-[4rem] leading-[0.95] text-[#1B1B1B]">
+            <h2 className="mt-3 md:mt-6 text-[2.15rem] sm:text-[2.45rem] md:text-[4rem] leading-[1] md:leading-[0.95] text-[#1B1B1B]">
               Discover your path.
             </h2>
           </div>
 
-          <p className="text-base md:text-lg leading-relaxed text-[#5F5F5F] max-w-xl lg:ml-auto">
+          <p className="text-sm sm:text-[15px] md:text-lg leading-relaxed text-[#5F5F5F] max-w-xl lg:ml-auto">
             From engineering and computing to business, law, and emerging
             technologies — explore industry-focused programmes built for the
             future.
@@ -259,27 +259,27 @@ export default function Programmes() {
         </div>
 
         {/* SEARCH + FILTERS */}
-        <div className="mt-10 md:mt-16 flex flex-col xl:flex-row gap-5 md:gap-6 xl:items-center xl:justify-between">
+        <div className="mt-7 md:mt-16 flex flex-col xl:flex-row gap-4 md:gap-6 xl:items-center xl:justify-between">
           {/* SEARCH */}
-          <div className="flex items-center h-14 md:h-16 px-5 md:px-6 rounded-full border border-black/5 bg-white shadow-sm w-full xl:max-w-xl">
-            <Search size={18} className="text-[#6B6B6B]" />
+          <div className="flex items-center h-11 md:h-16 px-4 md:px-6 rounded-full border border-black/5 bg-white shadow-sm w-full xl:max-w-xl">
+            <Search size={16} className="text-[#6B6B6B] md:size-[18px]" />
 
             <input
               type="text"
               placeholder="Search for a programme..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="ml-4 w-full bg-transparent outline-none text-sm md:text-base text-[#1B1B1B] placeholder:text-[#9B9B9B]"
+              className="ml-3 md:ml-4 w-full bg-transparent outline-none text-[13px] md:text-base text-[#1B1B1B] placeholder:text-[#9B9B9B]"
             />
           </div>
 
           {/* FILTERS */}
-          <div className="flex flex-wrap gap-3">
+          <div className="flex gap-2.5 overflow-x-auto pb-1 no-scrollbar sm:flex-wrap sm:pb-0">
             {filters.map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-5 py-2.5 text-sm rounded-full transition-all duration-300 ${
+                className={`shrink-0 px-4 md:px-5 py-2 md:py-2.5 text-xs md:text-sm rounded-full transition-all duration-300 ${
                   activeFilter === filter
                     ? "bg-[#1B1B1B] text-white"
                     : "bg-white text-[#1B1B1B] border border-black/5 hover:border-[#B68A3D] hover:text-[#B68A3D]"
@@ -292,12 +292,12 @@ export default function Programmes() {
         </div>
 
         {/* GRID */}
-        <div className="mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6">
+        <div className="mt-8 md:mt-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6">
           {displayedProgrammes.map((programme) => (
             <a
               key={programme.title}
               href={`/programmes/${programme.slug}`}
-              className="group relative h-[360px] sm:h-[420px] lg:h-[440px] overflow-hidden rounded-[2rem] md:rounded-[2.5rem]"
+              className="group relative h-[230px] sm:h-[340px] lg:h-[440px] overflow-hidden rounded-[1.35rem] sm:rounded-[1.75rem] md:rounded-[2.5rem]"
             >
               {/* IMAGE */}
               <Image
@@ -313,32 +313,32 @@ export default function Programmes() {
               <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent" />
 
               {/* CONTENT */}
-              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
+              <div className="absolute inset-0 p-4 sm:p-5 md:p-8 flex flex-col justify-between">
                 {/* TOP */}
-                <div className="flex items-start justify-between gap-3">
-                  <span className="inline-flex px-4 py-2 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 text-white/90 text-xs md:text-sm">
+                <div className="flex items-start justify-between gap-2">
+                  <span className="inline-flex px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 text-white/90 text-[11px] md:text-sm">
                     {programme.category}
                   </span>
 
-                  <span className="px-4 py-2 rounded-full bg-black/20 backdrop-blur-xl border border-white/10 text-white/70 text-xs md:text-sm">
+                  <span className="px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-black/20 backdrop-blur-xl border border-white/10 text-white/70 text-[11px] md:text-sm">
                     {programme.duration}
                   </span>
                 </div>
 
                 {/* BOTTOM */}
                 <div>
-                  <h3 className="text-white text-[1.8rem] sm:text-[2.1rem] lg:text-[2.3rem] leading-[1.05] max-w-md">
+                  <h3 className="text-white text-[1.35rem] sm:text-[1.7rem] lg:text-[2.3rem] leading-[1.05] max-w-md">
                     {programme.title}
                   </h3>
 
                   {/* EXPLORE */}
-                  <div className="mt-5 md:mt-7 flex items-center justify-between">
-                    <div className="flex items-center gap-3 text-[#D4A514] group-hover:gap-5 transition-all duration-300">
-                      <span className="text-xs md:text-sm tracking-[0.15em] uppercase">
+                  <div className="mt-3 md:mt-7 flex items-center justify-between">
+                    <div className="flex items-center gap-2 md:gap-3 text-[#D4A514] group-hover:gap-5 transition-all duration-300">
+                      <span className="text-[10px] md:text-sm tracking-[0.14em] md:tracking-[0.15em] uppercase">
                         Explore Programme
                       </span>
 
-                      <ArrowRight size={18} />
+                      <ArrowRight size={16} className="md:size-[18px]" />
                     </div>
                   </div>
                 </div>

@@ -27,7 +27,7 @@ export default function AdmissionModal() {
       {/* OPEN BUTTON */}
       <button
         onClick={() => setOpen(true)}
-        className="h-13 px-6 rounded-full bg-[#D4A514] text-white text-sm hover:scale-[1.03] transition-all duration-500"
+        className="h-11 lg:h-[52px] px-5 lg:px-6 rounded-full bg-[#D4A514] text-white text-sm hover:scale-[1.03] transition-all duration-500"
       >
         Apply Now
       </button>
@@ -48,7 +48,7 @@ export default function AdmissionModal() {
 
             {/* MODAL */}
             <div className="fixed inset-0 z-[210] overflow-y-auto">
-              <div className="min-h-screen flex items-center justify-center px-5 py-8">
+              <div className="min-h-screen flex items-center justify-center px-4 sm:px-5 py-5 sm:py-8">
                 <motion.div
                   initial={{ opacity: 0, y: 40, scale: 0.96 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -57,20 +57,20 @@ export default function AdmissionModal() {
                     duration: 0.45,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="relative w-full max-w-2xl bg-[#F7F5F2] rounded-[2.4rem] shadow-2xl overflow-hidden border border-black/5"
+                  className="relative w-full max-w-2xl bg-[#F7F5F2] rounded-[1.4rem] sm:rounded-[2.4rem] shadow-2xl overflow-hidden border border-black/5"
                 >
                   {/* CLOSE */}
                   <button
                     onClick={() => setOpen(false)}
-                    className="absolute top-5 right-5 z-20 w-10 h-10 rounded-full bg-black/5 hover:bg-black/10 transition-all flex items-center justify-center"
+                    className="absolute top-4 right-4 sm:top-5 sm:right-5 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/5 hover:bg-black/10 transition-all flex items-center justify-center"
                   >
                     <X size={18} />
                   </button>
 
                   {/* TOP */}
-                  <div className="px-8 md:px-10 pt-10 text-center">
+                  <div className="px-5 sm:px-8 md:px-10 pt-7 sm:pt-10 text-center">
                     {/* LOGO */}
-                    <div className="relative mx-auto w-[250px] h-[65px]">
+                    <div className="relative mx-auto w-[190px] sm:w-[250px] h-[50px] sm:h-[65px]">
                       <Image
                         src="/images/logo/jg-un-2-logo.png"
                         alt="JG University"
@@ -79,47 +79,47 @@ export default function AdmissionModal() {
                       />
                     </div>
 
-                    <p className="mt-6 uppercase tracking-[0.22em] text-[11px] text-[#B68D40]">
+                    <p className="mt-4 sm:mt-6 uppercase tracking-[0.22em] text-[10px] sm:text-[11px] text-[#B68D40]">
                       Admissions 2026
                     </p>
 
-                    <h2 className="mt-3 text-[2.5rem] leading-[0.95] text-[#111111]">
+                    <h2 className="mt-2 sm:mt-3 text-[2rem] sm:text-[2.5rem] leading-[0.98] sm:leading-[0.95] text-[#111111]">
                       Register for Admission
                     </h2>
 
-                    <p className="mt-4 text-black/55 max-w-lg mx-auto leading-relaxed text-[15px]">
+                    <p className="mt-3 sm:mt-4 text-black/55 max-w-lg mx-auto leading-relaxed text-[13px] sm:text-[15px]">
                       Begin your application journey at JG University and
                       connect with a future-focused academic ecosystem.
                     </p>
                   </div>
 
                   {/* FORM */}
-                  <div className="px-8 md:px-10 pt-8 pb-10">
-                    <div className="grid md:grid-cols-2 gap-4">
+                  <div className="px-5 sm:px-8 md:px-10 pt-5 sm:pt-8 pb-6 sm:pb-10">
+                    <div className="grid md:grid-cols-2 gap-3 sm:gap-4">
                       {/* NAME */}
                       <input
                         type="text"
                         placeholder="Full Name"
-                        className="h-14 rounded-[1.1rem] bg-white px-5 outline-none border border-black/10 focus:border-[#B68D40] transition-all text-[15px]"
+                        className="h-11 sm:h-14 rounded-[0.9rem] sm:rounded-[1.1rem] bg-white px-4 sm:px-5 outline-none border border-black/10 focus:border-[#B68D40] transition-all text-[13px] sm:text-[15px]"
                       />
 
                       {/* PHONE */}
                       <input
                         type="text"
                         placeholder="Phone Number"
-                        className="h-14 rounded-[1.1rem] bg-white px-5 outline-none border border-black/10 focus:border-[#B68D40] transition-all text-[15px]"
+                        className="h-11 sm:h-14 rounded-[0.9rem] sm:rounded-[1.1rem] bg-white px-4 sm:px-5 outline-none border border-black/10 focus:border-[#B68D40] transition-all text-[13px] sm:text-[15px]"
                       />
 
                       {/* EMAIL */}
                       <input
                         type="email"
                         placeholder="Email Address"
-                        className="h-14 rounded-[1.1rem] bg-white px-5 outline-none border border-black/10 focus:border-[#B68D40] transition-all text-[15px]"
+                        className="h-11 sm:h-14 rounded-[0.9rem] sm:rounded-[1.1rem] bg-white px-4 sm:px-5 outline-none border border-black/10 focus:border-[#B68D40] transition-all text-[13px] sm:text-[15px]"
                       />
 
                       {/* YEAR */}
                       <div className="relative">
-                        <select className="appearance-none w-full h-14 rounded-[1.1rem] bg-white px-5 outline-none border border-black/10 focus:border-[#B68D40] transition-all text-black/70 text-[15px]">
+                        <select className="appearance-none w-full h-11 sm:h-14 rounded-[0.9rem] sm:rounded-[1.1rem] bg-white px-4 sm:px-5 outline-none border border-black/10 focus:border-[#B68D40] transition-all text-black/70 text-[13px] sm:text-[15px]">
                           <option>Select Academic Year</option>
                           <option>2025 - 2026</option>
                           <option>2026 - 2027</option>
@@ -136,7 +136,7 @@ export default function AdmissionModal() {
                         <select
                           value={selectedLevel}
                           onChange={(e) => setSelectedLevel(e.target.value)}
-                          className="appearance-none w-full h-14 rounded-[1.1rem] bg-white px-5 outline-none border border-black/10 focus:border-[#B68D40] transition-all text-black/70 text-[15px]"
+                          className="appearance-none w-full h-11 sm:h-14 rounded-[0.9rem] sm:rounded-[1.1rem] bg-white px-4 sm:px-5 outline-none border border-black/10 focus:border-[#B68D40] transition-all text-black/70 text-[13px] sm:text-[15px]"
                         >
                           <option value="">Select Programme Level</option>
 
@@ -155,7 +155,7 @@ export default function AdmissionModal() {
 
                       {/* PROGRAMME */}
                       <div className="relative">
-                        <select className="appearance-none w-full h-14 rounded-[1.1rem] bg-white px-5 outline-none border border-black/10 focus:border-[#B68D40] transition-all text-black/70 text-[15px]">
+                        <select className="appearance-none w-full h-11 sm:h-14 rounded-[0.9rem] sm:rounded-[1.1rem] bg-white px-4 sm:px-5 outline-none border border-black/10 focus:border-[#B68D40] transition-all text-black/70 text-[13px] sm:text-[15px]">
                           <option>Select Programme</option>
 
                           {filteredProgrammes.map((programme) => (
@@ -176,20 +176,20 @@ export default function AdmissionModal() {
                     </div>
 
                     {/* CHECKBOX */}
-                    <label className="mt-6 flex items-start gap-3 cursor-pointer">
+                    <label className="mt-4 sm:mt-6 flex items-start gap-3 cursor-pointer">
                       <input
                         type="checkbox"
                         className="mt-1 w-4 h-4 accent-[#B68D40]"
                       />
 
-                      <p className="text-black/60 leading-relaxed text-sm">
+                      <p className="text-black/60 leading-relaxed text-xs sm:text-sm">
                         I agree to receive information regarding my submitted
                         application and admission process.
                       </p>
                     </label>
 
                     {/* BUTTONS */}
-                    <div className="mt-8 flex items-center justify-center gap-4">
+                    <div className="mt-5 sm:mt-8 flex items-center justify-center gap-3 sm:gap-4">
                       <button
                         onClick={() => setOpen(false)}
                         className="h-12 px-6 rounded-full border border-black/10 hover:bg-black/5 transition-all duration-500 text-sm"

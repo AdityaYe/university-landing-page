@@ -50,11 +50,11 @@ const partners = [
 
 export default function Partners() {
   return (
-    <section className="bg-[#F7F5F2] py-20 overflow-hidden">
+    <section className="bg-[#F7F5F2] py-10 sm:py-12 lg:py-20 overflow-hidden">
       <Container>
         {/* HEADER */}
-        <div className="flex items-center justify-between mb-10">
-          <span className="uppercase tracking-[0.25em] text-sm text-[#B68D40]">
+        <div className="flex items-center justify-between mb-4 lg:mb-10">
+          <span className="uppercase tracking-[0.22em] lg:tracking-[0.25em] text-[11px] lg:text-sm text-[#B68D40]">
             Partners
           </span>
         </div>
@@ -62,19 +62,19 @@ export default function Partners() {
         {/* PARTNER STRIP */}
         <div className="relative">
           {/* TOP BORDER */}
-          <div className="absolute top-10 left-0 w-full h-px bg-black/10" />
+          <div className="absolute top-5 lg:top-10 left-0 w-full h-px bg-black/10" />
 
           {/* BOTTOM BORDER */}
-          <div className="absolute bottom-10 left-0 w-full h-px bg-black/10" />
+          <div className="absolute bottom-5 lg:bottom-10 left-0 w-full h-px bg-black/10" />
 
           {/* Gradient Fade Left */}
-          <div className="absolute left-0 top-0 h-full w-52 bg-gradient-to-r from-[#F7F5F2] to-transparent z-20 pointer-events-none" />
+          <div className="absolute left-0 top-0 h-full w-16 sm:w-28 lg:w-52 bg-gradient-to-r from-[#F7F5F2] to-transparent z-20 pointer-events-none" />
 
           {/* Gradient Fade Right */}
-          <div className="absolute right-0 top-0 h-full w-52 bg-gradient-to-l from-[#F7F5F2] to-transparent z-20 pointer-events-none" />
+          <div className="absolute right-0 top-0 h-full w-16 sm:w-28 lg:w-52 bg-gradient-to-l from-[#F7F5F2] to-transparent z-20 pointer-events-none" />
 
           {/* Logos */}
-          <div className="overflow-hidden py-16">
+          <div className="overflow-hidden py-8 lg:py-16">
             <motion.div
               animate={{ x: ["0%", "-50%"] }}
               transition={{
@@ -82,14 +82,14 @@ export default function Partners() {
                 repeat: Infinity,
                 ease: "linear",
               }}
-              className="flex items-center gap-16 w-max"
+              className="flex items-center gap-8 sm:gap-10 lg:gap-16 w-max"
             >
               {[...partners, ...partners].map((partner, index) => (
                 <div
                   key={index}
                   className={`relative shrink-0 ${
-                    partner.width || "w-80"
-                  } ${partner.height || "h-40"}`}
+                    partner.width || "w-36 sm:w-48 lg:w-80"
+                  } ${partner.height || "h-20 sm:h-24 lg:h-40"}`}
                 >
                   <Image
                     src={partner.logo}
@@ -104,7 +104,7 @@ export default function Partners() {
         </div>
 
         {/* DESCRIPTION */}
-        <p className="mt-8 mx-auto text-sm text-center leading-relaxed text-black/40 max-w-3xl">
+        <p className="mt-4 lg:mt-8 mx-auto text-xs sm:text-sm text-center leading-relaxed text-black/40 max-w-3xl">
           JG University collaborates with leading organizations,
           technology companies, research institutions, and
           innovation-driven enterprises to create industry-ready

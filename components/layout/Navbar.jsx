@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
-import { Menu, X, Search } from "lucide-react";
+import { Menu, Search } from "lucide-react";
 
 const navLinks = [
   {
@@ -33,6 +33,7 @@ const navLinks = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -70,7 +71,7 @@ export default function Navbar() {
     if (pathname !== "/") {
       sessionStorage.setItem("scroll-target", sectionId);
 
-      window.location.href = "/";
+      router.push("/");
 
       return;
     }

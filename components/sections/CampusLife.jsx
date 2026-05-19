@@ -43,39 +43,47 @@ export default function Campus() {
 
     if (!track) return;
 
-    const totalWidth = track.scrollWidth / 2;
+    const media = gsap.matchMedia();
 
-    const tween = gsap.to(track, {
-      x: -totalWidth,
+    media.add("(min-width: 1024px)", () => {
+      const totalWidth = track.scrollWidth / 2;
 
-      duration: 28,
+      const tween = gsap.to(track, {
+        x: -totalWidth,
 
-      ease: "none",
+        duration: 28,
 
-      repeat: -1,
+        ease: "none",
+
+        repeat: -1,
+      });
+
+      return () => {
+        tween.kill();
+      };
     });
 
     return () => {
-      tween.kill();
+      media.revert();
     };
   }, []);
 
   return (
-    <section id="campus-life" className="relative bg-[#F7F5F2] py-24 overflow-hidden">
+    <section id="campus-life" className="relative bg-[#F7F5F2] py-14 sm:py-16 lg:py-24 overflow-hidden">
       <Container>
         {/* HERO */}
-        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-end">
+        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-10 items-end">
           {/* LEFT */}
           <div className="max-w-xl">
-            <span className="uppercase tracking-[0.25em] text-sm text-[#B68D40]">
+            <span className="uppercase tracking-[0.22em] lg:tracking-[0.25em] text-[11px] lg:text-sm text-[#B68D40]">
               Campus Experience
             </span>
 
-            <h2 className="mt-6 text-[3.2rem] leading-[0.95] text-[#111111]">
+            <h2 className="mt-3 lg:mt-6 text-[2.05rem] sm:text-[2.45rem] lg:text-[3.2rem] leading-[1] lg:leading-[0.95] text-[#111111]">
               A future-ready campus built for innovation and student life.
             </h2>
 
-            <p className="mt-8 text-lg leading-relaxed text-black/60">
+            <p className="mt-4 lg:mt-8 text-sm sm:text-[15px] lg:text-lg leading-relaxed text-black/60">
               JG University combines collaborative learning spaces, advanced
               classrooms, IIoT Labs, R&D + Incubation Centres, tech-enabled
               libraries, and a fully Wi-Fi enabled campus to create a modern
@@ -89,7 +97,7 @@ export default function Campus() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative h-[360px] rounded-[2.4rem] overflow-hidden group"
+            className="relative h-[240px] sm:h-[300px] lg:h-[360px] rounded-[1.4rem] lg:rounded-[2.4rem] overflow-hidden group"
           >
             <Image
               src="/images/campus/campus-1.jpg"
@@ -100,8 +108,8 @@ export default function Campus() {
 
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent" />
 
-            <div className="absolute bottom-10 left-8">
-              <h3 className="text-white text-4xl leading-tight max-w-60">
+            <div className="absolute bottom-5 left-5 lg:bottom-10 lg:left-8">
+              <h3 className="text-white text-2xl lg:text-4xl leading-tight max-w-60">
                 Spaces designed for learning, collaboration and growth.
               </h3>
             </div>
@@ -109,21 +117,21 @@ export default function Campus() {
         </div>
 
         {/* HORIZONTAL STRIP */}
-        <div className="relative mt-14 overflow-hidden border-y border-black/10 py-3">
+        <div className="relative mt-8 lg:mt-14 overflow-x-auto lg:overflow-hidden border-y border-black/10 py-3 no-scrollbar touch-pan-x">
           {/* LEFT FADE */}
-          <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#F7F5F2] to-transparent z-20 pointer-events-none" />
+          <div className="absolute left-0 top-0 hidden h-full w-24 bg-gradient-to-r from-[#F7F5F2] to-transparent z-20 pointer-events-none lg:block" />
 
           {/* RIGHT FADE */}
-          <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#F7F5F2] to-transparent z-20 pointer-events-none" />
+          <div className="absolute right-0 top-0 hidden h-full w-24 bg-gradient-to-l from-[#F7F5F2] to-transparent z-20 pointer-events-none lg:block" />
 
           <div
             ref={trackRef}
-            className="flex gap-4 w-max will-change-transform"
+            className="flex gap-3 lg:gap-4 w-max lg:will-change-transform"
           >
             {[...horizontalImages, ...horizontalImages].map((image, index) => (
               <div
                 key={index}
-                className="relative w-[360px] h-[210px] rounded-[2.2rem] overflow-hidden shrink-0"
+                className="relative w-[220px] sm:w-[280px] lg:w-[360px] h-[132px] sm:h-[170px] lg:h-[210px] rounded-[1.35rem] lg:rounded-[2.2rem] overflow-hidden shrink-0"
               >
                 <Image src={image} alt="Campus" fill className="object-cover" />
 
@@ -134,9 +142,9 @@ export default function Campus() {
         </div>
 
         {/* CULTURE SECTION */}
-        <div className="mt-14 grid lg:grid-cols-[1fr_0.9fr] gap-5 items-center">
+        <div className="mt-8 lg:mt-14 grid lg:grid-cols-[1fr_0.9fr] gap-4 lg:gap-5 items-center">
           {/* IMAGE */}
-          <div className="relative h-[360px] rounded-[2rem] overflow-hidden">
+          <div className="relative h-[260px] sm:h-[320px] lg:h-[360px] rounded-[1.4rem] lg:rounded-[2rem] overflow-hidden">
             {festImages.map((image, index) => (
               <motion.div
                 key={index}
@@ -162,12 +170,12 @@ export default function Campus() {
               </motion.div>
             ))}
 
-            <div className="absolute bottom-8 left-8 z-20">
-              <p className="text-white/70 uppercase tracking-[0.2em] text-xs">
+            <div className="absolute bottom-5 left-5 lg:bottom-8 lg:left-8 z-20">
+              <p className="text-white/70 uppercase tracking-[0.18em] lg:tracking-[0.2em] text-[10px] lg:text-xs">
                 Campus Life
               </p>
 
-              <h3 className="mt-3 text-white text-4xl leading-tight max-w-lg">
+              <h3 className="mt-2 lg:mt-3 text-white text-2xl lg:text-4xl leading-tight max-w-lg">
                 Culture, creativity, innovation and unforgettable experiences.
               </h3>
             </div>
@@ -179,18 +187,18 @@ export default function Campus() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="bg-white rounded-[2rem] p-6 h-[360px] flex flex-col justify-between"
+            className="bg-white rounded-[1.4rem] lg:rounded-[2rem] p-4 sm:p-5 lg:p-6 min-h-[260px] lg:h-[360px] flex flex-col justify-between"
           >
             <div>
-              <span className="uppercase tracking-[0.25em] text-xs text-[#B68D40]">
+              <span className="uppercase tracking-[0.22em] lg:tracking-[0.25em] text-[10px] lg:text-xs text-[#B68D40]">
                 Student Culture
               </span>
 
-              <h3 className="mt-4 text-3xl leading-[1.05] text-[#111111] max-w-md">
+              <h3 className="mt-3 lg:mt-4 text-2xl lg:text-3xl leading-[1.05] text-[#111111] max-w-md">
                 Beyond academics, a vibrant student experience.
               </h3>
 
-              <p className="mt-5 text-black/60 leading-relaxed text-[15px]">
+              <p className="mt-3 lg:mt-5 text-black/60 leading-relaxed text-[13px] sm:text-sm lg:text-[15px]">
                 From technical communities and collaborative workshops to
                 cultural festivals, performances, competitions, and student-led
                 initiatives, campus life at JG University is designed to inspire
@@ -198,19 +206,21 @@ export default function Campus() {
               </p>
             </div>
 
-            <div className="mt-7 flex gap-8 border-t border-black/10 pt-5">
+            <div className="mt-5 lg:mt-7 flex gap-8 border-t border-black/10 pt-4 lg:pt-5">
               <div>
-                <p className="text-2xl text-[#111111]">24×7</p>
+                <p className="text-xl lg:text-2xl text-[#111111]">24x7</p>
 
-                <p className="mt-1 text-xs text-black/50">
+                <p className="mt-1 text-[11px] lg:text-xs text-black/50">
                   Learning Environment
                 </p>
               </div>
 
               <div>
-                <p className="text-2xl text-[#111111]">10+</p>
+                <p className="text-xl lg:text-2xl text-[#111111]">10+</p>
 
-                <p className="mt-1 text-xs text-black/50">Innovation Spaces</p>
+                <p className="mt-1 text-[11px] lg:text-xs text-black/50">
+                  Innovation Spaces
+                </p>
               </div>
             </div>
           </motion.div>

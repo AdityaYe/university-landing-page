@@ -38,42 +38,44 @@ export default function StatsCard() {
   ];
 
   return (
-    <section className="relative z-30 -mt-32 sm:-mt-28 md:-mt-24 lg:-mt-20 pb-10">
+    <section className="relative z-30 -mt-20 sm:-mt-24 lg:-mt-20 pb-8 lg:pb-10">
       <div className="w-[92%] max-w-6xl mx-auto">
         <div
-          className={`grid grid-cols-2 md:grid-cols-4 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border transition-all duration-700 ${
+          className={`grid grid-cols-2 md:grid-cols-4 rounded-[1.25rem] sm:rounded-[1.5rem] lg:rounded-[2.5rem] overflow-hidden border bg-[#F7F5F2]/95 border-black/5 shadow-[0_10px_40px_rgba(0,0,0,0.08)] backdrop-blur-2xl lg:transition-all lg:duration-700 ${
             scrolled
-              ? "bg-[#F7F5F2]/95 border-black/5 shadow-[0_10px_40px_rgba(0,0,0,0.08)] backdrop-blur-2xl"
-              : "bg-white/10 border-white/10 backdrop-blur-2xl"
+              ? "lg:bg-[#F7F5F2]/95 lg:border-black/5 lg:shadow-[0_10px_40px_rgba(0,0,0,0.08)]"
+              : "lg:bg-white/10 lg:border-white/10 lg:shadow-none"
           }`}
         >
           {stats.map((item, index) => (
             <div
               key={index}
-              className={`p-7 sm:p-8 md:p-10 text-center transition-all duration-700 ${
+              className={`p-3.5 sm:p-4 md:p-5 lg:p-10 text-center lg:transition-all lg:duration-700 ${
                 index !== stats.length - 1
                   ? scrolled
                     ? "md:border-r border-black/10"
-                    : "md:border-r border-transparent"
+                    : "md:border-r border-black/10 lg:border-transparent"
                   : ""
               } ${
                 index < 2
                   ? scrolled
                     ? "border-b md:border-b-0 border-black/10"
-                    : "border-b md:border-b-0 border-transparent"
+                    : "border-b md:border-b-0 border-black/10 lg:border-transparent"
                   : ""
               }`}
             >
               <div
-                className={`overflow-hidden transition-all duration-700 ${
-                  scrolled ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                className={`lg:overflow-hidden lg:transition-all lg:duration-700 ${
+                  scrolled
+                    ? "lg:max-h-40 lg:opacity-100"
+                    : "lg:max-h-0 lg:opacity-0"
                 }`}
               >
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-light text-[#1B1B1B]">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-[#1B1B1B]">
                   {item.number}
                 </h3>
 
-                <p className="mt-3 md:mt-4 text-sm sm:text-base text-[#6B6B6B] leading-relaxed">
+                <p className="mt-1.5 lg:mt-4 text-[11px] sm:text-xs md:text-sm lg:text-base text-[#6B6B6B] leading-snug lg:leading-relaxed">
                   {item.label}
                 </p>
               </div>

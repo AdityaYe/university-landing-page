@@ -3,13 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  GraduationCap,
-  CalendarDays,
-  BadgeCheck,
-  Globe2,
-} from "lucide-react";
 
 import Container from "../../components/ui/Container";
 import AdmissionModal from "../../components/ui/AdmissionModal";
@@ -19,7 +12,7 @@ export default function AdmissionsPage() {
   return (
     <main className="bg-[#F7F5F2] overflow-hidden">
       {/* HERO */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative min-h-[620px] md:h-screen overflow-hidden">
         <Image
           src="/images/extra/admissions-image.png"
           alt="Admissions"
@@ -33,28 +26,28 @@ export default function AdmissionsPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
         <div className="absolute inset-0 flex items-end">
-          <Container className="pb-20">
+          <Container className="pb-16 md:pb-20">
             <motion.div
               initial={{ opacity: 0, y: 35 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="max-w-3xl"
             >
-              <p className="uppercase tracking-[0.25em] text-sm text-[#D4A514]">
+              <p className="uppercase tracking-[0.22em] md:tracking-[0.25em] text-[11px] md:text-sm text-[#D4A514]">
                 Admissions 2026
               </p>
 
-              <h1 className="mt-6 text-white text-[5.5rem] leading-[0.92] tracking-tight">
+              <h1 className="mt-3 md:mt-6 text-white text-[2.7rem] sm:text-[3.4rem] md:text-[5.5rem] leading-[1] md:leading-[0.92] tracking-tight">
                 Build your future at JG University.
               </h1>
 
-              <p className="mt-8 text-xl leading-relaxed text-white/70 max-w-2xl">
+              <p className="mt-4 md:mt-8 text-sm sm:text-base md:text-xl leading-relaxed text-white/70 max-w-2xl">
                 A seamless admission experience designed to identify ambitious
                 learners, future innovators and leaders ready to create
                 meaningful impact.
               </p>
 
-              <div className="mt-10 flex flex-wrap gap-5">
+              <div className="mt-6 md:mt-10 flex flex-wrap gap-3 md:gap-5">
                 <AdmissionModal />
 
                 <a
@@ -62,7 +55,7 @@ export default function AdmissionsPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="h-14 px-7 rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-white hover:bg-white/15 transition-all duration-500">
+                  <button className="h-11 md:h-14 px-5 md:px-7 rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-white text-sm md:text-base hover:bg-white/15 transition-all duration-500">
                     Download Brochure
                   </button>
                 </a>
@@ -73,10 +66,10 @@ export default function AdmissionsPage() {
       </section>
 
       {/* PROGRAMME SELECTOR */}
-      <section className="pb-24">
+      <section className="pb-14 md:pb-24">
         <Container>
           {/* TABS */}
-          <div className="bg-white rounded-[2.8rem] p-3 border border-black/5">
+          <div className="bg-white rounded-[1.5rem] md:rounded-[2.8rem] p-2 md:p-3 border border-black/5">
             <div className="grid md:grid-cols-3 gap-3">
               {[
                 {
@@ -100,7 +93,7 @@ export default function AdmissionsPage() {
                 <button
                   key={index}
                   onClick={() => setActiveProgramme(item.id)}
-                  className={`group relative overflow-hidden rounded-[2rem] px-8 py-8 text-left transition-all duration-500 ${
+                  className={`group relative overflow-hidden rounded-[1.15rem] md:rounded-[2rem] px-4 md:px-8 py-4 md:py-8 text-left transition-all duration-500 ${
                     activeProgramme === item.id
                       ? "bg-[#111111] text-white"
                       : "bg-[#F7F5F2] hover:bg-[#EFE9DE]"
@@ -116,7 +109,7 @@ export default function AdmissionsPage() {
 
                   <div className="relative z-10">
                     <p
-                      className={`text-xs uppercase tracking-[0.22em] ${
+                      className={`text-[10px] md:text-xs uppercase tracking-[0.18em] md:tracking-[0.22em] ${
                         activeProgramme === item.id
                           ? "text-white/40"
                           : "text-black/35"
@@ -126,7 +119,7 @@ export default function AdmissionsPage() {
                     </p>
 
                     <h3
-                      className={`mt-4 text-[2rem] leading-[1] ${
+                      className={`mt-2 md:mt-4 text-[1.35rem] md:text-[2rem] leading-[1] ${
                         activeProgramme === item.id
                           ? "text-white"
                           : "text-[#111111]"
@@ -136,7 +129,7 @@ export default function AdmissionsPage() {
                     </h3>
 
                     <div
-                      className={`mt-8 h-[2px] w-full transition-all duration-500 ${
+                      className={`mt-4 md:mt-8 h-[2px] w-full transition-all duration-500 ${
                         activeProgramme === item.id
                           ? "bg-[#D4A514]"
                           : "bg-black/8 group-hover:bg-[#B68D40]"
@@ -154,27 +147,27 @@ export default function AdmissionsPage() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mt-20"
+              className="mt-10 md:mt-20"
             >
-              <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-14 items-end">
+              <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-5 md:gap-14 items-end">
                 <div>
-                  <span className="uppercase tracking-[0.25em] text-sm text-[#B68D40]">
+                  <span className="uppercase tracking-[0.22em] md:tracking-[0.25em] text-[11px] md:text-sm text-[#B68D40]">
                     Undergraduate Admissions
                   </span>
 
-                  <h2 className="mt-6 text-[4rem] leading-[0.95] text-[#111111]">
+                  <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-[4rem] leading-[1] md:leading-[0.95] text-[#111111]">
                     UG Programmes
                   </h2>
                 </div>
 
                 <div>
-                  <p className="text-lg leading-relaxed text-black/60">
+                  <p className="text-sm md:text-lg leading-relaxed text-black/60">
                     Candidates applying for undergraduate programmes go through
                     a carefully designed admission process focused on academic
                     readiness, communication skills, and potential.
                   </p>
 
-                  <p className="mt-6 text-lg leading-relaxed text-black/60">
+                  <p className="mt-3 md:mt-6 text-sm md:text-lg leading-relaxed text-black/60">
                     The admission process includes application submission,
                     personal interaction, selection notification and admission
                     confirmation.
@@ -182,7 +175,7 @@ export default function AdmissionsPage() {
                 </div>
               </div>
 
-              <div className="mt-14 grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+              <div className="mt-7 md:mt-14 grid sm:grid-cols-2 xl:grid-cols-4 gap-3.5 md:gap-5">
                 {[
                   {
                     number: "01",
@@ -214,12 +207,12 @@ export default function AdmissionsPage() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className={`rounded-[2.5rem] p-8 min-h-[320px] flex flex-col justify-between ${
+                    className={`rounded-[1.35rem] md:rounded-[2.5rem] p-4 md:p-8 min-h-[178px] md:min-h-[320px] flex flex-col justify-between ${
                       index % 2 === 0 ? "bg-[#111111] text-white" : "bg-white"
                     }`}
                   >
                     <span
-                      className={`text-sm ${
+                      className={`text-xs md:text-sm ${
                         index % 2 === 0 ? "text-white/40" : "text-black/30"
                       }`}
                     >
@@ -227,10 +220,10 @@ export default function AdmissionsPage() {
                     </span>
 
                     <div>
-                      <h3 className="text-3xl leading-tight">{item.title}</h3>
+                      <h3 className="text-[1.35rem] md:text-3xl leading-tight">{item.title}</h3>
 
                       <p
-                        className={`mt-5 leading-relaxed ${
+                        className={`mt-3 md:mt-5 text-[13px] md:text-base leading-relaxed ${
                           index % 2 === 0 ? "text-white/65" : "text-black/60"
                         }`}
                       >
@@ -249,34 +242,34 @@ export default function AdmissionsPage() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mt-20"
+              className="mt-10 md:mt-20"
             >
-              <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-14 items-end">
+              <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-5 md:gap-14 items-end">
                 <div>
-                  <span className="uppercase tracking-[0.25em] text-sm text-[#B68D40]">
+                  <span className="uppercase tracking-[0.22em] md:tracking-[0.25em] text-[11px] md:text-sm text-[#B68D40]">
                     Postgraduate Admissions
                   </span>
 
-                  <h2 className="mt-6 text-[4rem] leading-[0.95] text-[#111111]">
+                  <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-[4rem] leading-[1] md:leading-[0.95] text-[#111111]">
                     PG Programmes
                   </h2>
                 </div>
 
                 <div>
-                  <p className="text-lg leading-relaxed text-black/60">
+                  <p className="text-sm md:text-lg leading-relaxed text-black/60">
                     Postgraduate admissions at JG University are designed to
                     assess analytical ability, aptitude and academic
                     preparedness through JGET and personal assessment rounds.
                   </p>
 
-                  <p className="mt-6 text-lg leading-relaxed text-black/60">
+                  <p className="mt-3 md:mt-6 text-sm md:text-lg leading-relaxed text-black/60">
                     Candidates with CAT, CMAT, XAT, NMAT, MAT, SNAP, GRE and
                     equivalent examinations may receive exemption from JGET.
                   </p>
                 </div>
               </div>
 
-              <div className="mt-14 grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+              <div className="mt-7 md:mt-14 grid sm:grid-cols-2 xl:grid-cols-3 gap-3.5 md:gap-5">
                 {[
                   {
                     number: "01",
@@ -322,16 +315,16 @@ export default function AdmissionsPage() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-[2.5rem] p-8 min-h-[290px] flex flex-col justify-between"
+                    className="bg-white rounded-[1.35rem] md:rounded-[2.5rem] p-4 md:p-8 min-h-[168px] md:min-h-[290px] flex flex-col justify-between"
                   >
-                    <span className="text-sm text-black/30">{item.number}</span>
+                    <span className="text-xs md:text-sm text-black/30">{item.number}</span>
 
                     <div>
-                      <h3 className="text-3xl leading-tight text-[#111111]">
+                      <h3 className="text-[1.35rem] md:text-3xl leading-tight text-[#111111]">
                         {item.title}
                       </h3>
 
-                      <p className="mt-5 leading-relaxed text-black/60">
+                      <p className="mt-3 md:mt-5 text-[13px] md:text-base leading-relaxed text-black/60">
                         {item.description}
                       </p>
                     </div>
@@ -347,17 +340,17 @@ export default function AdmissionsPage() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mt-20 bg-[#111111] text-white rounded-[3rem] p-10 md:p-14"
+              className="mt-10 md:mt-20 bg-[#111111] text-white rounded-[1.5rem] md:rounded-[3rem] p-5 md:p-14"
             >
-              <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-14">
+              <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-6 md:gap-14">
                 <div>
                   <span className="uppercase tracking-[0.22em] text-xs text-[#D4A514]">
                     Research & Innovation
                   </span>
 
-                  <h2 className="mt-6 text-5xl leading-[1]">Ph.D Programmes</h2>
+                  <h2 className="mt-3 md:mt-6 text-[2rem] md:text-5xl leading-[1]">Ph.D Programmes</h2>
 
-                  <p className="mt-6 text-white/65 text-lg leading-relaxed">
+                  <p className="mt-4 md:mt-6 text-white/65 text-sm md:text-lg leading-relaxed">
                     Our doctoral admission process is designed to identify
                     candidates prepared for advanced academic research and
                     contribution to their respective fields.
@@ -392,15 +385,15 @@ export default function AdmissionsPage() {
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className="border border-white/10 rounded-[2rem] p-7"
+                      className="border border-white/10 rounded-[1.2rem] md:rounded-[2rem] p-4 md:p-7"
                     >
                       <div className="flex items-start justify-between gap-5">
                         <div>
-                          <h3 className="text-2xl leading-tight">
+                          <h3 className="text-lg md:text-2xl leading-tight">
                             {item.title}
                           </h3>
 
-                          <p className="mt-4 text-white/60 leading-relaxed">
+                          <p className="mt-2 md:mt-4 text-sm md:text-base text-white/60 leading-relaxed">
                             {item.description}
                           </p>
                         </div>
@@ -419,14 +412,14 @@ export default function AdmissionsPage() {
       </section>
 
       {/* CTA */}
-      <section className="pb-24">
+      <section className="pb-14 md:pb-24">
         <Container>
           <motion.div
             initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="relative rounded-[3rem] overflow-hidden"
+            className="relative rounded-[1.5rem] md:rounded-[3rem] overflow-hidden"
           >
             {/* BG */}
             <div className="absolute inset-0">
@@ -441,22 +434,22 @@ export default function AdmissionsPage() {
             </div>
 
             {/* CONTENT */}
-            <div className="relative z-10 py-28 px-10 text-center">
-              <p className="uppercase tracking-[0.25em] text-sm text-[#D4A514]">
+            <div className="relative z-10 py-12 md:py-28 px-5 md:px-10 text-center">
+              <p className="uppercase tracking-[0.22em] md:tracking-[0.25em] text-[11px] md:text-sm text-[#D4A514]">
                 Begin Your Journey
               </p>
 
-              <h2 className="mt-6 text-white text-[4rem] leading-[0.95] max-w-4xl mx-auto">
+              <h2 className="mt-3 md:mt-6 text-white text-[2.05rem] md:text-[4rem] leading-[1] md:leading-[0.95] max-w-4xl mx-auto">
                 Ready to become part of the JG University ecosystem?
               </h2>
 
-              <p className="mt-6 text-white/65 text-lg leading-relaxed max-w-2xl mx-auto">
+              <p className="mt-4 md:mt-6 text-white/65 text-sm md:text-lg leading-relaxed max-w-2xl mx-auto">
                 Start your admission process today and take the next step
                 towards innovation-driven education and future-ready
                 opportunities.
               </p>
 
-              <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
+              <div className="mt-6 md:mt-10 flex flex-wrap items-center justify-center gap-3 md:gap-5">
                 <AdmissionModal />
 
                 <a
@@ -464,7 +457,7 @@ export default function AdmissionsPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="h-16 px-8 rounded-full border border-white/20 text-white backdrop-blur-sm hover:bg-white/10 transition-all">
+                  <button className="h-11 md:h-16 px-5 md:px-8 rounded-full border border-white/20 text-white text-sm md:text-base backdrop-blur-sm hover:bg-white/10 transition-all">
                     Download Brochure
                   </button>
                 </a>
