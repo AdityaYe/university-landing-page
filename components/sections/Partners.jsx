@@ -73,8 +73,27 @@ export default function Partners() {
           {/* Gradient Fade Right */}
           <div className="absolute right-0 top-0 h-full w-16 sm:w-28 lg:w-52 bg-gradient-to-l from-[#F7F5F2] to-transparent z-20 pointer-events-none" />
 
-          {/* Logos */}
-          <div className="overflow-hidden py-8 lg:py-16">
+          {/* Logos: touch scroller for mobile/tablet */}
+          <div className="overflow-x-auto no-scrollbar py-8 pr-6 touch-pan-x lg:hidden">
+            <div className="flex w-max snap-x snap-mandatory items-center gap-9 sm:gap-12">
+              {partners.map((partner, index) => (
+                <div
+                  key={index}
+                  className="relative h-20 w-40 shrink-0 snap-center sm:h-24 sm:w-52"
+                >
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    fill
+                    className="object-contain opacity-90"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Logos: desktop marquee */}
+          <div className="hidden overflow-hidden py-16 lg:block">
             <motion.div
               animate={{ x: ["0%", "-50%"] }}
               transition={{
@@ -82,7 +101,7 @@ export default function Partners() {
                 repeat: Infinity,
                 ease: "linear",
               }}
-              className="flex items-center gap-8 sm:gap-10 lg:gap-16 w-max"
+              className="flex items-center gap-16 w-max"
             >
               {[...partners, ...partners].map((partner, index) => (
                 <div

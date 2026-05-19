@@ -52,8 +52,8 @@ export default function CTA() {
                 {/* BUTTONS */}
                 <div className="mt-3 lg:mt-12 flex items-center gap-2 lg:gap-5">
                   {/* PRIMARY */}
-                  <div className="flex-1 lg:flex-none">
-                    <AdmissionModal className="w-full lg:w-auto h-9 lg:h-auto px-4 lg:px-8 text-[11px] lg:text-sm" />
+                  <div className="min-w-0 flex-1 basis-0 lg:flex-none lg:basis-auto">
+                    <AdmissionModal className="w-full h-9 px-4 text-[11px] leading-none lg:w-auto lg:h-[52px] lg:px-6 lg:text-sm" />
                   </div>
 
                   {/* SECONDARY */}
@@ -61,9 +61,9 @@ export default function CTA() {
                     href="https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x395e8353dee254bb:0x6909d82c9319e0a0!3e0?g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 lg:flex-none"
+                    className="min-w-0 flex-1 basis-0 lg:flex-none lg:basis-auto"
                   >
-                    <button className="w-full lg:w-auto h-9 lg:h-auto px-4 lg:px-8 py-0 lg:py-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl text-white text-[11px] lg:text-sm tracking-wide hover:bg-white/20 transition-all duration-500 shadow-[0_4px_20px_rgba(0,0,0,0.65)]">
+                    <button className="w-full h-9 px-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl text-white text-[11px] leading-none tracking-wide hover:bg-white/20 transition-all duration-500 shadow-[0_4px_20px_rgba(0,0,0,0.65)] lg:w-auto lg:h-auto lg:px-8 lg:py-4 lg:text-sm">
                       Visit Campus
                     </button>
                   </a>

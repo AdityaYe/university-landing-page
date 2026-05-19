@@ -7,7 +7,7 @@ import { X, ChevronDown } from "lucide-react";
 
 import { programmes } from "../../data/programmes";
 
-export default function AdmissionModal() {
+export default function AdmissionModal({ className = "" }) {
   const [open, setOpen] = useState(false);
 
   const [selectedLevel, setSelectedLevel] = useState("");
@@ -27,7 +27,7 @@ export default function AdmissionModal() {
       {/* OPEN BUTTON */}
       <button
         onClick={() => setOpen(true)}
-        className="h-11 lg:h-[52px] px-5 lg:px-6 rounded-full bg-[#D4A514] text-white text-sm hover:scale-[1.03] transition-all duration-500"
+        className={`h-11 lg:h-[52px] px-5 lg:px-6 rounded-full bg-[#D4A514] text-white text-sm hover:scale-[1.03] transition-all duration-500 ${className}`}
       >
         Apply Now
       </button>

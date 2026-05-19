@@ -25,13 +25,13 @@ export default function Footer() {
   return (
     <footer className="relative bg-[#111111] text-white overflow-hidden">
       {/* TOP */}
-      <section className="pt-24 pb-20 border-b border-white/10">
+      <section className="pt-12 pb-10 border-b border-white/10 lg:pt-24 lg:pb-20">
         <Container>
-          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-16">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             {/* LEFT */}
             <div>
               {/* LOGO */}
-              <div className="relative w-[280px] h-[85px]">
+              <div className="relative w-[210px] h-[64px] lg:w-[280px] lg:h-[85px]">
                 <Image
                   src="/images/logo/jg-un-1-logo.png"
                   alt="JG University"
@@ -40,20 +40,20 @@ export default function Footer() {
                 />
               </div>
 
-              <h2 className="mt-10 text-[3.5rem] leading-[0.95] max-w-xl">
+              <h2 className="mt-6 text-[2.05rem] leading-[1] max-w-xl lg:mt-10 lg:text-[3.5rem] lg:leading-[0.95]">
                 Future-ready education designed for tomorrow’s leaders.
               </h2>
 
-              <p className="mt-8 text-white/60 leading-relaxed max-w-lg">
+              <p className="mt-4 text-sm text-white/60 leading-relaxed max-w-lg lg:mt-8 lg:text-base">
                 JG University combines academic excellence, industry-driven
                 learning, innovation ecosystems and vibrant campus life to
                 create transformative learning experiences.
               </p>
 
               {/* BUTTONS */}
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-6 grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap sm:gap-4 lg:mt-10">
                 <Link href="/admissions">
-                  <button className="h-14 px-7 rounded-full bg-[#D4A514] text-white hover:scale-[1.03] transition-all duration-500">
+                  <button className="h-10 w-full px-4 rounded-full bg-[#D4A514] text-xs text-white hover:scale-[1.03] transition-all duration-500 sm:w-auto lg:h-14 lg:px-7 lg:text-base">
                     Apply Now
                   </button>
                 </Link>
@@ -63,7 +63,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="h-14 px-7 rounded-full border border-white/15 bg-white/5 backdrop-blur-md text-white hover:bg-white/10 transition-all duration-500">
+                  <button className="h-10 w-full px-4 rounded-full border border-white/15 bg-white/5 backdrop-blur-md text-xs text-white hover:bg-white/10 transition-all duration-500 sm:w-auto lg:h-14 lg:px-7 lg:text-base">
                     Download Brochure
                   </button>
                 </a>
@@ -71,19 +71,19 @@ export default function Footer() {
             </div>
 
             {/* RIGHT */}
-            <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-10">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-2 xl:grid-cols-4 lg:gap-10">
               {/* UG */}
               <div>
                 <p className="uppercase tracking-[0.22em] text-xs text-white/40">
                   Undergraduate
                 </p>
 
-                <div className="mt-7 space-y-4">
+                <div className="mt-4 space-y-2.5 lg:mt-7 lg:space-y-4">
                   {ugProgrammes.map((programme) => (
                     <Link
                       key={programme.slug}
                       href={`/programmes/${programme.slug}`}
-                      className="group flex items-center justify-between text-white/70 hover:text-white transition-all"
+                      className="group flex items-center justify-between gap-3 text-sm text-white/70 hover:text-white transition-all lg:text-base"
                     >
                       <span>{programme.title}</span>
 
@@ -102,12 +102,12 @@ export default function Footer() {
                   Postgraduate
                 </p>
 
-                <div className="mt-7 space-y-4">
+                <div className="mt-4 space-y-2.5 lg:mt-7 lg:space-y-4">
                   {pgProgrammes.map((programme) => (
                     <Link
                       key={programme.slug}
                       href={`/programmes/${programme.slug}`}
-                      className="group flex items-center justify-between text-white/70 hover:text-white transition-all"
+                      className="group flex items-center justify-between gap-3 text-sm text-white/70 hover:text-white transition-all lg:text-base"
                     >
                       <span>{programme.title}</span>
 
@@ -126,12 +126,12 @@ export default function Footer() {
                   Doctoral
                 </p>
 
-                <div className="mt-7 space-y-4">
+                <div className="mt-4 space-y-2.5 lg:mt-7 lg:space-y-4">
                   {phdProgrammes.map((programme) => (
                     <Link
                       key={programme.slug}
                       href={`/programmes/${programme.slug}`}
-                      className="group flex items-center justify-between text-white/70 hover:text-white transition-all"
+                      className="group flex items-center justify-between gap-3 text-sm text-white/70 hover:text-white transition-all lg:text-base"
                     >
                       <span>{programme.title}</span>
 
@@ -150,9 +150,9 @@ export default function Footer() {
                   Contact
                 </p>
 
-                <div className="mt-7 space-y-6">
+                <div className="mt-4 space-y-4 lg:mt-7 lg:space-y-6">
                   {/* ADDRESS */}
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-3 lg:gap-4">
                     <MapPin
                       size={18}
                       className="text-[#D4A514] shrink-0 mt-1"
@@ -166,7 +166,7 @@ export default function Footer() {
                   </div>
 
                   {/* EMAIL */}
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-3 lg:gap-4">
                     <Mail size={18} className="text-[#D4A514] shrink-0 mt-1" />
 
                     <div className="space-y-1 text-sm">
@@ -187,7 +187,7 @@ export default function Footer() {
                   </div>
 
                   {/* PHONE */}
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-3 lg:gap-4">
                     <Phone size={18} className="text-[#D4A514] shrink-0 mt-1" />
 
                     <a
@@ -199,7 +199,7 @@ export default function Footer() {
                   </div>
 
                   {/* SOCIALS */}
-                  <div className="flex items-center gap-3 pt-3">
+                  <div className="flex items-center gap-2.5 pt-1 lg:gap-3 lg:pt-3">
                     {[
                       {
                         icon: FaInstagram,
@@ -224,7 +224,7 @@ export default function Footer() {
                           href={item.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-11 h-11 rounded-full border border-white/10 bg-white/5 hover:bg-[#D4A514] hover:border-[#D4A514] transition-all duration-500 flex items-center justify-center"
+                          className="w-9 h-9 rounded-full border border-white/10 bg-white/5 hover:bg-[#D4A514] hover:border-[#D4A514] transition-all duration-500 flex items-center justify-center lg:w-11 lg:h-11"
                         >
                           <Icon size={16} />
                         </a>
@@ -239,14 +239,14 @@ export default function Footer() {
       </section>
 
       {/* BOTTOM */}
-      <section className="py-7">
+      <section className="py-5 lg:py-7">
         <Container>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-5">
-            <p className="text-white/35 text-sm">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 lg:gap-5">
+            <p className="text-white/35 text-xs lg:text-sm">
               © 2026 JG University. All rights reserved.
             </p>
 
-            <div className="flex flex-wrap items-center gap-8 text-sm text-white/40">
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-white/40 lg:gap-8 lg:text-sm">
               <Link href="/" className="hover:text-white transition">
                 Home
               </Link>
