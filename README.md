@@ -51,6 +51,12 @@ Includes:
 
 ---
 
+## Live Link
+
+https://university-landing-page-ten.vercel.app
+
+---
+
 ## Installation
 
 ### Clone Repository
