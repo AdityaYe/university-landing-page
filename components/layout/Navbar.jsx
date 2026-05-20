@@ -145,18 +145,14 @@ export default function Navbar() {
           </div>
 
           {/* DESKTOP NAV */}
-          <ul
-            className={`hidden xl:flex items-center gap-10 transition-colors duration-300 ${
-              scrolled ? "text-[#1B1B1B]" : "text-white"
-            }`}
-          >
+          <ul className="hidden xl:flex items-center gap-10">
             {navLinks.map((link) => (
               <li key={link.label}>
                 {link.route ? (
                   <Link
                     href={link.route}
-                    className={`text-sm tracking-wide transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A514] ${
-                      scrolled ? "hover:text-[#B68D40]" : "hover:text-white/70"
+                    className={`text-sm tracking-wide transition-colors duration-200 ${
+                      scrolled ? "text-[#1B1B1B]" : "text-white"
                     }`}
                   >
                     {link.label}
@@ -165,10 +161,8 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => handleSectionNavigation(link.section)}
-                    className={`text-sm tracking-wide transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A514] ${
-                      scrolled
-                        ? "hover:text-[#B68D40]"
-                        : "hover:text-white/70"
+                    className={`text-sm tracking-wide transition-colors duration-200 ${
+                      scrolled ? "text-[#1B1B1B]" : "text-white"
                     }`}
                   >
                     {link.label}
@@ -226,7 +220,9 @@ export default function Navbar() {
             type="button"
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
-            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={
+              menuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
             className={`xl:hidden transition-colors duration-300 ${
               scrolled ? "text-[#1B1B1B]" : "text-white"
             }`}
