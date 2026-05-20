@@ -120,6 +120,14 @@ export default function Features() {
         );
       });
 
+      /* TABLET + MOBILE RESET */
+      media.add("(max-width: 1023px)", () => {
+        gsap.set(cardsRef.current, {
+          clearProps: "transform",
+          y: 0,
+        });
+      });
+
       return () => media.revert();
     }, sectionRef);
 
@@ -140,7 +148,7 @@ export default function Features() {
                 JG University
               </span>
 
-              <h2 className="mt-3 lg:mt-8 text-[2.1rem] sm:text-[2.5rem] lg:text-[4.5rem] leading-[1] lg:leading-[0.95] text-[#111111] max-w-xl lg:max-w-none">
+              <h2 className="mt-3 lg:mt-8 text-[2.1rem] sm:text-[2.5rem] lg:text-[4.5rem] leading-none lg:leading-[0.95] text-[#111111] max-w-xl lg:max-w-none">
                 Education built around innovation, industry and impact.
               </h2>
 
@@ -175,7 +183,7 @@ export default function Features() {
                       delay: index * 0.03,
                     }}
                     viewport={{ once: true }}
-                    className={`rounded-[1.25rem] sm:rounded-[1.5rem] lg:rounded-[2.5rem] p-3.5 sm:p-4 lg:p-8 min-h-[150px] sm:min-h-[188px] lg:min-h-[280px] flex flex-col justify-between transition-all duration-500 hover:-translate-y-1 lg:hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] ${
+                    className={`rounded-[1.25rem] sm:rounded-3xl lg:rounded-[2.5rem] p-3.5 sm:p-4 lg:p-8 min-h-38 sm:min-h-47 lg:min-h-70 flex flex-col justify-between transition-all duration-500 hover:-translate-y-1 lg:hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] ${
                       isDark
                         ? "bg-[#111111] text-white"
                         : "bg-white border border-black/5"
@@ -190,7 +198,7 @@ export default function Features() {
                         <Icon
                           size={18}
                           aria-hidden="true"
-                          className={`lg:size-[26px] ${
+                          className={`lg:size-6.5 ${
                             isDark ? "text-[#D4A514]" : "text-[#B68D40]"
                           }`}
                         />
@@ -233,7 +241,7 @@ export default function Features() {
               Leadership
             </span>
 
-            <h2 className="mt-3 lg:mt-6 text-[2rem] sm:text-[2.45rem] lg:text-[4rem] leading-[1] lg:leading-[0.95] text-[#111111]">
+            <h2 className="mt-3 lg:mt-6 text-[2rem] sm:text-[2.45rem] lg:text-[4rem] leading-none lg:leading-[0.95] text-[#111111]">
               Visionary leadership shaping the future of education.
             </h2>
 
@@ -250,9 +258,9 @@ export default function Features() {
         <Container>
           <div className="space-y-12 lg:space-y-20">
             <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-6 lg:gap-14 items-center">
-              <figure className="relative h-[260px] sm:h-[340px] md:h-[400px] lg:h-[430px] rounded-[1.4rem] lg:rounded-[2.5rem] overflow-hidden">
+              <figure className="relative h-65 sm:h-85 md:h-100 lg:h-108 rounded-[1.4rem] lg:rounded-[2.5rem] overflow-hidden">
                 <Image
-                  src="/images/leaders/mp-chandran-image.png"
+                  src="/images/leaders/mp-chandran-image.webp"
                   alt="M.P Chandran"
                   fill
                   className="object-cover"
@@ -277,7 +285,7 @@ export default function Features() {
                 </p>
 
                 <div className="mt-5 lg:mt-10 grid grid-cols-3 gap-2.5 sm:gap-4">
-                  <div className="rounded-[1rem] lg:rounded-[1.6rem] bg-white border border-black/5 p-3 sm:p-4 lg:p-5">
+                  <div className="rounded-2xl lg:rounded-[1.6rem] bg-white border border-black/5 p-3 sm:p-4 lg:p-5">
                     <h4 className="text-2xl lg:text-3xl text-[#111111]">30+</h4>
 
                     <p className="mt-1.5 lg:mt-2 text-[11px] sm:text-xs lg:text-base text-black/55 leading-snug lg:leading-relaxed">
@@ -285,7 +293,7 @@ export default function Features() {
                     </p>
                   </div>
 
-                  <div className="rounded-[1rem] lg:rounded-[1.6rem] bg-white border border-black/5 p-3 sm:p-4 lg:p-5">
+                  <div className="rounded-2xl lg:rounded-[1.6rem] bg-white border border-black/5 p-3 sm:p-4 lg:p-5">
                     <h4 className="text-[13px] sm:text-sm lg:text-lg leading-tight text-[#111111]">
                       GCCI Education Task Force
                     </h4>
@@ -295,7 +303,7 @@ export default function Features() {
                     </p>
                   </div>
 
-                  <div className="rounded-[1rem] lg:rounded-[1.6rem] bg-white border border-black/5 p-3 sm:p-4 lg:p-5">
+                  <div className="rounded-2xl lg:rounded-[1.6rem] bg-white border border-black/5 p-3 sm:p-4 lg:p-5">
                     <h4 className="text-[13px] sm:text-sm lg:text-lg leading-tight text-[#111111]">
                       ASIA Charitable Trust
                     </h4>
@@ -327,19 +335,19 @@ export default function Features() {
                 </p>
 
                 <div className="mt-5 lg:mt-10 grid grid-cols-3 gap-2.5 sm:gap-4">
-                  <div className="rounded-[1rem] lg:rounded-[1.6rem] bg-white border border-black/5 p-3 sm:p-4 lg:p-5">
+                  <div className="rounded-2xl lg:rounded-[1.6rem] bg-white border border-black/5 p-3 sm:p-4 lg:p-5">
                     <h4 className="text-[13px] sm:text-sm lg:text-lg leading-tight text-[#111111]">
                       Doctorate in Management & Commerce
                     </h4>
                   </div>
 
-                  <div className="rounded-[1rem] lg:rounded-[1.6rem] bg-white border border-black/5 p-3 sm:p-4 lg:p-5">
+                  <div className="rounded-2xl lg:rounded-[1.6rem] bg-white border border-black/5 p-3 sm:p-4 lg:p-5">
                     <h4 className="text-[13px] sm:text-sm lg:text-lg leading-tight text-[#111111]">
                       Bharat Jyoti Award Recipient
                     </h4>
                   </div>
 
-                  <div className="rounded-[1rem] lg:rounded-[1.6rem] bg-white border border-black/5 p-3 sm:p-4 lg:p-5">
+                  <div className="rounded-2xl lg:rounded-[1.6rem] bg-white border border-black/5 p-3 sm:p-4 lg:p-5">
                     <h4 className="text-[13px] sm:text-sm lg:text-lg leading-tight text-[#111111]">
                       International Academic Leadership
                     </h4>
@@ -347,9 +355,9 @@ export default function Features() {
                 </div>
               </div>
 
-              <figure className="relative order-1 h-[260px] sm:h-[340px] md:h-[400px] lg:order-2 lg:h-[430px] rounded-[1.4rem] lg:rounded-[2.5rem] overflow-hidden">
+              <figure className="relative order-1 h-65 sm:h-85 md:h-100 lg:order-2 lg:h-108 rounded-[1.4rem] lg:rounded-[2.5rem] overflow-hidden">
                 <Image
-                  src="/images/leaders/ca-dani-image.png"
+                  src="/images/leaders/ca-dani-image.webp"
                   alt="Dr. CA Achyut Dani"
                   fill
                   className="object-cover"

@@ -4,11 +4,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[620px] overflow-hidden pb-14 sm:min-h-[680px] md:min-h-screen md:pb-12"
+      className="relative min-h-155 overflow-hidden pb-14 sm:min-h-170 md:min-h-screen md:pb-12"
     >
       {/* BACKGROUND */}
       <Image
-        src="/images/hero/jg-campus-image.png"
+        src="/images/hero/jg-campus-image.webp"
         alt="JG University Campus"
         fill
         priority
@@ -18,12 +18,12 @@ export default function Hero() {
       {/* OVERLAYS */}
       <div className="absolute inset-0 bg-black/35" />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/15 md:bg-gradient-to-r md:from-black/60 md:via-black/20 md:to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/35 to-black/15 md:bg-linear-to-r md:from-black/60 md:via-black/20 md:to-transparent" />
 
       {/* CONTENT */}
-      <div className="relative z-10 w-[92%] max-w-7xl mx-auto min-h-[620px] sm:min-h-[680px] md:min-h-screen flex flex-col justify-end md:justify-center pt-28 md:pt-36 lg:pt-40 pb-24 sm:pb-28 md:pb-32 lg:pb-20">
+      <div className="relative z-10 w-[92%] max-w-7xl mx-auto min-h-155 sm:min-h-170 md:min-h-screen flex flex-col justify-end md:justify-center pt-28 md:pt-36 lg:pt-40 pb-24 sm:pb-28 md:pb-32 lg:pb-20">
         {/* HEADING */}
-        <h1 className="max-w-[21rem] sm:max-w-2xl md:max-w-4xl text-white leading-[0.98] md:leading-[0.95] font-light text-[2.65rem] sm:text-[3.4rem] md:text-[5rem] lg:text-[7rem]">
+        <h1 className="max-w-84 sm:max-w-2xl md:max-w-4xl text-white leading-[0.98] md:leading-[0.95] font-light text-[2.65rem] sm:text-[3.4rem] md:text-[5rem] lg:text-[7rem]">
           Shaping minds,
           <br />
           building tomorrow.
@@ -40,7 +40,7 @@ export default function Hero() {
           {/* PRIMARY */}
           <a
             href="#programmes"
-            className="flex-1 sm:flex-none inline-flex h-11 w-full items-center justify-center rounded-full bg-white px-5 text-sm text-black transition-all duration-500 hover:bg-white/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto md:h-14 md:px-7 md:text-base"
+            className="flex-1 sm:flex-none inline-flex h-11 w-full items-center justify-center rounded-full bg-white px-5 text-sm text-black transition-all duration-500 hover:bg-white/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto md:h-14 md:px-7 md:text-base"
           >
             <span className="md:hidden">Programmes</span>
             <span className="hidden md:inline">Explore Programmes</span>
@@ -49,7 +49,7 @@ export default function Hero() {
           {/* SECONDARY */}
           <a
             href="#features"
-            className="flex-1 sm:flex-none inline-flex h-11 w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 text-sm text-white backdrop-blur-md transition-all duration-500 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto md:h-14 md:px-7 md:text-base"
+            className="flex-1 sm:flex-none inline-flex h-11 w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 text-sm text-white backdrop-blur-md transition-all duration-500 hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto md:h-14 md:px-7 md:text-base"
           >
             Learn More
           </a>

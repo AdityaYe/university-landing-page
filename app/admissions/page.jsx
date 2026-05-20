@@ -12,9 +12,9 @@ export default function AdmissionsPage() {
   return (
     <main className="bg-[#F7F5F2] overflow-hidden">
       {/* HERO */}
-      <section className="relative h-[100svh] min-h-[620px] overflow-hidden">
+      <section className="relative h-0svh min-h-155 overflow-hidden">
         <Image
-          src="/images/extra/admissions-image.png"
+          src="/images/hero/admissions-image.webp"
           alt="Admissions"
           fill
           priority
@@ -23,7 +23,7 @@ export default function AdmissionsPage() {
 
         <div className="absolute inset-0 bg-black/50" />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
 
         <div className="absolute inset-0 flex items-end">
           <Container className="pb-10 md:pb-20">
@@ -37,7 +37,7 @@ export default function AdmissionsPage() {
                 Admissions 2026
               </p>
 
-              <h1 className="mt-3 md:mt-6 text-white text-[2.35rem] sm:text-[3.4rem] md:text-[5.5rem] leading-[1] md:leading-[0.92] tracking-tight">
+              <h1 className="mt-3 md:mt-6 text-white text-[2.35rem] sm:text-[3.4rem] md:text-[5.5rem] leading-none md:leading-[0.92] tracking-tight">
                 Build your future at JG University.
               </h1>
 
@@ -48,13 +48,13 @@ export default function AdmissionsPage() {
               </p>
 
               <div className="mt-5 grid grid-cols-2 gap-2.5 sm:flex md:mt-10 md:gap-5">
-                <AdmissionModal className="h-10 w-full px-4 text-xs sm:w-auto md:h-[52px] md:px-6 md:text-sm" />
+                <AdmissionModal className="h-10 w-full px-4 text-xs sm:w-auto md:h-13 md:px-6 md:text-sm" />
 
                 <a
                   href="/brochures/jg-university-brochure.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-10 w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-4 text-xs text-white backdrop-blur-md transition-all duration-500 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:h-14 md:w-auto md:px-7 md:text-base"
+                  className="inline-flex h-10 w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-4 text-xs text-white backdrop-blur-md transition-all duration-500 hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:h-14 md:w-auto md:px-7 md:text-base"
                 >
                   Download Brochure
                 </a>
@@ -94,7 +94,7 @@ export default function AdmissionsPage() {
                   type="button"
                   aria-pressed={activeProgramme === item.id}
                   onClick={() => setActiveProgramme(item.id)}
-                  className={`group relative min-w-[168px] flex-1 overflow-hidden rounded-[1rem] md:min-w-0 md:rounded-[2rem] px-3.5 md:px-8 py-3 md:py-8 text-left transition-all duration-500 ${
+                  className={`group relative min-w-42 flex-1 overflow-hidden rounded-2xl md:min-w-0 md:rounded-4xl px-3.5 md:px-8 py-3 md:py-8 text-left transition-all duration-500 ${
                     activeProgramme === item.id
                       ? "bg-[#111111] text-white"
                       : "bg-[#F7F5F2] hover:bg-[#EFE9DE]"
@@ -104,7 +104,7 @@ export default function AdmissionsPage() {
                     className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
                       activeProgramme === item.id
                         ? "bg-white/5"
-                        : "bg-gradient-to-br from-[#D4A514]/10 to-transparent"
+                        : "bg-linear-to-br from-[#D4A514]/10 to-transparent"
                     }`}
                   />
 
@@ -120,7 +120,7 @@ export default function AdmissionsPage() {
                     </p>
 
                     <h3
-                      className={`mt-1.5 md:mt-4 text-[1.05rem] md:text-[2rem] leading-[1] ${
+                      className={`mt-1.5 md:mt-4 text-[1.05rem] md:text-[2rem] leading-none ${
                         activeProgramme === item.id
                           ? "text-white"
                           : "text-[#111111]"
@@ -130,7 +130,7 @@ export default function AdmissionsPage() {
                     </h3>
 
                     <div
-                      className={`mt-3 md:mt-8 h-[2px] w-full transition-all duration-500 ${
+                      className={`mt-3 md:mt-8 h-0.5 w-full transition-all duration-500 ${
                         activeProgramme === item.id
                           ? "bg-[#D4A514]"
                           : "bg-black/10 group-hover:bg-[#B68D40]"
@@ -156,7 +156,7 @@ export default function AdmissionsPage() {
                     Undergraduate Admissions
                   </span>
 
-                  <h2 className="mt-3 md:mt-6 text-[1.9rem] md:text-[4rem] leading-[1] md:leading-[0.95] text-[#111111]">
+                  <h2 className="mt-3 md:mt-6 text-[1.9rem] md:text-[4rem] leading-none md:leading-[0.95] text-[#111111]">
                     UG Programmes
                   </h2>
                 </div>
@@ -208,7 +208,7 @@ export default function AdmissionsPage() {
                 ].map((item, index) => (
                   <div
                     key={item.number}
-                    className={`rounded-[1.15rem] md:rounded-[2.5rem] p-3.5 md:p-8 min-h-[148px] md:min-h-[320px] flex flex-col justify-between ${
+                    className={`rounded-[1.15rem] md:rounded-[2.5rem] p-3.5 md:p-8 min-h-37 md:min-h-80 flex flex-col justify-between ${
                       index % 2 === 0 ? "bg-[#111111] text-white" : "bg-white"
                     }`}
                   >
@@ -251,7 +251,7 @@ export default function AdmissionsPage() {
                     Postgraduate Admissions
                   </span>
 
-                  <h2 className="mt-3 md:mt-6 text-[1.9rem] md:text-[4rem] leading-[1] md:leading-[0.95] text-[#111111]">
+                  <h2 className="mt-3 md:mt-6 text-[1.9rem] md:text-[4rem] leading-none md:leading-[0.95] text-[#111111]">
                     PG Programmes
                   </h2>
                 </div>
@@ -316,7 +316,7 @@ export default function AdmissionsPage() {
                 ].map((item) => (
                   <div
                     key={item.number}
-                    className="bg-white rounded-[1.15rem] md:rounded-[2.5rem] p-3.5 md:p-8 min-h-[140px] md:min-h-[290px] flex flex-col justify-between"
+                    className="bg-white rounded-[1.15rem] md:rounded-[2.5rem] p-3.5 md:p-8 min-h-35 md:min-h-72 flex flex-col justify-between"
                   >
                     <span className="text-xs md:text-sm text-black/30">{item.number}</span>
 
@@ -349,7 +349,7 @@ export default function AdmissionsPage() {
                     Research & Innovation
                   </span>
 
-                  <h2 className="mt-3 md:mt-6 text-[1.85rem] md:text-5xl leading-[1]">Ph.D Programmes</h2>
+                  <h2 className="mt-3 md:mt-6 text-[1.85rem] md:text-5xl leading-none">Ph.D Programmes</h2>
 
                   <p className="mt-3 md:mt-6 text-white/65 text-sm md:text-lg leading-relaxed">
                     Our doctoral admission process is designed to identify
@@ -386,7 +386,7 @@ export default function AdmissionsPage() {
                   ].map((item, index) => (
                     <div
                       key={item.title}
-                      className="border border-white/10 rounded-[1rem] md:rounded-[2rem] p-3.5 md:p-7"
+                      className="border border-white/10 rounded-2xl md:rounded-4xl p-3.5 md:p-7"
                     >
                       <div className="flex items-start justify-between gap-5">
                         <div>
@@ -425,7 +425,7 @@ export default function AdmissionsPage() {
             {/* BG */}
             <div className="absolute inset-0">
               <Image
-                src="/images/extra/group-image.png"
+                src="/images/extra/group-image.webp"
                 alt="Admissions"
                 fill
                 className="object-cover"
@@ -440,7 +440,7 @@ export default function AdmissionsPage() {
                 Begin Your Journey
               </p>
 
-              <h2 className="mt-3 md:mt-6 text-white text-[1.85rem] md:text-[4rem] leading-[1] md:leading-[0.95] max-w-4xl mx-auto">
+              <h2 className="mt-3 md:mt-6 text-white text-[1.85rem] md:text-[4rem] leading-none md:leading-[0.95] max-w-4xl mx-auto">
                 Ready to become part of the JG University ecosystem?
               </h2>
 
@@ -451,13 +451,13 @@ export default function AdmissionsPage() {
               </p>
 
               <div className="mt-5 md:mt-10 grid grid-cols-2 items-center justify-center gap-2.5 md:flex md:gap-5">
-                <AdmissionModal className="h-10 w-full px-4 text-xs md:h-[52px] md:w-auto md:px-6 md:text-sm" />
+                <AdmissionModal className="h-10 w-full px-4 text-xs md:h-13 md:w-auto md:px-6 md:text-sm" />
 
                 <a
                   href="/brochures/jg-university-brochure.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-10 w-full items-center justify-center rounded-full border border-white/20 px-4 text-xs text-white backdrop-blur-sm transition-all hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:h-16 md:w-auto md:px-8 md:text-base"
+                  className="inline-flex h-10 w-full items-center justify-center rounded-full border border-white/20 px-4 text-xs text-white backdrop-blur-sm transition-all hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:h-16 md:w-auto md:px-8 md:text-base"
                 >
                   Download Brochure
                 </a>

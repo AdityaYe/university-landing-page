@@ -31,7 +31,7 @@ export default function Footer() {
             {/* LEFT */}
             <div>
               {/* LOGO */}
-              <div className="relative w-[210px] h-[64px] lg:w-[280px] lg:h-[85px]">
+              <div className="relative w-52 h-16 lg:w-70 lg:h-22">
                 <Image
                   src="/images/logo/jg-un-1-logo.png"
                   alt="JG University"
@@ -40,7 +40,7 @@ export default function Footer() {
                 />
               </div>
 
-              <p className="mt-6 max-w-xl font-[var(--font-cormorant)] text-[2.05rem] leading-[1] lg:mt-10 lg:text-[3.5rem] lg:leading-[0.95]">
+              <p className="mt-6 max-w-xl font-(--font-cormorant) text-[2.05rem] leading-none lg:mt-10 lg:text-[3.5rem] lg:leading-[0.95]">
                 Future-ready education designed for tomorrow&apos;s leaders.
               </p>
 
@@ -54,7 +54,7 @@ export default function Footer() {
               <div className="mt-6 grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap sm:gap-4 lg:mt-10">
                 <Link
                   href="/admissions"
-                  className="inline-flex h-10 w-full items-center justify-center rounded-full bg-[#D4A514] px-4 text-xs text-white transition-all duration-500 hover:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A514] sm:w-auto lg:h-14 lg:px-7 lg:text-base"
+                  className="inline-flex h-10 w-full items-center justify-center rounded-full bg-[#D4A514] px-4 text-xs text-white transition-all duration-500 hover:scale-[1.03] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A514] sm:w-auto lg:h-14 lg:px-7 lg:text-base"
                 >
                   Apply Now
                 </Link>
@@ -63,7 +63,7 @@ export default function Footer() {
                   href="/brochures/jg-university-brochure.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-10 w-full items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 text-xs text-white backdrop-blur-md transition-all duration-500 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto lg:h-14 lg:px-7 lg:text-base"
+                  className="inline-flex h-10 w-full items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 text-xs text-white backdrop-blur-md transition-all duration-500 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto lg:h-14 lg:px-7 lg:text-base"
                 >
                   Download Brochure
                 </a>

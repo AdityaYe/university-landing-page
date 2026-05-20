@@ -34,7 +34,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-[var(--background)] text-[var(--text-primary)] overflow-hidden">
+    <main className="bg-(--background) text-(--text-primary) overflow-hidden">
       <Hero />
       <StatsCard />
       <About />

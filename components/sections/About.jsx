@@ -26,7 +26,7 @@ export default function About() {
             About
           </p>
 
-          <h2 className="mt-3 text-[2.15rem] leading-[1] font-light text-[#111111]">
+          <h2 className="mt-3 text-[2.15rem] leading-none font-light text-[#111111]">
             Built for future-ready education.
           </h2>
 
@@ -37,7 +37,7 @@ export default function About() {
                 muted
                 loop
                 playsInline
-                poster="/images/about/about-preview.png"
+                poster="/images/about/about-preview.webp"
                 className="block w-full scale-125 object-contain"
                 aria-label="JG University campus and student life video"
               >
@@ -50,7 +50,7 @@ export default function About() {
                   href="https://www.youtube.com/watch?v=QuRupPh1kAU&t=97s"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-11 items-center justify-center gap-2.5 whitespace-nowrap rounded-full bg-black/20 px-5 text-sm text-white/80 backdrop-blur-sm transition-all duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  className="inline-flex h-11 items-center justify-center gap-2.5 whitespace-nowrap rounded-full bg-black/20 px-5 text-sm text-white/80 backdrop-blur-sm transition-all duration-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   <Play size={16} fill="currentColor" aria-hidden="true" />
                   Watch Full Story
@@ -70,7 +70,7 @@ export default function About() {
             {stats.map((item) => (
               <div
                 key={item.label}
-                className="rounded-[1rem] border border-black/5 bg-white px-3 py-3"
+                className="rounded-2xl border border-black/5 bg-white px-3 py-3"
               >
                 <h3 className="text-xl leading-none text-[#B68D40]">
                   {item.value}
@@ -90,13 +90,13 @@ export default function About() {
           </p>
         </div>
 
-        <div className="relative hidden min-h-[500px] overflow-hidden rounded-[2.5rem] md:block lg:h-[70vh] lg:min-h-[650px]">
+        <div className="relative hidden min-h-125 overflow-hidden rounded-[2.5rem] md:block lg:h-[70vh] lg:min-h-162">
           <video
             autoPlay
             muted
             loop
             playsInline
-            poster="/images/about/about-preview.png"
+            poster="/images/about/about-preview.webp"
             className="absolute inset-0 h-full w-full object-cover object-center scale-125 lg:scale-115"
             aria-label="JG University campus and student life video"
           >
@@ -105,7 +105,7 @@ export default function About() {
 
           <div className="absolute inset-0 bg-black/45" />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-black/75 via-black/45 to-transparent" />
 
           <div className="relative z-10 flex h-full items-center">
             <div className="w-[90%] max-w-7xl mx-auto py-8 lg:py-0">

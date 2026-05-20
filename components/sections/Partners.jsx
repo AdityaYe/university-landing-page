@@ -37,7 +37,7 @@ const partners = [
   },
   {
     name: "Asian-African Chamber of Commerce & Industry",
-    logo: "/images/partners/african-asian--image.png",
+    logo: "/images/partners/african-asian--image.webp",
   },
   {
     name: "Virtual Height",
@@ -95,10 +95,10 @@ export default function Partners() {
           <div className="absolute bottom-5 lg:bottom-10 left-0 w-full h-px bg-black/10" />
 
           {/* Gradient Fade Left */}
-          <div className="absolute left-0 top-0 h-full w-16 sm:w-28 lg:w-52 bg-gradient-to-r from-[#F7F5F2] to-transparent z-20 pointer-events-none" />
+          <div className="absolute left-0 top-0 h-full w-16 sm:w-28 lg:w-52 bg-linear-to-r from-[#F7F5F2] to-transparent z-20 pointer-events-none" />
 
           {/* Gradient Fade Right */}
-          <div className="absolute right-0 top-0 h-full w-16 sm:w-28 lg:w-52 bg-gradient-to-l from-[#F7F5F2] to-transparent z-20 pointer-events-none" />
+          <div className="absolute right-0 top-0 h-full w-16 sm:w-28 lg:w-52 bg-linear-to-l from-[#F7F5F2] to-transparent z-20 pointer-events-none" />
 
           {/* MOBILE/TABLET AUTO SCROLL */}
           <div

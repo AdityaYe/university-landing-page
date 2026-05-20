@@ -85,7 +85,7 @@ export default function Testimonials() {
               Alumni Voices
             </span>
 
-            <h2 className="mt-3 lg:mt-6 text-[2.05rem] sm:text-[2.45rem] lg:text-[4rem] leading-[1] lg:leading-[0.95] text-[#111111]">
+            <h2 className="mt-3 lg:mt-6 text-[2.05rem] sm:text-[2.45rem] lg:text-[4rem] leading-none lg:leading-[0.95] text-[#111111]">
               Stories shaped by learning, ambition and growth.
             </h2>
 
@@ -97,7 +97,7 @@ export default function Testimonials() {
           </div>
 
           <div>
-            <div className="relative h-[390px] sm:h-[430px] lg:h-[520px]">
+            <div className="relative h-98 sm:h-108 lg:h-130">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={active}
@@ -117,7 +117,7 @@ export default function Testimonials() {
                     duration: 0.7,
                     ease: "easeInOut",
                   }}
-                  className="absolute inset-0 bg-white/80 backdrop-blur-xl rounded-[1.5rem] lg:rounded-[3rem] p-5 sm:p-6 lg:p-14 shadow-[0_20px_60px_rgba(0,0,0,0.05)] border border-white/40 flex flex-col justify-between"
+                  className="absolute inset-0 bg-white/80 backdrop-blur-xl rounded-3xl lg:rounded-[3rem] p-5 sm:p-6 lg:p-14 shadow-[0_20px_60px_rgba(0,0,0,0.05)] border border-white/40 flex flex-col justify-between"
                 >
                   <div>
                     <div className="text-[#D4A514] text-4xl lg:text-7xl leading-none">

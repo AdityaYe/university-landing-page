@@ -20,7 +20,7 @@ const programmes = [
     title: "B.Tech Computer Science & Engineering",
     category: "Undergraduate",
     duration: "4 Years",
-    image: "/images/programmes/ug-cs-image.png",
+    image: "/images/programmes/ug-cs-image.webp",
   },
 
   {
@@ -28,7 +28,7 @@ const programmes = [
     title: "B.Tech Artificial Intelligence & Machine Learning",
     category: "Undergraduate",
     duration: "4 Years",
-    image: "/images/programmes/btech-ai-ml-image.png",
+    image: "/images/programmes/btech-ai-ml-image.webp",
   },
 
   {
@@ -36,7 +36,7 @@ const programmes = [
     title: "B.Tech Information Technology",
     category: "Undergraduate",
     duration: "4 Years",
-    image: "/images/programmes/btech-it-image.png",
+    image: "/images/programmes/btech-it-image.webp",
   },
 
   {
@@ -44,7 +44,7 @@ const programmes = [
     title: "BBA",
     category: "Undergraduate",
     duration: "3 Years",
-    image: "/images/programmes/ug-bba-image.png",
+    image: "/images/programmes/ug-bba-image.webp",
   },
 
   {
@@ -52,7 +52,7 @@ const programmes = [
     title: "B.Com",
     category: "Undergraduate",
     duration: "3 Years",
-    image: "/images/programmes/undergraduate-image.png",
+    image: "/images/programmes/undergraduate-image.webp",
   },
 
   {
@@ -60,7 +60,7 @@ const programmes = [
     title: "B.Design UI/UX Design",
     category: "Undergraduate",
     duration: "4 Years",
-    image: "/images/programmes/ug-uiux-image.png",
+    image: "/images/programmes/ug-uiux-image.webp",
   },
 
   {
@@ -68,7 +68,7 @@ const programmes = [
     title: "B.Design Game Design",
     category: "Undergraduate",
     duration: "4 Years",
-    image: "/images/programmes/ug-gamedesign-image.png",
+    image: "/images/programmes/ug-gamedesign-image.webp",
   },
 
   {
@@ -76,7 +76,7 @@ const programmes = [
     title: "iMSc Reproductive Biology & Clinical Embryology",
     category: "Undergraduate",
     duration: "5 Years",
-    image: "/images/programmes/ug-bio-image.png",
+    image: "/images/programmes/ug-bio-image.webp",
   },
 
   // Postgraduate
@@ -85,7 +85,7 @@ const programmes = [
     title: "MBA",
     category: "Postgraduate",
     duration: "2 Years",
-    image: "/images/programmes/pg-mba-image.png",
+    image: "/images/programmes/pg-mba-image.webp",
   },
 
   {
@@ -93,7 +93,7 @@ const programmes = [
     title: "M.Com",
     category: "Postgraduate",
     duration: "2 Years",
-    image: "/images/programmes/pg-mcom-image.png",
+    image: "/images/programmes/pg-mcom-image.webp",
   },
 
   {
@@ -101,7 +101,7 @@ const programmes = [
     title: "MCA",
     category: "Postgraduate",
     duration: "2 Years",
-    image: "/images/programmes/postgraduate-image.png",
+    image: "/images/programmes/postgraduate-image.webp",
   },
 
   {
@@ -109,7 +109,7 @@ const programmes = [
     title: "Master In Aviation, Hospitality & Travel Management",
     category: "Postgraduate",
     duration: "2 Years",
-    image: "/images/programmes/pg-aviation-image.png",
+    image: "/images/programmes/pg-aviation-image.webp",
   },
 
   {
@@ -117,7 +117,7 @@ const programmes = [
     title: "Master In International Trade and Finance",
     category: "Postgraduate",
     duration: "2 Years",
-    image: "/images/programmes/pg-finance-image.png",
+    image: "/images/programmes/pg-finance-image.webp",
   },
 
   // Doctoral
@@ -126,7 +126,7 @@ const programmes = [
     title: "Ph.D in Management",
     category: "Doctoral",
     duration: "Research Programme",
-    image: "/images/programmes/phd-management-image.png",
+    image: "/images/programmes/phd-management-image.webp",
   },
 
   {
@@ -134,7 +134,7 @@ const programmes = [
     title: "Ph.D in Commerce",
     category: "Doctoral",
     duration: "Research Programme",
-    image: "/images/programmes/phd-commerce-image.png",
+    image: "/images/programmes/phd-commerce-image.webp",
   },
 
   {
@@ -142,7 +142,7 @@ const programmes = [
     title: "Ph.D in Computing",
     category: "Doctoral",
     duration: "Research Programme",
-    image: "/images/programmes/phd-computing-image.png",
+    image: "/images/programmes/phd-computing-image.webp",
   },
 
   {
@@ -150,7 +150,7 @@ const programmes = [
     title: "Ph.D in Law",
     category: "Doctoral",
     duration: "Research Programme",
-    image: "/images/programmes/phd-law-image.png",
+    image: "/images/programmes/phd-law-image.webp",
   },
 
   // Certificate
@@ -159,7 +159,7 @@ const programmes = [
     title: "Metaverse",
     category: "Certificate",
     duration: "Certification",
-    image: "/images/programmes/certificate-metaverse-image.png",
+    image: "/images/programmes/certificate-metaverse-image.webp",
   },
 
   {
@@ -167,7 +167,7 @@ const programmes = [
     title: "Blockchain",
     category: "Certificate",
     duration: "Certification",
-    image: "/images/programmes/certificate-blockchain-image.png",
+    image: "/images/programmes/certificate-blockchain-image.webp",
   },
 
   {
@@ -175,7 +175,7 @@ const programmes = [
     title: "Cyber Security",
     category: "Certificate",
     duration: "Certification",
-    image: "/images/programmes/certificate-cybersecurity-image.png",
+    image: "/images/programmes/certificate-cybersecurity-image.webp",
   },
 
   {
@@ -183,7 +183,7 @@ const programmes = [
     title: "Industrial IoT",
     category: "Certificate",
     duration: "Certification",
-    image: "/images/programmes/certificate-IoT-image.png",
+    image: "/images/programmes/certificate-IoT-image.webp",
   },
 
   {
@@ -191,7 +191,7 @@ const programmes = [
     title: "Azure DevOps",
     category: "Certificate",
     duration: "Certification",
-    image: "/images/programmes/certificate-azure-image.png",
+    image: "/images/programmes/certificate-azure-image.webp",
   },
 
   {
@@ -199,7 +199,7 @@ const programmes = [
     title: "Robotics Process Automation",
     category: "Certificate",
     duration: "Certification",
-    image: "/images/programmes/certificate-robotics-image.png",
+    image: "/images/programmes/certificate-robotics-image.webp",
   },
 ];
 
@@ -247,7 +247,7 @@ export default function Programmes() {
               Programmes
             </p>
 
-            <h2 className="mt-3 md:mt-6 text-[2.15rem] sm:text-[2.45rem] md:text-[4rem] leading-[1] md:leading-[0.95] text-[#1B1B1B]">
+            <h2 className="mt-3 md:mt-6 text-[2.15rem] sm:text-[2.45rem] md:text-[4rem] leading-none md:leading-[0.95] text-[#1B1B1B]">
               Discover your path.
             </h2>
           </div>
@@ -266,7 +266,7 @@ export default function Programmes() {
             <Search
               size={16}
               aria-hidden="true"
-              className="text-[#6B6B6B] md:size-[18px]"
+              className="text-[#6B6B6B] md:size-4.5"
             />
 
             <input
@@ -305,7 +305,7 @@ export default function Programmes() {
             <Link
               key={programme.slug}
               href={`/programmes/${programme.slug}`}
-              className="group relative h-[230px] sm:h-[340px] lg:h-[440px] overflow-hidden rounded-[1.35rem] sm:rounded-[1.75rem] md:rounded-[2.5rem]"
+              className="group relative h-58 sm:h-85 lg:h-110 overflow-hidden rounded-[1.35rem] sm:rounded-[1.75rem] md:rounded-[2.5rem]"
             >
               {/* IMAGE */}
               <Image
@@ -316,9 +316,9 @@ export default function Programmes() {
               />
 
               {/* OVERLAYS */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
 
-              <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-b from-black/30 to-transparent" />
 
               {/* CONTENT */}
               <div className="absolute inset-0 p-4 sm:p-5 md:p-8 flex flex-col justify-between">
@@ -349,7 +349,7 @@ export default function Programmes() {
                       <ArrowRight
                         size={16}
                         aria-hidden="true"
-                        className="md:size-[18px]"
+                        className="md:size-4.5"
                       />
                     </div>
                   </div>

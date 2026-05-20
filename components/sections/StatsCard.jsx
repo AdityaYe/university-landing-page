@@ -19,7 +19,7 @@ export default function StatsCard() {
     <section className="relative z-30 -mt-6 md:-mt-18 lg:-mt-20 pb-8 lg:pb-10">
       <div className="w-[92%] max-w-6xl mx-auto">
         <div
-          className={`grid grid-cols-2 md:grid-cols-4 rounded-[1.25rem] sm:rounded-[1.5rem] lg:rounded-[2.5rem] overflow-hidden border backdrop-blur-2xl transition-all duration-700 ease-out ${
+          className={`grid grid-cols-2 md:grid-cols-4 rounded-[1.25rem] sm:rounded-3xl lg:rounded-[2.5rem] overflow-hidden border backdrop-blur-2xl transition-all duration-700 ease-out ${
             scrolled
               ? "bg-[#F7F5F2]/95 border-black/5 shadow-[0_10px_40px_rgba(0,0,0,0.08)]"
               : "bg-white/10 border-white/10 shadow-none"

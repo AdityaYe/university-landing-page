@@ -46,7 +46,7 @@ export default function AdmissionModal({ className = "" }) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className={`h-11 lg:h-[52px] px-5 lg:px-6 rounded-full bg-[#D4A514] text-white text-sm hover:scale-[1.03] transition-all duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A514] ${className}`}
+        className={`h-11 lg:h-13 px-5 lg:px-6 rounded-full bg-[#D4A514] text-white text-sm hover:scale-[1.03] transition-all duration-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A514] ${className}`}
       >
         Apply Now
       </button>
@@ -61,13 +61,13 @@ export default function AdmissionModal({ className = "" }) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[200]"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-200"
               onClick={() => setOpen(false)}
               aria-hidden="true"
             />
 
             {/* MODAL */}
-            <div className="fixed inset-0 z-[210] overflow-y-auto">
+            <div className="fixed inset-0 z-210 overflow-y-auto">
               <div className="min-h-screen flex items-center justify-center px-4 sm:px-5 py-5 sm:py-8">
                 <motion.div
                   initial={{ opacity: 0, y: 40, scale: 0.96 }}
@@ -87,7 +87,7 @@ export default function AdmissionModal({ className = "" }) {
                     type="button"
                     onClick={() => setOpen(false)}
                     aria-label="Close admission form"
-                    className="absolute top-4 right-4 sm:top-5 sm:right-5 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/5 hover:bg-black/10 transition-all flex items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B68D40]"
+                    className="absolute top-4 right-4 sm:top-5 sm:right-5 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/5 hover:bg-black/10 transition-all flex items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B68D40]"
                   >
                     <X size={18} aria-hidden="true" />
                   </button>
@@ -95,7 +95,7 @@ export default function AdmissionModal({ className = "" }) {
                   {/* TOP */}
                   <div className="px-5 sm:px-8 md:px-10 pt-7 sm:pt-10 text-center">
                     {/* LOGO */}
-                    <div className="relative mx-auto w-[190px] sm:w-[250px] h-[50px] sm:h-[65px]">
+                    <div className="relative mx-auto w-48 sm:w-63 h-13 sm:h-16">
                       <Image
                         src="/images/logo/jg-un-2-logo.png"
                         alt="JG University"
@@ -247,14 +247,14 @@ export default function AdmissionModal({ className = "" }) {
                       <button
                         type="button"
                         onClick={() => setOpen(false)}
-                        className="h-12 px-6 rounded-full border border-black/10 hover:bg-black/5 transition-all duration-500 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B68D40]"
+                        className="h-12 px-6 rounded-full border border-black/10 hover:bg-black/5 transition-all duration-500 text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B68D40]"
                       >
                         Cancel
                       </button>
 
                       <button
                         type="submit"
-                        className="h-12 px-7 rounded-full bg-[#B68D40] text-white hover:scale-[1.03] transition-all duration-500 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B68D40]"
+                        className="h-12 px-7 rounded-full bg-[#B68D40] text-white hover:scale-[1.03] transition-all duration-500 text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B68D40]"
                       >
                         Register Now
                       </button>

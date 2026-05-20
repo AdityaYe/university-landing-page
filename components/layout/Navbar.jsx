@@ -91,7 +91,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 isolate w-full z-[9999] transition-all duration-500 ${
+        className={`fixed top-0 left-0 isolate w-full z-9999 transition-all duration-500 ${
           scrolled
             ? "bg-[#F7F5F2]/95 backdrop-blur-xl shadow-sm"
             : "bg-transparent"
@@ -106,7 +106,7 @@ export default function Navbar() {
             <Link
               href="/#hero"
               aria-label="JG University home"
-              className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A514]"
+              className="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A514]"
             >
               {/* HERO LOGO */}
               <div
@@ -155,7 +155,7 @@ export default function Navbar() {
                 {link.route ? (
                   <Link
                     href={link.route}
-                    className={`text-sm tracking-wide transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A514] ${
+                    className={`text-sm tracking-wide transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A514] ${
                       scrolled ? "hover:text-[#B68D40]" : "hover:text-white/70"
                     }`}
                   >
@@ -165,7 +165,7 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => handleSectionNavigation(link.section)}
-                    className={`text-sm tracking-wide transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A514] ${
+                    className={`text-sm tracking-wide transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A514] ${
                       scrolled
                         ? "hover:text-[#B68D40]"
                         : "hover:text-white/70"
@@ -182,9 +182,9 @@ export default function Navbar() {
           <div className="hidden xl:flex items-center gap-4">
             {/* SEARCH */}
             <div
-              className={`flex items-center w-[240px] h-12 px-5 rounded-full border transition-all duration-500 ${
+              className={`flex items-center w-60 h-12 px-5 rounded-full border transition-all duration-500 ${
                 scrolled
-                  ? "border-black/10 bg-black/[0.03]"
+                  ? "border-black/10 bg-black/3"
                   : "border-white/20 bg-transparent"
               }`}
             >
@@ -211,7 +211,7 @@ export default function Navbar() {
             {/* ADMISSION */}
             <Link
               href="/admissions"
-              className={`rounded-full px-7 py-3 transition-all duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A514] ${
+              className={`rounded-full px-7 py-3 transition-all duration-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A514] ${
                 scrolled
                   ? "bg-[#D4A514] text-white hover:opacity-90"
                   : "border border-white/20 bg-white/10 text-white hover:bg-white/20"
@@ -240,8 +240,8 @@ export default function Navbar() {
       {/* MOBILE DROPDOWN */}
       <div
         id="mobile-navigation"
-        className={`fixed top-20 left-0 w-full xl:hidden z-[9998] transition-all duration-500 overflow-hidden ${
-          menuOpen ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
+        className={`fixed top-20 left-0 w-full xl:hidden z-9998 transition-all duration-500 overflow-hidden ${
+          menuOpen ? "max-h-175 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="bg-[#111111]/95 backdrop-blur-2xl border-t border-white/10">
@@ -254,7 +254,7 @@ export default function Navbar() {
                     <Link
                       href={link.route}
                       onClick={closeMenu}
-                      className="flex h-16 items-center border-b border-white/10 text-left text-lg text-white transition-all duration-300 hover:text-[#D4A514] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#D4A514]"
+                      className="flex h-16 items-center border-b border-white/10 text-left text-lg text-white transition-all duration-300 hover:text-[#D4A514] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A514]"
                     >
                       {link.label}
                     </Link>
@@ -262,7 +262,7 @@ export default function Navbar() {
                     <button
                       type="button"
                       onClick={() => handleSectionNavigation(link.section)}
-                      className="h-16 w-full border-b border-white/10 text-left text-lg text-white transition-all duration-300 hover:text-[#D4A514] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#D4A514]"
+                      className="h-16 w-full border-b border-white/10 text-left text-lg text-white transition-all duration-300 hover:text-[#D4A514] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A514]"
                     >
                       {link.label}
                     </button>
@@ -275,7 +275,7 @@ export default function Navbar() {
             <Link
               href="/admissions"
               onClick={closeMenu}
-              className="mt-7 flex h-14 w-full items-center justify-center rounded-full bg-[#D4A514] text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A514]"
+              className="mt-7 flex h-14 w-full items-center justify-center rounded-full bg-[#D4A514] text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A514]"
             >
               Apply for Admission
             </Link>

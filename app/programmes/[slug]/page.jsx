@@ -19,7 +19,7 @@ export default async function ProgrammePage({ params }) {
   return (
     <main className="bg-[#F7F5F2] text-[#1B1B1B]">
       {/* HERO */}
-      <section className="relative min-h-[620px] md:h-[90vh] overflow-hidden">
+      <section className="relative min-h-155 md:h-[90vh] overflow-hidden">
         <Image
           src={programme.heroImage || programme.image}
           alt={programme.title}
@@ -28,14 +28,14 @@ export default async function ProgrammePage({ params }) {
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10" />
+        <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-black/10" />
 
-        <div className="relative z-10 w-[92%] max-w-7xl mx-auto min-h-[620px] md:h-full flex flex-col justify-end pb-16 md:pb-24">
+        <div className="relative z-10 w-[92%] max-w-7xl mx-auto min-h-155 md:h-full flex flex-col justify-end pb-16 md:pb-24">
           <span className="text-white/70 uppercase tracking-[0.22em] md:tracking-[0.25em] text-[11px] md:text-sm">
             {programme.category}
           </span>
 
-          <h1 className="mt-3 md:mt-6 max-w-6xl text-white text-[2.55rem] sm:text-[3.2rem] md:text-8xl leading-[1] md:leading-none font-light">
+          <h1 className="mt-3 md:mt-6 max-w-6xl text-white text-[2.55rem] sm:text-[3.2rem] md:text-8xl leading-none md:leading-none font-light">
             {programme.title}
           </h1>
 
@@ -61,7 +61,7 @@ export default async function ProgrammePage({ params }) {
               Programme Overview
             </span>
 
-            <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-6xl leading-[1] md:leading-none font-light">
+            <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-6xl leading-none md:leading-none font-light">
               Built for future-ready careers.
             </h2>
           </div>
@@ -81,7 +81,7 @@ export default async function ProgrammePage({ params }) {
             {programme.stats.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-[1.25rem] md:rounded-[2rem] bg-white p-4 md:p-10 border border-black/5"
+                className="rounded-[1.25rem] md:rounded-4xl bg-white p-4 md:p-10 border border-black/5"
               >
                 <h3 className="text-2xl md:text-5xl font-light">
                   {stat.value}
@@ -102,7 +102,7 @@ export default async function ProgrammePage({ params }) {
               Specialisations
             </span>
 
-            <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-6xl leading-[1] md:leading-none font-light">
+            <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-6xl leading-none md:leading-none font-light">
               Explore focused learning paths.
             </h2>
 
@@ -119,7 +119,7 @@ export default async function ProgrammePage({ params }) {
 
             {/* Elective Notes */}
             {programme.electiveNotes && (
-              <div className="mt-7 md:mt-12 rounded-[1.25rem] md:rounded-[2rem] bg-[#EFEAE2] p-4 md:p-10">
+              <div className="mt-7 md:mt-12 rounded-[1.25rem] md:rounded-4xl bg-[#EFEAE2] p-4 md:p-10">
                 <h3 className="text-xl md:text-2xl font-light mb-4 md:mb-6">Important Notes</h3>
 
                 <div className="space-y-4">
@@ -139,12 +139,12 @@ export default async function ProgrammePage({ params }) {
       {programme.knowledgePartner && (
         <section className="pb-14 md:pb-32">
           <div className="w-[92%] max-w-7xl mx-auto">
-            <div className="rounded-[1.5rem] md:rounded-[3rem] bg-[#111111] text-white p-5 md:p-20">
+            <div className="rounded-3xl md:rounded-[3rem] bg-[#111111] text-white p-5 md:p-20">
               <span className="uppercase tracking-[0.18em] md:tracking-[0.2em] text-[11px] md:text-sm text-white/50">
                 Knowledge Partner
               </span>
 
-              <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-6xl leading-[1] md:leading-none font-light">
+              <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-6xl leading-none md:leading-none font-light">
                 {programme.knowledgePartner.title}
               </h2>
 
@@ -161,7 +161,7 @@ export default async function ProgrammePage({ params }) {
         <div className="w-[92%] max-w-7xl mx-auto grid lg:grid-cols-2 gap-10">
           {/* Fee Structure */}
           {programme.feeStructure && (
-            <div className="rounded-[1.5rem] md:rounded-[3rem] bg-white p-5 md:p-12 border border-black/5">
+            <div className="rounded-3xl md:rounded-[3rem] bg-white p-5 md:p-12 border border-black/5">
               <span className="uppercase tracking-[0.18em] md:tracking-[0.2em] text-[11px] md:text-sm text-[#B68D40]">
                 Fee Structure
               </span>
@@ -185,7 +185,7 @@ export default async function ProgrammePage({ params }) {
 
           {/* Eligibility */}
           {programme.eligibility && (
-            <div className="rounded-[1.5rem] md:rounded-[3rem] bg-[#111111] text-white p-5 md:p-12">
+            <div className="rounded-3xl md:rounded-[3rem] bg-[#111111] text-white p-5 md:p-12">
               <span className="uppercase tracking-[0.18em] md:tracking-[0.2em] text-[11px] md:text-sm text-white/50">
                 Eligibility
               </span>
@@ -214,7 +214,7 @@ export default async function ProgrammePage({ params }) {
               Programme Highlights
             </span>
 
-            <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-6xl leading-[1] md:leading-none font-light">
+            <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-6xl leading-none md:leading-none font-light">
               Designed for industry-ready learning.
             </h2>
 
@@ -222,7 +222,7 @@ export default async function ProgrammePage({ params }) {
               {programme.highlights.map((item) => (
                 <div
                   key={item}
-                  className="rounded-[1.25rem] md:rounded-[2rem] bg-white p-4 md:p-10 border border-black/5"
+                  className="rounded-[1.25rem] md:rounded-4xl bg-white p-4 md:p-10 border border-black/5"
                 >
                   <p className="text-sm md:text-lg leading-relaxed text-black/70">
                     {item}
@@ -242,13 +242,13 @@ export default async function ProgrammePage({ params }) {
               Advantages
             </span>
 
-            <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-6xl leading-[1] md:leading-none font-light">
+            <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-6xl leading-none md:leading-none font-light">
               Why choose this programme?
             </h2>
 
             <div className="mt-7 md:mt-16 grid sm:grid-cols-2 xl:grid-cols-3 gap-3.5 md:gap-6">
               {programme.advantages.map((item) => (
-                <div key={item.title} className="rounded-[1.25rem] md:rounded-[2rem] bg-[#EFEAE2] p-4 md:p-10">
+                <div key={item.title} className="rounded-[1.25rem] md:rounded-4xl bg-[#EFEAE2] p-4 md:p-10">
                   <h3 className="text-xl md:text-2xl font-light">{item.title}</h3>
 
                   <p className="mt-3 md:mt-6 text-sm md:text-base leading-relaxed text-black/70">
@@ -273,7 +273,7 @@ export default async function ProgrammePage({ params }) {
               {programme.admissionProcess.map((step, index) => (
                 <div
                   key={step}
-                  className="flex gap-4 md:gap-8 items-start rounded-[1.25rem] md:rounded-[2rem] bg-white p-4 md:p-8 border border-black/5"
+                  className="flex gap-4 md:gap-8 items-start rounded-[1.25rem] md:rounded-4xl bg-white p-4 md:p-8 border border-black/5"
                 >
                   <div className="text-3xl md:text-5xl font-light text-[#D4A514]">
                     0{index + 1}
@@ -297,7 +297,7 @@ export default async function ProgrammePage({ params }) {
               Career Opportunities
             </span>
 
-            <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-6xl leading-[1] md:leading-none font-light">
+            <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-6xl leading-none md:leading-none font-light">
               Future career pathways.
             </h2>
 
@@ -318,12 +318,12 @@ export default async function ProgrammePage({ params }) {
       {/* CTA */}
       <section className="pb-14 md:pb-32">
         <div className="w-[92%] max-w-7xl mx-auto">
-          <div className="rounded-[1.5rem] md:rounded-[3rem] bg-[#111111] px-5 md:px-14 py-12 md:py-24 text-center text-white">
+          <div className="rounded-3xl md:rounded-[3rem] bg-[#111111] px-5 md:px-14 py-12 md:py-24 text-center text-white">
             <span className="uppercase tracking-[0.18em] md:tracking-[0.2em] text-[11px] md:text-sm text-white/50">
               Admissions Open
             </span>
 
-            <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-6xl leading-[1] md:leading-none font-light">
+            <h2 className="mt-3 md:mt-6 text-[2.1rem] md:text-6xl leading-none md:leading-none font-light">
               Build your future with JG University.
             </h2>
 

@@ -11,10 +11,10 @@ export default function ContactPage() {
   return (
     <main className="bg-[#F7F5F2] overflow-hidden">
       {/* HERO */}
-      <section className="relative h-[100svh] min-h-[620px] overflow-hidden">
+      <section className="relative h-svh min-h-155 overflow-hidden">
         {/* IMAGE */}
         <Image
-          src="/images/extra/asia-campus-image.png"
+          src="/images/hero/asia-campus-image.webp"
           alt="JG University Campus"
           fill
           priority
@@ -24,7 +24,7 @@ export default function ContactPage() {
         {/* OVERLAYS */}
         <div className="absolute inset-0 bg-black/45" />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
 
         {/* CONTENT */}
         <div className="absolute inset-0 flex items-end">
@@ -39,7 +39,7 @@ export default function ContactPage() {
                 Contact JG University
               </p>
 
-              <h1 className="mt-3 md:mt-6 text-white text-[2.35rem] sm:text-[3.2rem] md:text-[5.5rem] leading-[1] md:leading-[0.92] tracking-tight">
+              <h1 className="mt-3 md:mt-6 text-white text-[2.35rem] sm:text-[3.2rem] md:text-[5.5rem] leading-none md:leading-[0.92] tracking-tight">
                 Let&apos;s connect and shape your future together.
               </h1>
 
@@ -55,14 +55,14 @@ export default function ContactPage() {
                   href="https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x395e8353dee254bb:0x6909d82c9319e0a0!3e0?g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-10 w-full items-center justify-center rounded-full bg-[#D4A514] px-4 text-xs text-white transition-all duration-500 hover:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A514] md:h-14 md:w-auto md:px-7 md:text-base"
+                  className="inline-flex h-10 w-full items-center justify-center rounded-full bg-[#D4A514] px-4 text-xs text-white transition-all duration-500 hover:scale-[1.03] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A514] md:h-14 md:w-auto md:px-7 md:text-base"
                 >
                   Visit Campus
                 </a>
 
                 <Link
                   href="/admissions"
-                  className="inline-flex h-10 w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-4 text-xs text-white backdrop-blur-md transition-all duration-500 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:h-14 md:w-auto md:px-7 md:text-base"
+                  className="inline-flex h-10 w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-4 text-xs text-white backdrop-blur-md transition-all duration-500 hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:h-14 md:w-auto md:px-7 md:text-base"
                 >
                   Admissions
                 </Link>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                 Main Campus
               </span>
 
-              <h2 className="mt-3 md:mt-6 text-[1.9rem] md:text-[4rem] leading-[1] md:leading-[0.95] text-[#111111]">
+              <h2 className="mt-3 md:mt-6 text-[1.9rem] md:text-[4rem] leading-none md:leading-[0.95] text-[#111111]">
                 Visit our Ahmedabad campus.
               </h2>
 
@@ -226,10 +226,10 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="rounded-[1.5rem] md:rounded-[3rem] overflow-hidden border border-black/5 bg-white"
+            className="rounded-3xl md:rounded-[3rem] overflow-hidden border border-black/5 bg-white"
           >
             {/* MAP */}
-            <div className="relative h-[320px] md:h-[620px]">
+            <div className="relative h-80 md:h-155">
               <iframe
                 title="JG University campus location map"
                 src="https://www.google.com/maps?q=JG+University+Ahmedabad&output=embed"

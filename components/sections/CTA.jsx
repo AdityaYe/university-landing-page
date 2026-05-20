@@ -15,11 +15,11 @@ export default function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="relative h-[205px] sm:h-[430px] lg:h-[620px] rounded-[1.5rem] lg:rounded-[3rem] overflow-hidden"
+          className="relative h-52 sm:h-108 lg:h-155 rounded-3xl lg:rounded-[3rem] overflow-hidden"
         >
           {/* BACKGROUND IMAGE */}
           <Image
-            src="/images/extra/group-image.png"
+            src="/images/extra/group-image.webp"
             alt="JG University students"
             fill
             className="object-contain bg-[#111111] lg:object-cover lg:bg-transparent"
@@ -29,7 +29,7 @@ export default function CTA() {
           <div className="absolute inset-0 bg-black/80 lg:bg-black/50" />
 
           {/* GRADIENT */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent lg:bg-gradient-to-r lg:from-black/70 lg:via-black/30 lg:to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/20 to-transparent lg:bg-linear-to-r lg:from-black/70 lg:via-black/30 lg:to-transparent" />
 
           {/* CONTENT */}
           <div className="absolute inset-0 flex items-end lg:items-center">
@@ -53,7 +53,7 @@ export default function CTA() {
                 <div className="mt-3 lg:mt-12 flex items-center gap-2 lg:gap-5">
                   {/* PRIMARY */}
                   <div className="min-w-0 flex-1 basis-0 lg:flex-none lg:basis-auto">
-                    <AdmissionModal className="w-full h-9 px-4 text-[11px] leading-none lg:w-auto lg:h-[52px] lg:px-6 lg:text-sm" />
+                    <AdmissionModal className="w-full h-9 px-4 text-[11px] leading-none lg:w-auto lg:h-13 lg:px-6 lg:text-sm" />
                   </div>
 
                   {/* SECONDARY */}
@@ -61,7 +61,7 @@ export default function CTA() {
                     href="https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x395e8353dee254bb:0x6909d82c9319e0a0!3e0?g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="min-w-0 flex-1 basis-0 lg:flex-none lg:basis-auto inline-flex h-9 w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-4 text-[11px] leading-none tracking-wide text-white shadow-[0_4px_20px_rgba(0,0,0,0.65)] backdrop-blur-xl transition-all duration-500 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white lg:h-auto lg:w-auto lg:px-8 lg:py-4 lg:text-sm"
+                    className="min-w-0 flex-1 basis-0 lg:flex-none lg:basis-auto inline-flex h-9 w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-4 text-[11px] leading-none tracking-wide text-white shadow-[0_4px_20px_rgba(0,0,0,0.65)] backdrop-blur-xl transition-all duration-500 hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white lg:h-auto lg:w-auto lg:px-8 lg:py-4 lg:text-sm"
                   >
                     Visit Campus
                   </a>
@@ -71,7 +71,7 @@ export default function CTA() {
           </div>
 
           {/* BOTTOM GLASS CARD */}
-          <div className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-xl border border-white/10 rounded-[2rem] px-8 py-6 hidden lg:flex items-center gap-12">
+          <div className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-xl border border-white/10 rounded-4xl px-8 py-6 hidden lg:flex items-center gap-12">
             <div>
               <p className="text-white text-3xl">30+</p>
 
