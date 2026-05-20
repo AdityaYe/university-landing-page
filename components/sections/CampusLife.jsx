@@ -39,21 +39,22 @@ export default function Campus() {
 
   /* AUTO HORIZONTAL SCROLL */
   useEffect(() => {
-    const track = trackRef.current;
+    const container = trackRef.current;
 
-    if (!track) return;
+    if (!container) return;
 
     let animationFrame;
 
     const autoScroll = () => {
-      // mobile/tablet slower
       const speed = window.innerWidth < 1024 ? 0.45 : 0.7;
 
-      track.scrollLeft += speed;
+      container.scrollLeft += speed;
 
-      // seamless reset
-      if (track.scrollLeft >= track.scrollWidth / 2) {
-        track.scrollLeft = 0;
+      // smoother infinite loop
+      const maxScroll = container.scrollWidth / 3;
+
+      if (container.scrollLeft >= maxScroll) {
+        container.scrollLeft = 0;
       }
 
       animationFrame = requestAnimationFrame(autoScroll);
@@ -116,27 +117,39 @@ export default function Campus() {
         </div>
 
         {/* HORIZONTAL STRIP */}
-        <div
-          ref={trackRef}
-          className="relative mt-8 lg:mt-14 overflow-x-auto border-y border-black/10 py-3 no-scrollbar touch-pan-x"
-        >
+        <div className="relative mt-8 lg:mt-14 border-y border-black/10 py-3">
           {/* LEFT FADE */}
-          <div className="absolute left-0 top-0 hidden h-full w-24 bg-gradient-to-r from-[#F7F5F2] to-transparent z-20 pointer-events-none lg:block" />
+          <div className="absolute left-0 top-0 hidden lg:block h-full w-10 bg-linear-to-r from-[#F7F5F2] via-[#F7F5F2] to-transparent z-30 pointer-events-none" />
 
           {/* RIGHT FADE */}
-          <div className="absolute right-0 top-0 hidden h-full w-24 bg-gradient-to-l from-[#F7F5F2] to-transparent z-20 pointer-events-none lg:block" />
+          <div className="absolute right-0 top-0 hidden lg:block h-full w-10 bg-linear-to-l from-[#F7F5F2] via-[#F7F5F2] to-transparent z-30 pointer-events-none" />
 
-          <div className="flex gap-3 lg:gap-4 w-max whitespace-nowrap">
-            {[...horizontalImages, ...horizontalImages].map((image, index) => (
-              <div
-                key={index}
-                className="relative w-[220px] sm:w-[280px] lg:w-[360px] h-[132px] sm:h-[170px] lg:h-[210px] rounded-[1.35rem] lg:rounded-[2.2rem] overflow-hidden shrink-0"
-              >
-                <Image src={image} alt="Campus" fill className="object-cover" />
+          {/* SCROLL CONTAINER */}
+          <div
+            ref={trackRef}
+            className="overflow-x-auto no-scrollbar touch-pan-x"
+          >
+            <div className="flex gap-3 lg:gap-4 w-max whitespace-nowrap">
+              {[
+                ...horizontalImages,
+                ...horizontalImages,
+                ...horizontalImages,
+              ].map((image, index) => (
+                <div
+                  key={index}
+                  className="relative w-[220px] sm:w-[280px] lg:w-[360px] h-[132px] sm:h-[170px] lg:h-[210px] rounded-[1.35rem] lg:rounded-[2.2rem] overflow-hidden shrink-0"
+                >
+                  <Image
+                    src={image}
+                    alt="Campus"
+                    fill
+                    className="object-cover"
+                  />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              </div>
-            ))}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

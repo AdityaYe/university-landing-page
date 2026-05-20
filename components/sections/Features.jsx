@@ -131,10 +131,10 @@ export default function Features() {
       <section
         id="features"
         ref={sectionRef}
-        className="bg-[#F7F5F2] py-14 sm:py-16 lg:py-32 overflow-hidden"
+        className="bg-[#F7F5F2] py-14 sm:py-16 md:py-14 lg:py-32 overflow-hidden"
       >
         <Container>
-          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 sm:gap-10 lg:gap-16 items-start">
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 sm:gap-10 md:gap-5 lg:gap-16 items-start">
             <div className="lg:sticky lg:top-32">
               <span className="uppercase tracking-[0.22em] lg:tracking-[0.25em] text-[11px] lg:text-sm text-[#B68D40]">
                 JG University
@@ -144,7 +144,7 @@ export default function Features() {
                 Education built around innovation, industry and impact.
               </h2>
 
-              <p className="mt-4 lg:mt-10 text-sm sm:text-[15px] lg:text-xl leading-relaxed text-black/60 max-w-xl">
+              <p className="mt-4 md:mt-3 lg:mt-10 text-sm sm:text-[15px] lg:text-xl leading-relaxed text-black/60 max-w-xl">
                 An academic ecosystem designed to combine interdisciplinary
                 learning, research, real-world exposure, and global
                 opportunities for future-ready professionals.
@@ -249,7 +249,7 @@ export default function Features() {
         <Container>
           <div className="space-y-12 lg:space-y-20">
             <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-6 lg:gap-14 items-center">
-              <div className="relative h-[260px] sm:h-[340px] lg:h-[430px] rounded-[1.4rem] lg:rounded-[2.5rem] overflow-hidden">
+              <div className="relative h-[260px] md:h-100 sm:h-[340px] lg:h-[430px] rounded-[1.4rem] lg:rounded-[2.5rem] overflow-hidden">
                 <Image
                   src="/images/leaders/mp-chandran-image.png"
                   alt="M.P Chandran"
@@ -348,7 +348,7 @@ export default function Features() {
                 </div>
               </div>
 
-              <div className="relative order-1 lg:order-2 h-[260px] sm:h-[340px] lg:h-[430px] rounded-[1.4rem] lg:rounded-[2.5rem] overflow-hidden">
+              <div className="relative order-1 lg:order-2 h-[260px] md:h-100 sm:h-[340px] lg:h-[430px] rounded-[1.4rem] lg:rounded-[2.5rem] overflow-hidden">
                 <Image
                   src="/images/leaders/ca-dani-image.png"
                   alt="Dr. CA Achyut Dani"

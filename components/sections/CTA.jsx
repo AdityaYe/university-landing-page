@@ -43,7 +43,7 @@ export default function CTA() {
                   Build your future at JG University.
                 </h2>
 
-                <p className="hidden mt-4 lg:mt-8 text-sm sm:text-base lg:text-xl leading-relaxed text-white/70 max-w-2xl lg:block">
+                <p className="hidden mt-3 md:block lg:mt-8 text-sm sm:text-base lg:text-xl leading-relaxed text-white/70 max-w-xl lg:max-w-2xl">
                   Join a future-focused learning ecosystem built around
                   innovation, industry collaboration, creativity and real-world
                   impact.

@@ -38,7 +38,7 @@ export default function StatsCard() {
   ];
 
   return (
-    <section className="relative z-30 -mt-20 sm:-mt-24 lg:-mt-20 pb-8 lg:pb-10">
+    <section className="relative z-30 -mt-6 md:-mt-18 lg:-mt-20 pb-8 lg:pb-10">
       <div className="w-[92%] max-w-6xl mx-auto">
         <div
           className={`grid grid-cols-2 md:grid-cols-4 rounded-[1.25rem] sm:rounded-[1.5rem] lg:rounded-[2.5rem] overflow-hidden border backdrop-blur-2xl transition-all duration-700 ease-out ${
@@ -66,9 +66,7 @@ export default function StatsCard() {
             >
               <div
                 className={`overflow-hidden transition-all duration-700 ease-out ${
-                  scrolled
-                    ? "max-h-40 opacity-100"
-                    : "max-h-0 opacity-0"
+                  scrolled ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-[#1B1B1B]">

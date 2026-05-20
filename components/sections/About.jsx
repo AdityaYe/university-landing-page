@@ -19,7 +19,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section className="bg-[#F7F5F2] py-14 sm:py-16 md:py-28">
+    <section className="bg-[#F7F5F2] py-14 sm:py-16 md:py-20 lg:py-28">
       <div className="w-[92%] max-w-7xl mx-auto">
         <div className="md:hidden">
           <p className="text-[#B68A3D] uppercase tracking-[0.22em] text-[11px]">
@@ -83,20 +83,20 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mb-14 hidden md:block">
+        <div className="mb-8 hidden md:block lg:mb-14">
           <p className="text-[#B68A3D] uppercase tracking-[0.25em] text-lg">
             About
           </p>
         </div>
 
-        <div className="relative hidden min-h-[700px] overflow-hidden rounded-[2.5rem] md:block lg:h-[70vh] lg:min-h-[650px]">
+        <div className="relative hidden min-h-105 overflow-hidden rounded-[2.5rem] md:block lg:h-[70vh] lg:min-h-[650px]">
           <video
             autoPlay
             muted
             loop
             playsInline
             poster="/images/about/about-preview.png"
-            className="absolute inset-0 h-full w-full object-cover object-center scale-125"
+            className="absolute inset-0 h-full w-full object-cover object-center scale-125 lg:scale-125"
           >
             <source src="/videos/about/about-video.mp4" type="video/mp4" />
           </video>
@@ -106,22 +106,22 @@ export default function About() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-transparent" />
 
           <div className="relative z-10 flex h-full items-center">
-            <div className="w-[90%] max-w-7xl mx-auto py-10 lg:py-0">
+            <div className="w-[90%] max-w-7xl mx-auto py-8 lg:py-0">
               <div className="max-w-3xl">
-                <h2 className="text-white leading-[0.95] font-light text-[4.5rem] lg:text-[5rem]">
+                <h2 className="text-white leading-[0.95] font-light text-[3.6rem] lg:text-[5rem]">
                   Built for
                   <br />
                   future-ready education.
                 </h2>
 
-                <p className="mt-10 max-w-2xl text-xl leading-relaxed text-white/75">
+                <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 lg:mt-10 lg:text-xl">
                   JG University is a tech-driven institution focused on
                   innovation, industry-ready learning, and real-world
                   experiences - empowering students for careers,
                   entrepreneurship, and the evolving future of education.
                 </p>
 
-                <div className="mt-12 flex flex-wrap gap-10">
+                <div className="mt-8 flex flex-wrap gap-8 lg:mt-12 lg:gap-10">
                   {stats.map((item) => (
                     <div key={item.label}>
                       <h3 className="text-4xl text-[#D4A514]">{item.value}</h3>
@@ -137,7 +137,7 @@ export default function About() {
                   href="https://www.youtube.com/watch?v=QuRupPh1kAU&t=97s"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-14 inline-flex items-center justify-center gap-3 rounded-full border border-white/20 bg-white/10 px-7 py-4 text-base text-white backdrop-blur-xl transition-all duration-500 hover:bg-white hover:text-black"
+                  className="mt-10 inline-flex items-center justify-center gap-3 rounded-full border border-white/20 bg-white/10 px-7 py-4 text-base text-white backdrop-blur-xl transition-all duration-500 hover:bg-white hover:text-black lg:mt-14"
                 >
                   <Play size={18} fill="currentColor" />
                   Watch Full Story
