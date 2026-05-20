@@ -92,8 +92,3 @@ npm run start
 - Responsive readable typography
 - Accessible navigation system
 
----
-
-## Author
-
-Aditya Yewale
