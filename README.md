@@ -1,177 +1,162 @@
-# JG University — Modern University Website
+# Modern University Landing Page
 
-A modern cinematic university website built using **Next.js 15**, **React**, **Tailwind CSS**, and **Framer Motion**.
+A premium modern university landing page built using **Next.js**, **React**, **TailwindCSS**, **GSAP**, and **Framer Motion**.
 
-Designed with a premium editorial aesthetic focused on immersive visuals, smooth interactions, and a future-ready digital university experience.
-
----
-
-## Features
-
-- Modern editorial-style landing page
-- Smooth scrolling navigation
-- Dynamic programme pages using App Router
-- Fully responsive premium UI
-- Interactive admissions modal
-- Dedicated admissions page
-- Dedicated contact page
-- Testimonials section
-- Campus experience showcase
-- Animated hero sections
-- Data-driven architecture
-- Reusable UI components
-- Optimized Next.js image handling
-- Smooth transitions and motion design
+This project was designed as a cinematic editorial-style university experience inspired by modern educational branding systems and interactive web experiences. The content structure and data references are based around JG University.
 
 ---
 
-## Tech Stack
+## Overview
 
-- Next.js 15
-- React
-- Tailwind CSS
-- Framer Motion
-- Lucide React
-- React Icons
+The website focuses on:
+
+- immersive storytelling
+- responsive editorial layouts
+- cinematic visuals
+- smooth motion design
+- modern admissions-focused UX
+- touch-friendly mobile interactions
+- performance-oriented frontend architecture
+
+The project includes fully responsive layouts optimized separately for:
+
+- Mobile
+- Tablet
+- Desktop
+
+---
+
+# Tech Stack
+
+- **Next.js**
+- **React**
+- **TailwindCSS**
+- **GSAP + ScrollTrigger**
+- **Framer Motion**
+- **Lucide React**
+- **Next/Image**
+
+---
+
+# Features
+
+## Cinematic Hero Sections
+- Fullscreen responsive hero layouts
+- Adaptive typography system
+- Smooth navbar transitions
+- Responsive CTA system
+
+---
+
+## Responsive Editorial Layouts
+- Mobile-first responsive architecture
+- Dedicated tablet optimization
+- Premium desktop cinematic composition
+- Adaptive spacing and typography
+
+---
+
+## Advanced Motion Design
+- GSAP powered scroll interactions
+- Infinite horizontal auto-scroll galleries
+- Touch-scrollable image strips
+- Framer Motion reveal animations
+- Smooth scroll-based transitions
+
+---
+
+## Interactive Campus Experience
+- Horizontal cinematic image galleries
+- Auto-scrolling campus strips
+- Responsive touch interactions
+- Smooth mobile scrolling behavior
+
+---
+
+## Admissions & Contact Experience
+- Responsive admissions layout
+- Mobile optimized CTA sections
+- Touch-friendly programme selectors
+- Compact responsive cards
+
+---
+
+## Performance Optimized
+- Responsive image sizing
+- Optimized `.webp` assets
+- Lazy loaded sections
+- Lightweight animation architecture
+- Mobile performance optimizations
+
+---
+
+# Pages
+
+- Home
+- Admissions
+- Contact
+
+---
+
+# Major Sections
+
+## Hero Section
+Modern fullscreen hero experience with cinematic imagery and responsive typography.
+
+---
+
+## About Section
+Video-driven storytelling section optimized separately for mobile, tablet, and desktop layouts.
+
+---
+
+## Features Section
+GSAP-powered editorial feature layout with scroll-based interactions and responsive card systems.
+
+---
+
+## Campus Experience
+Interactive horizontal gallery system with auto-scroll and touch interaction support.
+
+---
+
+## Testimonials
+Responsive testimonial section optimized for readability and compact mobile composition.
+
+---
+
+## CTA Section
+Immersive responsive call-to-action system with adaptive layouts across all screen sizes.
+
+---
+
+# Responsive Design
+
+| Breakpoint | Optimization |
+|---|---|
+| Mobile | Compact layouts, touch interactions, optimized spacing |
+| Tablet | Balanced editorial composition and responsive scaling |
+| Desktop | Cinematic immersive layouts and advanced motion |
 
 ---
 
 # Folder Structure
 
-```txt
-app
-├── admissions
-├── contact
-├── programmes
-│   ├── [slug]
-│   └── page.jsx
-├── globals.css
-├── layout.js
-└── page.js
-
-components
-├── layout
-├── sections
-└── ui
-
-data
-└── programmes.js
-
-public
-├── brochures
-├── images
-└── videos
-```
-
----
-
-## Installation
-
-Clone the repository:
-
 ```bash
-git clone https://github.com/your-username/jg-university.git
-```
-
-Navigate into the project:
-
-```bash
-cd jg-university
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run development server:
-
-```bash
-npm run dev
-```
-
-Open:
-
-```txt
-http://localhost:3000
-```
-
----
-
-## Production Build
-
-Build the project:
-
-```bash
-npm run build
-```
-
-Run production server:
-
-```bash
-npm start
-```
-
----
-
-## Deployment
-
-This project is optimized for deployment on:
-
-- **Vercel**
-
-Deploy instantly by importing the GitHub repository into Vercel.
-
----
-
-## Core Sections
-
-- Hero Section
-- Features Section
-- Programmes Showcase
-- Campus Life
-- Testimonials
-- Admissions
-- Contact
-- Footer
-
----
-
-## Dynamic Programmes System
-
-All programme pages are generated dynamically using:
-
-```txt
-data/programmes.js
-```
-
-Each programme contains:
-
-- Overview
-- Eligibility
-- Highlights
-- Careers
-- Fee Structure
-- Stats
-- Specialisations
-- Advantages
-
----
-
-## Future Improvements
-
-- Full search system
-- Backend admissions integration
-- CMS integration
-- Authentication
-- Student portal
-- Advanced filtering
-- SEO optimization
-- Analytics integration
-
----
-
-## License
-
-This project is for educational and portfolio purposes.
+modern-university/
+│
+├── app/
+├── components/
+│   ├── layout/
+│   ├── sections/
+│   └── ui/
+│
+├── public/
+│   ├── images/
+│   ├── videos/
+│   ├── brochures/
+│   └── icons/
+│
+├── styles/
+├── package.json
+└── README.md
