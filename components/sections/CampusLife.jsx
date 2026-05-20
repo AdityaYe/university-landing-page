@@ -4,8 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import gsap from "gsap";
-
 import Container from "../ui/Container";
 
 const horizontalImages = [
@@ -30,6 +28,8 @@ export default function Campus() {
 
   /* CROSSFADE */
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     const interval = setInterval(() => {
       setActiveImage((prev) => (prev + 1) % festImages.length);
     }, 3500);
@@ -42,6 +42,7 @@ export default function Campus() {
     const container = trackRef.current;
 
     if (!container) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     let animationFrame;
 
@@ -135,19 +136,19 @@ export default function Campus() {
                 ...horizontalImages,
                 ...horizontalImages,
               ].map((image, index) => (
-                <div
-                  key={index}
+                <figure
+                  key={`${image}-${index}`}
                   className="relative w-[220px] sm:w-[280px] lg:w-[360px] h-[132px] sm:h-[170px] lg:h-[210px] rounded-[1.35rem] lg:rounded-[2.2rem] overflow-hidden shrink-0"
                 >
                   <Image
                     src={image}
-                    alt="Campus"
+                    alt="JG University campus space"
                     fill
                     className="object-cover"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                </div>
+                </figure>
               ))}
             </div>
           </div>
@@ -159,7 +160,7 @@ export default function Campus() {
           <div className="relative h-[260px] sm:h-[320px] lg:h-[360px] rounded-[1.4rem] lg:rounded-[2rem] overflow-hidden">
             {festImages.map((image, index) => (
               <motion.div
-                key={index}
+                key={image}
                 initial={{ opacity: 0 }}
                 animate={{
                   opacity: activeImage === index ? 1 : 0,
@@ -173,7 +174,7 @@ export default function Campus() {
               >
                 <Image
                   src={image}
-                  alt="Campus Culture"
+                  alt="JG University campus culture"
                   fill
                   className="object-cover"
                 />

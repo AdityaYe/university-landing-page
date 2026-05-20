@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Mail, MapPin, Phone, Clock3 } from "lucide-react";
 
@@ -39,7 +40,7 @@ export default function ContactPage() {
               </p>
 
               <h1 className="mt-3 md:mt-6 text-white text-[2.35rem] sm:text-[3.2rem] md:text-[5.5rem] leading-[1] md:leading-[0.92] tracking-tight">
-                Let’s connect and shape your future together.
+                Let&apos;s connect and shape your future together.
               </h1>
 
               <p className="mt-3 md:mt-8 text-[13px] sm:text-base md:text-xl leading-relaxed text-white/70 max-w-2xl">
@@ -54,17 +55,17 @@ export default function ContactPage() {
                   href="https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x395e8353dee254bb:0x6909d82c9319e0a0!3e0?g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-flex h-10 w-full items-center justify-center rounded-full bg-[#D4A514] px-4 text-xs text-white transition-all duration-500 hover:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A514] md:h-14 md:w-auto md:px-7 md:text-base"
                 >
-                  <button className="h-10 w-full px-4 md:h-14 md:w-auto md:px-7 rounded-full bg-[#D4A514] text-white text-xs md:text-base hover:scale-[1.03] transition-all duration-500">
-                    Visit Campus
-                  </button>
+                  Visit Campus
                 </a>
 
-                <a href="/admissions">
-                  <button className="h-10 w-full px-4 md:h-14 md:w-auto md:px-7 rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-white text-xs md:text-base hover:bg-white/15 transition-all duration-500">
-                    Admissions
-                  </button>
-                </a>
+                <Link
+                  href="/admissions"
+                  className="inline-flex h-10 w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-4 text-xs text-white backdrop-blur-md transition-all duration-500 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:h-14 md:w-auto md:px-7 md:text-base"
+                >
+                  Admissions
+                </Link>
               </div>
             </motion.div>
           </Container>
@@ -103,7 +104,11 @@ export default function ContactPage() {
                 className="bg-white rounded-[1.15rem] md:rounded-[2.5rem] p-3.5 md:p-8"
               >
                 <div className="w-9 h-9 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-[#F5F1EA] flex items-center justify-center">
-                  <MapPin size={24} className="w-5 h-5 md:w-6 md:h-6 text-[#B68D40]" />
+                  <MapPin
+                    size={24}
+                    aria-hidden="true"
+                    className="w-5 h-5 md:w-6 md:h-6 text-[#B68D40]"
+                  />
                 </div>
 
                 <h3 className="mt-3 md:mt-8 text-lg md:text-2xl text-[#111111]">Address</h3>
@@ -126,7 +131,11 @@ export default function ContactPage() {
                 className="bg-white rounded-[1.15rem] md:rounded-[2.5rem] p-3.5 md:p-8"
               >
                 <div className="w-9 h-9 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-[#F5F1EA] flex items-center justify-center">
-                  <Mail size={24} className="w-5 h-5 md:w-6 md:h-6 text-[#B68D40]" />
+                  <Mail
+                    size={24}
+                    aria-hidden="true"
+                    className="w-5 h-5 md:w-6 md:h-6 text-[#B68D40]"
+                  />
                 </div>
 
                 <h3 className="mt-3 md:mt-8 text-lg md:text-2xl text-[#111111]">Email</h3>
@@ -160,7 +169,11 @@ export default function ContactPage() {
                 className="bg-white rounded-[1.15rem] md:rounded-[2.5rem] p-3.5 md:p-8"
               >
                 <div className="w-9 h-9 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-[#F5F1EA] flex items-center justify-center">
-                  <Phone size={24} className="w-5 h-5 md:w-6 md:h-6 text-[#B68D40]" />
+                  <Phone
+                    size={24}
+                    aria-hidden="true"
+                    className="w-5 h-5 md:w-6 md:h-6 text-[#B68D40]"
+                  />
                 </div>
 
                 <h3 className="mt-3 md:mt-8 text-lg md:text-2xl text-[#111111]">Phone</h3>
@@ -185,15 +198,19 @@ export default function ContactPage() {
                 className="bg-[#111111] text-white rounded-[1.15rem] md:rounded-[2.5rem] p-3.5 md:p-8"
               >
                 <div className="w-9 h-9 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white/10 flex items-center justify-center">
-                  <Clock3 size={24} className="w-5 h-5 md:w-6 md:h-6 text-[#D4A514]" />
+                  <Clock3
+                    size={24}
+                    aria-hidden="true"
+                    className="w-5 h-5 md:w-6 md:h-6 text-[#D4A514]"
+                  />
                 </div>
 
                 <h3 className="mt-3 md:mt-8 text-lg md:text-2xl">Office Hours</h3>
 
                 <p className="mt-2 md:mt-5 text-[13px] md:text-base text-white/65 leading-relaxed">
-                  Monday – Saturday
+                  Monday - Saturday
                   <br />
-                  9:00 AM – 5:00 PM
+                  9:00 AM - 5:00 PM
                 </p>
               </motion.div>
             </div>
@@ -214,6 +231,7 @@ export default function ContactPage() {
             {/* MAP */}
             <div className="relative h-[320px] md:h-[620px]">
               <iframe
+                title="JG University campus location map"
                 src="https://www.google.com/maps?q=JG+University+Ahmedabad&output=embed"
                 width="100%"
                 height="100%"
@@ -241,7 +259,7 @@ export default function ContactPage() {
                 className="h-11 md:h-14 px-5 md:px-7 rounded-full bg-[#111111] text-white text-sm md:text-base flex items-center justify-center gap-3 hover:bg-[#B68D40] transition-all duration-500 shrink-0"
               >
                 Open in Google Maps
-                <ArrowUpRight size={18} />
+                <ArrowUpRight size={18} aria-hidden="true" />
               </a>
             </div>
           </motion.div>

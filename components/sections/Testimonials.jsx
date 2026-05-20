@@ -56,6 +56,8 @@ export default function Testimonials() {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % testimonials.length);
     }, 6000);
@@ -122,9 +124,9 @@ export default function Testimonials() {
                       &quot;
                     </div>
 
-                    <p className="mt-3 lg:mt-4 text-[1.2rem] sm:text-[1.35rem] lg:text-[2rem] leading-[1.35] lg:leading-[1.3] text-[#111111] font-light">
+                    <blockquote className="mt-3 lg:mt-4 text-[1.2rem] sm:text-[1.35rem] lg:text-[2rem] leading-[1.35] lg:leading-[1.3] text-[#111111] font-light">
                       {testimonials[active].quote}
-                    </p>
+                    </blockquote>
                   </div>
 
                   <div className="flex items-center gap-3 lg:gap-5 pt-5 lg:pt-10 border-t border-black/10">
@@ -154,8 +156,11 @@ export default function Testimonials() {
             <div className="mt-5 flex items-center justify-center gap-3">
               {testimonials.map((_, index) => (
                 <button
-                  key={index}
+                  key={testimonials[index].name}
                   onClick={() => setActive(index)}
+                  type="button"
+                  aria-label={`Show testimonial from ${testimonials[index].name}`}
+                  aria-current={active === index ? "true" : undefined}
                   className={`transition-all duration-500 rounded-full ${
                     active === index
                       ? "w-10 h-2 bg-[#111111]"
@@ -168,16 +173,20 @@ export default function Testimonials() {
             <div className="mt-5 flex items-center justify-center gap-3 lg:gap-4">
               <button
                 onClick={prevSlide}
+                type="button"
+                aria-label="Show previous testimonial"
                 className="w-11 h-11 lg:w-14 lg:h-14 rounded-full border border-black/10 bg-white flex items-center justify-center hover:bg-black hover:text-white transition-all duration-500"
               >
-                <ChevronLeft size={20} />
+                <ChevronLeft size={20} aria-hidden="true" />
               </button>
 
               <button
                 onClick={nextSlide}
+                type="button"
+                aria-label="Show next testimonial"
                 className="w-11 h-11 lg:w-14 lg:h-14 rounded-full border border-black/10 bg-white flex items-center justify-center hover:bg-black hover:text-white transition-all duration-500"
               >
-                <ChevronRight size={20} />
+                <ChevronRight size={20} aria-hidden="true" />
               </button>
             </div>
           </div>

@@ -40,9 +40,9 @@ export default function Footer() {
                 />
               </div>
 
-              <h2 className="mt-6 text-[2.05rem] leading-[1] max-w-xl lg:mt-10 lg:text-[3.5rem] lg:leading-[0.95]">
-                Future-ready education designed for tomorrow’s leaders.
-              </h2>
+              <p className="mt-6 max-w-xl font-[var(--font-cormorant)] text-[2.05rem] leading-[1] lg:mt-10 lg:text-[3.5rem] lg:leading-[0.95]">
+                Future-ready education designed for tomorrow&apos;s leaders.
+              </p>
 
               <p className="mt-4 text-sm text-white/60 leading-relaxed max-w-lg lg:mt-8 lg:text-base">
                 JG University combines academic excellence, industry-driven
@@ -52,20 +52,20 @@ export default function Footer() {
 
               {/* BUTTONS */}
               <div className="mt-6 grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap sm:gap-4 lg:mt-10">
-                <Link href="/admissions">
-                  <button className="h-10 w-full px-4 rounded-full bg-[#D4A514] text-xs text-white hover:scale-[1.03] transition-all duration-500 sm:w-auto lg:h-14 lg:px-7 lg:text-base">
-                    Apply Now
-                  </button>
+                <Link
+                  href="/admissions"
+                  className="inline-flex h-10 w-full items-center justify-center rounded-full bg-[#D4A514] px-4 text-xs text-white transition-all duration-500 hover:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A514] sm:w-auto lg:h-14 lg:px-7 lg:text-base"
+                >
+                  Apply Now
                 </Link>
 
                 <a
                   href="/brochures/jg-university-brochure.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-flex h-10 w-full items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 text-xs text-white backdrop-blur-md transition-all duration-500 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto lg:h-14 lg:px-7 lg:text-base"
                 >
-                  <button className="h-10 w-full px-4 rounded-full border border-white/15 bg-white/5 backdrop-blur-md text-xs text-white hover:bg-white/10 transition-all duration-500 sm:w-auto lg:h-14 lg:px-7 lg:text-base">
-                    Download Brochure
-                  </button>
+                  Download Brochure
                 </a>
               </div>
             </div>
@@ -155,6 +155,7 @@ export default function Footer() {
                   <div className="flex items-start gap-3 lg:gap-4">
                     <MapPin
                       size={18}
+                      aria-hidden="true"
                       className="text-[#D4A514] shrink-0 mt-1"
                     />
 
@@ -167,7 +168,11 @@ export default function Footer() {
 
                   {/* EMAIL */}
                   <div className="flex items-start gap-3 lg:gap-4">
-                    <Mail size={18} className="text-[#D4A514] shrink-0 mt-1" />
+                    <Mail
+                      size={18}
+                      aria-hidden="true"
+                      className="text-[#D4A514] shrink-0 mt-1"
+                    />
 
                     <div className="space-y-1 text-sm">
                       <a
@@ -188,7 +193,11 @@ export default function Footer() {
 
                   {/* PHONE */}
                   <div className="flex items-start gap-3 lg:gap-4">
-                    <Phone size={18} className="text-[#D4A514] shrink-0 mt-1" />
+                    <Phone
+                      size={18}
+                      aria-hidden="true"
+                      className="text-[#D4A514] shrink-0 mt-1"
+                    />
 
                     <a
                       href="tel:+917567756758"
@@ -203,30 +212,34 @@ export default function Footer() {
                     {[
                       {
                         icon: FaInstagram,
+                        label: "Instagram",
                         href: "https://www.instagram.com/jguniversity",
                       },
 
                       {
                         icon: FaLinkedinIn,
+                        label: "LinkedIn",
                         href: "https://www.linkedin.com/company/jg-university/",
                       },
 
                       {
                         icon: FaYoutube,
+                        label: "YouTube",
                         href: "https://www.youtube.com/channel/UCyR1OyKN8l2Srj5G0H1WRyg/featured",
                       },
-                    ].map((item, index) => {
+                    ].map((item) => {
                       const Icon = item.icon;
 
                       return (
                         <a
-                          key={index}
+                          key={item.label}
                           href={item.href}
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label={`JG University on ${item.label}`}
                           className="w-9 h-9 rounded-full border border-white/10 bg-white/5 hover:bg-[#D4A514] hover:border-[#D4A514] transition-all duration-500 flex items-center justify-center lg:w-11 lg:h-11"
                         >
-                          <Icon size={16} />
+                          <Icon size={16} aria-hidden="true" />
                         </a>
                       );
                     })}
@@ -243,7 +256,7 @@ export default function Footer() {
         <Container>
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 lg:gap-5">
             <p className="text-white/35 text-xs lg:text-sm">
-              © 2026 JG University. All rights reserved.
+              Copyright 2026 JG University. All rights reserved.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-white/40 lg:gap-8 lg:text-sm">

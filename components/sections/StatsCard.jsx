@@ -15,28 +15,6 @@ export default function StatsCard() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const stats = [
-    {
-      number: "25+",
-      label: "Years of Excellence",
-    },
-
-    {
-      number: "120+",
-      label: "Programs Offered",
-    },
-
-    {
-      number: "12K+",
-      label: "Students Enrolled",
-    },
-
-    {
-      number: "300+",
-      label: "Expert Faculty",
-    },
-  ];
-
   return (
     <section className="relative z-30 -mt-6 md:-mt-18 lg:-mt-20 pb-8 lg:pb-10">
       <div className="w-[92%] max-w-6xl mx-auto">
@@ -49,7 +27,7 @@ export default function StatsCard() {
         >
           {stats.map((item, index) => (
             <div
-              key={index}
+              key={item.label}
               className={`p-3.5 sm:p-4 md:p-5 lg:p-10 text-center transition-all duration-700 ease-out ${
                 index !== stats.length - 1
                   ? scrolled
@@ -84,3 +62,22 @@ export default function StatsCard() {
     </section>
   );
 }
+
+const stats = [
+  {
+    number: "25+",
+    label: "Years of Excellence",
+  },
+  {
+    number: "120+",
+    label: "Programs Offered",
+  },
+  {
+    number: "12K+",
+    label: "Students Enrolled",
+  },
+  {
+    number: "300+",
+    label: "Expert Faculty",
+  },
+];

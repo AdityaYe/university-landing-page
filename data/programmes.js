@@ -8,7 +8,7 @@ export const programmes = [
 
     category: "Undergraduate",
 
-    duration: "4 Years · 8 Semesters",
+    duration: "4 Years - 8 Semesters",
 
     image: "/images/programmes/ug-cs-image.png",
 
@@ -18,10 +18,10 @@ export const programmes = [
       "Industry-focused engineering programme designed to prepare students for careers in software development, artificial intelligence, cybersecurity, cloud computing, and emerging technologies.",
 
     description:
-      "JG University’s School of Engineering offers a future-ready B.Tech Computer Science & Engineering programme built around experiential learning, industry exposure, and practical problem solving. The curriculum combines strong computer science fundamentals with modern technologies including AI, cloud computing, mobile application development, cybersecurity, and software engineering. Students gain hands-on experience through internships, capstone projects, workshops, and real-world learning opportunities while developing critical thinking, teamwork, and innovation-driven skills.",
+      "JG University's School of Engineering offers a future-ready B.Tech Computer Science & Engineering programme built around experiential learning, industry exposure, and practical problem solving. The curriculum combines strong computer science fundamentals with modern technologies including AI, cloud computing, mobile application development, cybersecurity, and software engineering. Students gain hands-on experience through internships, capstone projects, workshops, and real-world learning opportunities while developing critical thinking, teamwork, and innovation-driven skills.",
 
     feeStructure: {
-      tuitionFeePerSemester: "₹39,375 per semester as per FRC",
+      tuitionFeePerSemester: "Rs. 39,375 per semester as per FRC",
     },
 
     eligibility: [
@@ -131,7 +131,7 @@ export const programmes = [
 
     category: "Undergraduate",
 
-    duration: "4 Years · 8 Semesters",
+    duration: "4 Years - 8 Semesters",
 
     image: "/images/programmes/btech-it-image.png",
 
@@ -141,7 +141,7 @@ export const programmes = [
       "Future-focused Information Technology programme designed to build expertise in software systems, networking, cloud computing, AI, cybersecurity, and emerging digital technologies.",
 
     description:
-      "JG University’s B.Tech Information Technology programme equips students with strong technical foundations and industry-ready skills through experiential learning and practical exposure. The curriculum includes programming, web technologies, operating systems, cloud computing, mobile app development, networking, cybersecurity, and data science. Students gain hands-on experience through internships, capstone projects, workshops, and research-driven learning while developing problem-solving, teamwork, and innovation-focused capabilities essential for modern IT careers. In collaboration with Coding Pro, the programme also provides future-oriented technology exposure guided by IIT and IIM alumni expertise.",
+      "JG University's B.Tech Information Technology programme equips students with strong technical foundations and industry-ready skills through experiential learning and practical exposure. The curriculum includes programming, web technologies, operating systems, cloud computing, mobile app development, networking, cybersecurity, and data science. Students gain hands-on experience through internships, capstone projects, workshops, and research-driven learning while developing problem-solving, teamwork, and innovation-focused capabilities essential for modern IT careers. In collaboration with Coding Pro, the programme also provides future-oriented technology exposure guided by IIT and IIM alumni expertise.",
 
     knowledgePartner: {
       title: "Coding Pro",
@@ -150,7 +150,7 @@ export const programmes = [
     },
 
     feeStructure: {
-      tuitionFeePerSemester: "₹39,375 per semester as per FRC",
+      tuitionFeePerSemester: "Rs. 39,375 per semester as per FRC",
     },
 
     eligibility: [
@@ -260,7 +260,7 @@ export const programmes = [
 
     category: "Undergraduate",
 
-    duration: "4 Years · 8 Semesters",
+    duration: "4 Years - 8 Semesters",
 
     image: "/images/programmes/btech-ai-ml-image.png",
 
@@ -270,10 +270,10 @@ export const programmes = [
       "Advanced AI-focused engineering programme designed to build expertise in machine learning, intelligent systems, robotics, automation, and next-generation technologies.",
 
     description:
-      "JG University’s B.Tech Artificial Intelligence & Machine Learning programme is designed for innovators and future technology leaders. The curriculum combines strong theoretical foundations with hands-on practical learning in intelligent systems, machine learning, robotics, automation, natural language processing, and AI-driven applications. Students gain real-world exposure through projects, industrial internships, workshops, and research-oriented learning while developing analytical thinking, innovation, and problem-solving skills essential for the rapidly evolving AI industry.",
+      "JG University's B.Tech Artificial Intelligence & Machine Learning programme is designed for innovators and future technology leaders. The curriculum combines strong theoretical foundations with hands-on practical learning in intelligent systems, machine learning, robotics, automation, natural language processing, and AI-driven applications. Students gain real-world exposure through projects, industrial internships, workshops, and research-oriented learning while developing analytical thinking, innovation, and problem-solving skills essential for the rapidly evolving AI industry.",
 
     feeStructure: {
-      tuitionFeePerSemester: "₹39,375 per semester as per FRC",
+      tuitionFeePerSemester: "Rs. 39,375 per semester as per FRC",
     },
 
     eligibility: [
@@ -383,7 +383,7 @@ export const programmes = [
 
     category: "Undergraduate",
 
-    duration: "4 Years · 8 Semesters",
+    duration: "4 Years - 8 Semesters",
 
     image: "/images/programmes/ug-bba-image.png",
 
@@ -393,10 +393,10 @@ export const programmes = [
       "Industry-oriented business administration programme designed to develop future leaders through management education, technology integration, entrepreneurship, and experiential learning.",
 
     description:
-      "JG University’s BBA (Hons) programme combines management education with liberal studies and technology-driven learning to create innovative and socially conscious business leaders. Students gain practical exposure through internships, capstone projects, industrial immersion programmes, workshops, and experiential classroom learning. The curriculum focuses on developing leadership, communication, teamwork, problem-solving, and entrepreneurial skills while preparing students for accelerated career growth in the global business environment.",
+      "JG University's BBA (Hons) programme combines management education with liberal studies and technology-driven learning to create innovative and socially conscious business leaders. Students gain practical exposure through internships, capstone projects, industrial immersion programmes, workshops, and experiential classroom learning. The curriculum focuses on developing leadership, communication, teamwork, problem-solving, and entrepreneurial skills while preparing students for accelerated career growth in the global business environment.",
 
     feeStructure: {
-      tuitionFeePerSemester: "₹40,000 per semester",
+      tuitionFeePerSemester: "Rs. 40,000 per semester",
     },
 
     eligibility: [
@@ -531,7 +531,7 @@ export const programmes = [
 
     category: "Undergraduate",
 
-    duration: "4 Years · 8 Semesters",
+    duration: "4 Years - 8 Semesters",
 
     image: "/images/programmes/undergraduate-image.png",
 
@@ -541,10 +541,10 @@ export const programmes = [
       "Comprehensive commerce programme designed to develop expertise in accounting, finance, auditing, taxation, business operations, and professional commerce practices.",
 
     description:
-      "JG University’s B.Com (Hons) programme prepares students to become future-ready commerce professionals with a strong understanding of modern business environments. The curriculum combines accounting, finance, auditing, taxation, banking, financial markets, and management practices with experiential learning and industry exposure. Students develop analytical thinking, business understanding, communication, and technological skills through internships, capstone projects, workshops, and continuous mentoring by experienced faculty and industry experts.",
+      "JG University's B.Com (Hons) programme prepares students to become future-ready commerce professionals with a strong understanding of modern business environments. The curriculum combines accounting, finance, auditing, taxation, banking, financial markets, and management practices with experiential learning and industry exposure. Students develop analytical thinking, business understanding, communication, and technological skills through internships, capstone projects, workshops, and continuous mentoring by experienced faculty and industry experts.",
 
     feeStructure: {
-      tuitionFeePerSemester: "₹30,000 per semester for first three years",
+      tuitionFeePerSemester: "Rs. 30,000 per semester for first three years",
     },
 
     eligibility: [
@@ -666,7 +666,7 @@ export const programmes = [
 
     category: "Undergraduate",
 
-    duration: "4 Years · 8 Semesters",
+    duration: "4 Years - 8 Semesters",
 
     image: "/images/programmes/ug-gamedesign-image.png",
 
@@ -676,10 +676,10 @@ export const programmes = [
       "Creative technology-focused design programme built for aspiring game developers, artists, storytellers, and interactive experience creators in the modern gaming industry.",
 
     description:
-      "JG University’s B.Design Game Design programme is designed to transform passionate gamers and creative thinkers into industry-ready game design professionals. The curriculum combines game development, interactive storytelling, 3D art, animation, virtual reality, augmented reality, sound design, and quality assurance with practical industry exposure. Students work on real-world projects, internships, workshops, and capstone experiences while learning from experienced industry professionals and creative mentors in a highly collaborative environment focused on innovation and creativity.",
+      "JG University's B.Design Game Design programme is designed to transform passionate gamers and creative thinkers into industry-ready game design professionals. The curriculum combines game development, interactive storytelling, 3D art, animation, virtual reality, augmented reality, sound design, and quality assurance with practical industry exposure. Students work on real-world projects, internships, workshops, and capstone experiences while learning from experienced industry professionals and creative mentors in a highly collaborative environment focused on innovation and creativity.",
 
     feeStructure: {
-      tuitionFeePerSemester: "₹80,000 per semester",
+      tuitionFeePerSemester: "Rs. 80,000 per semester",
     },
 
     eligibility: [
@@ -781,7 +781,7 @@ export const programmes = [
 
     category: "Undergraduate",
 
-    duration: "4 Years · 8 Semesters",
+    duration: "4 Years - 8 Semesters",
 
     image: "/images/programmes/ug-uiux-image.png",
 
@@ -791,10 +791,10 @@ export const programmes = [
       "Creative design programme focused on crafting intuitive digital experiences through user research, interface design, interaction systems, and modern design thinking methodologies.",
 
     description:
-      "JG University’s B.Design UI/UX programme is designed for creative thinkers who aspire to shape modern digital experiences. The curriculum blends design thinking, user psychology, interface systems, digital storytelling, prototyping, and interaction design with practical learning and industry exposure. Students develop expertise in wireframing, information architecture, visual systems, and user-centred design while building strong technical, creative, and strategic problem-solving skills essential for the modern digital design industry.",
+      "JG University's B.Design UI/UX programme is designed for creative thinkers who aspire to shape modern digital experiences. The curriculum blends design thinking, user psychology, interface systems, digital storytelling, prototyping, and interaction design with practical learning and industry exposure. Students develop expertise in wireframing, information architecture, visual systems, and user-centred design while building strong technical, creative, and strategic problem-solving skills essential for the modern digital design industry.",
 
     feeStructure: {
-      tuitionFeePerSemester: "₹80,000 per semester",
+      tuitionFeePerSemester: "Rs. 80,000 per semester",
     },
 
     eligibility: [
@@ -894,7 +894,7 @@ export const programmes = [
 
     category: "Undergraduate",
 
-    duration: "5 Years · 10 Semesters",
+    duration: "5 Years - 10 Semesters",
 
     image: "/images/programmes/ug-bio-image.png",
 
@@ -904,10 +904,10 @@ export const programmes = [
       "Integrated life sciences programme focused on reproductive biology, embryology, infertility management, IVF technologies, and advanced reproductive healthcare practices.",
 
     description:
-      "JG University’s Integrated B.Sc. + M.Sc. in Reproductive Biology & Clinical Embryology offers a comprehensive pathway into the rapidly advancing field of reproductive medicine and assisted reproductive technologies. The programme combines foundational life sciences education with advanced specialised learning in reproductive endocrinology, infertility management, embryology procedures, IVF, and clinical laboratory practices. Students gain practical expertise through laboratory training, clinical exposure, case studies, and research-oriented learning while developing strong ethical, scientific, and analytical skills under the guidance of experienced academicians and industry professionals.",
+      "JG University's Integrated B.Sc. + M.Sc. in Reproductive Biology & Clinical Embryology offers a comprehensive pathway into the rapidly advancing field of reproductive medicine and assisted reproductive technologies. The programme combines foundational life sciences education with advanced specialised learning in reproductive endocrinology, infertility management, embryology procedures, IVF, and clinical laboratory practices. Students gain practical expertise through laboratory training, clinical exposure, case studies, and research-oriented learning while developing strong ethical, scientific, and analytical skills under the guidance of experienced academicians and industry professionals.",
 
     feeStructure: {
-      tuitionFeePerSemester: "₹45,500 per semester",
+      tuitionFeePerSemester: "Rs. 45,500 per semester",
     },
 
     eligibility: [
@@ -1016,7 +1016,7 @@ export const programmes = [
 
     category: "Postgraduate",
 
-    duration: "2 Years · 4 Semesters",
+    duration: "2 Years - 4 Semesters",
 
     image: "/images/programmes/pg-mba-image.png",
 
@@ -1026,17 +1026,17 @@ export const programmes = [
       "Industry-focused management programme designed to develop future business leaders through strategic thinking, experiential learning, and real-world corporate exposure.",
 
     description:
-      "JG University’s MBA programme combines management education, liberal studies, and technology-driven learning to prepare students for leadership roles in the modern business environment. The curriculum emphasises critical thinking, problem-solving, strategic decision-making, and professional communication through case studies, presentations, roleplays, internships, and capstone projects. Students gain practical exposure through industry interaction, corporate internships, workshops, and mentorship from experienced academicians and business professionals.",
+      "JG University's MBA programme combines management education, liberal studies, and technology-driven learning to prepare students for leadership roles in the modern business environment. The curriculum emphasises critical thinking, problem-solving, strategic decision-making, and professional communication through case studies, presentations, roleplays, internships, and capstone projects. Students gain practical exposure through industry interaction, corporate internships, workshops, and mentorship from experienced academicians and business professionals.",
 
     feeStructure: {
-      tuitionFeePerSemester: "₹42,525 per semester as per FRC",
+      tuitionFeePerSemester: "Rs. 42,525 per semester as per FRC",
     },
 
     eligibility: [
       "CMAT / CAT / GMAT / GRE / JG University Entrance Test (JGET)",
-      "Bachelor’s degree with minimum 50% aggregate marks",
+      "Bachelor's degree with minimum 50% aggregate marks",
       "Minimum 45% aggregate for reserved category candidates",
-      "Bachelor’s degree must involve minimum 3 years of education after 10+2",
+      "Bachelor's degree must involve minimum 3 years of education after 10+2",
     ],
 
     specialisations: [
@@ -1163,7 +1163,7 @@ export const programmes = [
 
     category: "Postgraduate",
 
-    duration: "2 Years · 4 Semesters",
+    duration: "2 Years - 4 Semesters",
 
     image: "/images/programmes/pg-mcom-image.png",
 
@@ -1173,7 +1173,7 @@ export const programmes = [
       "Industry-integrated commerce programme specialising in US Accounting and Taxation with paid on-the-job training and global professional exposure.",
 
     description:
-      "JG University’s M.Com (Hons) programme is designed to prepare students for global careers in accounting, taxation, finance, and professional business services. The curriculum focuses on US Accounting and Taxation while integrating practical corporate training, business communication, and technological skills. Students gain real-world industry exposure through full-time on-the-job training opportunities beginning from Semester 2, allowing them to earn while they learn. Guided by experienced professionals and global industry experts, the programme develops technical expertise, practical problem-solving skills, and corporate professionalism for the evolving KPO and BPO sectors.",
+      "JG University's M.Com (Hons) programme is designed to prepare students for global careers in accounting, taxation, finance, and professional business services. The curriculum focuses on US Accounting and Taxation while integrating practical corporate training, business communication, and technological skills. Students gain real-world industry exposure through full-time on-the-job training opportunities beginning from Semester 2, allowing them to earn while they learn. Guided by experienced professionals and global industry experts, the programme develops technical expertise, practical problem-solving skills, and corporate professionalism for the evolving KPO and BPO sectors.",
 
     knowledgePartner: {
       title: "Phoenix Institute",
@@ -1182,15 +1182,15 @@ export const programmes = [
     },
 
     feeStructure: {
-      tuitionFeePerSemester: "₹60,000 per semester",
+      tuitionFeePerSemester: "Rs. 60,000 per semester",
     },
 
     eligibility: [
       "JG University Entrance Test (JGET)",
-      "Bachelor’s degree in Commerce, Business Administration, or Management",
+      "Bachelor's degree in Commerce, Business Administration, or Management",
       "Minimum 45% aggregate for open category candidates",
       "Minimum 40% aggregate for reserved category candidates",
-      "Bachelor’s degree must involve minimum 3 years of education after 10+2",
+      "Bachelor's degree must involve minimum 3 years of education after 10+2",
     ],
 
     specialisations: ["International Accounting & Taxation"],
@@ -1200,7 +1200,7 @@ export const programmes = [
       "18 months of corporate on-the-job training",
       "Earn while you learn model",
       "Monthly stipend opportunities beginning from Semester 2",
-      "Potential earnings of ₹4,50,000 by Semester 4",
+      "Potential earnings of Rs. 4,50,000 by Semester 4",
       "Curriculum designed by highly experienced professionals",
       "Continuous evaluation and practical skill development",
       "Real-world corporate exposure and business experience",
@@ -1269,7 +1269,7 @@ export const programmes = [
 
     stats: [
       {
-        value: "₹4.5L+",
+        value: "Rs. 4.5L+",
         label: "Potential Earnings During Programme",
       },
 
@@ -1298,7 +1298,7 @@ export const programmes = [
 
     category: "Postgraduate",
 
-    duration: "2 Years · 4 Semesters",
+    duration: "2 Years - 4 Semesters",
 
     image: "/images/programmes/postgraduate-image.png",
 
@@ -1308,18 +1308,18 @@ export const programmes = [
       "Advanced computer applications programme focused on software development, emerging technologies, research-driven learning, and industry-ready technical expertise.",
 
     description:
-      "JG University’s MCA programme is designed to provide students with strong technical foundations and advanced industry-oriented skills in computer science and information technology. The curriculum combines programming, software development, networking, cloud computing, mobile technologies, data science, AI, machine learning, and IoT with practical exposure through internships, workshops, capstone projects, and research-driven learning. Students develop technical expertise, analytical thinking, and professional problem-solving abilities under the guidance of experienced academicians and industry experts while staying aligned with evolving technology trends and innovations.",
+      "JG University's MCA programme is designed to provide students with strong technical foundations and advanced industry-oriented skills in computer science and information technology. The curriculum combines programming, software development, networking, cloud computing, mobile technologies, data science, AI, machine learning, and IoT with practical exposure through internships, workshops, capstone projects, and research-driven learning. Students develop technical expertise, analytical thinking, and professional problem-solving abilities under the guidance of experienced academicians and industry experts while staying aligned with evolving technology trends and innovations.",
 
     feeStructure: {
-      tuitionFeePerSemester: "₹40,950 per semester as per FRC",
+      tuitionFeePerSemester: "Rs. 40,950 per semester as per FRC",
     },
 
     eligibility: [
       "CMAT / CAT / GMAT / GRE / JG University Entrance Test (JGET)",
-      "Bachelor’s degree in Computer Science or Information Technology",
+      "Bachelor's degree in Computer Science or Information Technology",
       "Minimum 50% aggregate for open category candidates",
       "Minimum 45% aggregate for reserved category candidates",
-      "Bachelor’s degree must involve minimum 3 years of education after 10+2",
+      "Bachelor's degree must involve minimum 3 years of education after 10+2",
     ],
 
     specialisations: [
@@ -1434,7 +1434,7 @@ export const programmes = [
 
     category: "Postgraduate",
 
-    duration: "2 Years · 4 Semesters",
+    duration: "2 Years - 4 Semesters",
 
     image: "/images/programmes/pg-finance-image.png",
 
@@ -1444,17 +1444,17 @@ export const programmes = [
       "Global business and finance programme designed to build expertise in international trade operations, export-import management, supply chain systems, and global financial practices.",
 
     description:
-      "JG University’s MBA in International Trade & Finance prepares students for leadership roles in the global business ecosystem through an industry-oriented curriculum combining management, finance, and technology. The programme provides in-depth exposure to international trade practices, export-import operations, accounting principles, logistics, supply chain management, and global financial systems. Students gain analytical, strategic, and operational skills required to navigate complex international markets while developing professional expertise through practical learning and real-world business exposure.",
+      "JG University's MBA in International Trade & Finance prepares students for leadership roles in the global business ecosystem through an industry-oriented curriculum combining management, finance, and technology. The programme provides in-depth exposure to international trade practices, export-import operations, accounting principles, logistics, supply chain management, and global financial systems. Students gain analytical, strategic, and operational skills required to navigate complex international markets while developing professional expertise through practical learning and real-world business exposure.",
 
     feeStructure: {
-      tuitionFeePerSemester: "₹65,000 per semester",
+      tuitionFeePerSemester: "Rs. 65,000 per semester",
     },
 
     eligibility: [
-      "Bachelor’s degree in any discipline",
+      "Bachelor's degree in any discipline",
       "Minimum 50% aggregate for open category candidates",
       "Minimum 45% aggregate for reserved category candidates",
-      "Bachelor’s degree must involve minimum 3 years of education after 10+2",
+      "Bachelor's degree must involve minimum 3 years of education after 10+2",
     ],
 
     specialisations: [
@@ -1556,7 +1556,7 @@ export const programmes = [
 
     category: "Postgraduate",
 
-    duration: "2 Years · 4 Semesters",
+    duration: "2 Years - 4 Semesters",
 
     image: "/images/programmes/pg-aviation-image.png",
 
@@ -1566,17 +1566,17 @@ export const programmes = [
       "Industry-oriented management programme focused on aviation operations, hospitality systems, tourism management, and global travel industry practices.",
 
     description:
-      "JG University’s MBA in Aviation, Hospitality & Travel Management provides students with specialised knowledge and practical exposure across the aviation, hospitality, and tourism sectors. The programme covers airline operations, aircraft scheduling, airport systems, hospitality operations, food and beverage management, international tourism, and travel logistics. Students gain a comprehensive understanding of aviation planning, hospitality services, and tours & travel management through a curriculum that integrates management principles with technology-driven learning and real-world industry insights.",
+      "JG University's MBA in Aviation, Hospitality & Travel Management provides students with specialised knowledge and practical exposure across the aviation, hospitality, and tourism sectors. The programme covers airline operations, aircraft scheduling, airport systems, hospitality operations, food and beverage management, international tourism, and travel logistics. Students gain a comprehensive understanding of aviation planning, hospitality services, and tours & travel management through a curriculum that integrates management principles with technology-driven learning and real-world industry insights.",
 
     feeStructure: {
-      tuitionFeePerSemester: "₹65,000 per semester",
+      tuitionFeePerSemester: "Rs. 65,000 per semester",
     },
 
     eligibility: [
-      "Bachelor’s degree in any discipline",
+      "Bachelor's degree in any discipline",
       "Minimum 50% aggregate for open category candidates",
       "Minimum 45% aggregate for reserved category candidates",
-      "Bachelor’s degree must involve minimum 3 years of education after 10+2",
+      "Bachelor's degree must involve minimum 3 years of education after 10+2",
     ],
 
     specialisations: [
@@ -1689,16 +1689,16 @@ export const programmes = [
     "Advanced doctoral research programme focused on management studies, business innovation, leadership research, and interdisciplinary academic excellence.",
 
   description:
-    "JG University’s Ph.D in Management programme is designed for aspiring researchers, academicians, and industry professionals seeking advanced expertise in management and business research. The programme provides rigorous research methodology training, interdisciplinary exposure, academic mentorship, and opportunities to contribute meaningful research in business strategy, leadership, innovation, finance, marketing, and organisational studies. Scholars receive strong academic support through seminars, conferences, teaching opportunities, and research collaborations with experienced faculty and industry experts.",
+    "JG University's Ph.D in Management programme is designed for aspiring researchers, academicians, and industry professionals seeking advanced expertise in management and business research. The programme provides rigorous research methodology training, interdisciplinary exposure, academic mentorship, and opportunities to contribute meaningful research in business strategy, leadership, innovation, finance, marketing, and organisational studies. Scholars receive strong academic support through seminars, conferences, teaching opportunities, and research collaborations with experienced faculty and industry experts.",
 
   feeStructure: {
     programmeFeePerSemester:
-      "₹40,000 per semester",
+      "Rs. 40,000 per semester",
   },
 
   eligibility: [
-    "Master’s degree in Management, Commerce, Arts, Social Sciences, Humanities, Computing, or Education with minimum 55% aggregate or equivalent CGPA",
-    "Candidates with Bachelor’s (Honours) in 10+2+4 pattern and one-year Master’s degree are also eligible",
+    "Master's degree in Management, Commerce, Arts, Social Sciences, Humanities, Computing, or Education with minimum 55% aggregate or equivalent CGPA",
+    "Candidates with Bachelor's (Honours) in 10+2+4 pattern and one-year Master's degree are also eligible",
     "5% relaxation for SC, ST, EWS, and PwD candidates",
     "Degrees must be recognised by MHRD, UGC, or Government of India",
     "Professional qualification holders such as CA/CS may also apply",
@@ -1824,16 +1824,16 @@ export const programmes = [
     "Research-focused doctoral programme designed to advance academic, analytical, and industry-oriented expertise in commerce, finance, economics, and interdisciplinary business studies.",
 
   description:
-    "JG University’s School of Research & Innovation offers a rigorous Ph.D in Commerce programme focused on empowering aspiring researchers and academicians through advanced research methodologies, interdisciplinary exposure, and academic mentorship. Scholars gain opportunities to contribute meaningful research in commerce, accounting, economics, finance, and related business domains while engaging with experienced faculty, academic conferences, seminars, and research presentations. The programme combines strong research support with industry and academic exposure to prepare scholars for impactful careers in academia and professional research.",
+    "JG University's School of Research & Innovation offers a rigorous Ph.D in Commerce programme focused on empowering aspiring researchers and academicians through advanced research methodologies, interdisciplinary exposure, and academic mentorship. Scholars gain opportunities to contribute meaningful research in commerce, accounting, economics, finance, and related business domains while engaging with experienced faculty, academic conferences, seminars, and research presentations. The programme combines strong research support with industry and academic exposure to prepare scholars for impactful careers in academia and professional research.",
 
   feeStructure: {
     programmeFeePerSemester:
-      "₹40,000 per semester",
+      "Rs. 40,000 per semester",
   },
 
   eligibility: [
-    "Master’s degree in Commerce, Arts, Social Sciences, Humanities, Computing, or Education with minimum 55% aggregate or equivalent CGPA",
-    "Candidates with Bachelor’s (Honours) in 10+2+4 pattern and one-year Master’s degree are also eligible",
+    "Master's degree in Commerce, Arts, Social Sciences, Humanities, Computing, or Education with minimum 55% aggregate or equivalent CGPA",
+    "Candidates with Bachelor's (Honours) in 10+2+4 pattern and one-year Master's degree are also eligible",
     "5% relaxation for SC, ST, EWS, and PwD candidates",
     "Degrees must be recognised by MHRD, UGC, or Government of India",
     "Professional qualification holders such as CA/CS may also apply",
@@ -1958,16 +1958,16 @@ export const programmes = [
     "Advanced doctoral research programme focused on computing technologies, innovation, interdisciplinary research, and emerging digital systems.",
 
   description:
-    "JG University’s Ph.D in Computing programme is designed for aspiring researchers and academicians seeking advanced expertise in computing and emerging technologies. The programme provides interdisciplinary exposure, strong research mentorship, and opportunities to contribute meaningful innovations in computing systems, digital technologies, and modern research domains. Scholars receive academic guidance, teaching exposure, conference participation opportunities, and research training that prepares them for impactful careers in academia, research institutions, and the technology industry.",
+    "JG University's Ph.D in Computing programme is designed for aspiring researchers and academicians seeking advanced expertise in computing and emerging technologies. The programme provides interdisciplinary exposure, strong research mentorship, and opportunities to contribute meaningful innovations in computing systems, digital technologies, and modern research domains. Scholars receive academic guidance, teaching exposure, conference participation opportunities, and research training that prepares them for impactful careers in academia, research institutions, and the technology industry.",
 
   feeStructure: {
     programmeFeePerSemester:
-      "₹40,000 per semester",
+      "Rs. 40,000 per semester",
   },
 
   eligibility: [
-    "Master’s degree in Computing, Arts, Commerce, Social Sciences, Humanities, or Education with minimum 55% aggregate or equivalent CGPA",
-    "Candidates with Bachelor’s (Honours) in 10+2+4 pattern and one-year Master’s degree are also eligible",
+    "Master's degree in Computing, Arts, Commerce, Social Sciences, Humanities, or Education with minimum 55% aggregate or equivalent CGPA",
+    "Candidates with Bachelor's (Honours) in 10+2+4 pattern and one-year Master's degree are also eligible",
     "5% relaxation for SC, ST, EWS, and PwD candidates",
     "Degrees must be recognised by MHRD, UGC, or Government of India",
     "Professional qualification holders such as CA/CS may also apply",
@@ -2092,16 +2092,16 @@ export const programmes = [
     "Advanced doctoral programme focused on legal research, policy analysis, interdisciplinary law studies, and academic excellence in legal scholarship.",
 
   description:
-    "JG University’s Ph.D in Law programme is designed for aspiring legal scholars, researchers, and academicians seeking advanced expertise in legal studies and interdisciplinary research. The programme provides rigorous research methodology training, academic mentorship, and opportunities to contribute meaningful research in law, policy, ethics, and contemporary legal systems. Scholars gain exposure to conferences, seminars, academic presentations, and teaching opportunities while working closely with experienced faculty and research experts.",
+    "JG University's Ph.D in Law programme is designed for aspiring legal scholars, researchers, and academicians seeking advanced expertise in legal studies and interdisciplinary research. The programme provides rigorous research methodology training, academic mentorship, and opportunities to contribute meaningful research in law, policy, ethics, and contemporary legal systems. Scholars gain exposure to conferences, seminars, academic presentations, and teaching opportunities while working closely with experienced faculty and research experts.",
 
   feeStructure: {
     programmeFeePerSemester:
-      "₹40,000 per semester",
+      "Rs. 40,000 per semester",
   },
 
   eligibility: [
-    "Master’s degree in Law, Arts, Commerce, Social Sciences, Humanities, Computing, or Education with minimum 55% aggregate or equivalent CGPA",
-    "Candidates with Bachelor’s (Honours) in 10+2+4 pattern and one-year Master’s degree are also eligible",
+    "Master's degree in Law, Arts, Commerce, Social Sciences, Humanities, Computing, or Education with minimum 55% aggregate or equivalent CGPA",
+    "Candidates with Bachelor's (Honours) in 10+2+4 pattern and one-year Master's degree are also eligible",
     "5% relaxation for SC, ST, EWS, and PwD candidates",
     "Degrees must be recognised by MHRD, UGC, or Government of India",
     "Professional qualification holders such as CA/CS may also apply",
@@ -2216,7 +2216,7 @@ export const programmes = [
 
     category: "Certificate",
 
-    duration: "1–3 Months",
+    duration: "1-3 Months",
 
     image: "/images/programmes/certificate-metaverse-image.png",
 
@@ -2226,14 +2226,14 @@ export const programmes = [
       "Future-focused certification programme exploring virtual worlds, immersive technologies, digital interaction systems, and emerging metaverse ecosystems.",
 
     description:
-      "JG University’s Metaverse Certification programme is designed for students and professionals seeking expertise in next-generation immersive technologies and digital ecosystems. The programme introduces participants to virtual reality, augmented reality, shared digital environments, and emerging metaverse applications that are transforming industries, communication, entertainment, and business. Through practical projects, hands-on experimentation, and 24/7 access to the JG Cloud Lab, learners gain real-world exposure to immersive technologies while collaborating with industry professionals and technology experts.",
+      "JG University's Metaverse Certification programme is designed for students and professionals seeking expertise in next-generation immersive technologies and digital ecosystems. The programme introduces participants to virtual reality, augmented reality, shared digital environments, and emerging metaverse applications that are transforming industries, communication, entertainment, and business. Through practical projects, hands-on experimentation, and 24/7 access to the JG Cloud Lab, learners gain real-world exposure to immersive technologies while collaborating with industry professionals and technology experts.",
 
     feeStructure: {
-      foundationCourse: "₹10,000 · Bridge Course (1 Month)",
+      foundationCourse: "Rs. 10,000 - Bridge Course (1 Month)",
 
-      intermediateCourse: "₹40,000 · Intermediate Level",
+      intermediateCourse: "Rs. 40,000 - Intermediate Level",
 
-      expertCourse: "₹60,000 · Expert Level",
+      expertCourse: "Rs. 60,000 - Expert Level",
     },
 
     eligibility: [
@@ -2341,7 +2341,7 @@ export const programmes = [
 
     category: "Certificate",
 
-    duration: "1–3 Months",
+    duration: "1-3 Months",
 
     image: "/images/programmes/certificate-blockchain-image.png",
 
@@ -2351,14 +2351,14 @@ export const programmes = [
       "Industry-focused blockchain certification programme designed to build expertise in decentralised systems, digital transactions, smart technologies, and secure distributed networks.",
 
     description:
-      "JG University’s Blockchain Certification programme is designed for students and professionals who want to gain practical expertise in one of the most transformative technologies shaping the future digital economy. The programme introduces learners to decentralised systems, digital ledgers, secure transactions, blockchain applications, and emerging industry use cases across finance, healthcare, logistics, and digital identity systems. Through project-based learning, cloud lab access, and collaboration opportunities with industry experts, participants develop practical blockchain skills aligned with future technology trends.",
+      "JG University's Blockchain Certification programme is designed for students and professionals who want to gain practical expertise in one of the most transformative technologies shaping the future digital economy. The programme introduces learners to decentralised systems, digital ledgers, secure transactions, blockchain applications, and emerging industry use cases across finance, healthcare, logistics, and digital identity systems. Through project-based learning, cloud lab access, and collaboration opportunities with industry experts, participants develop practical blockchain skills aligned with future technology trends.",
 
     feeStructure: {
-      foundationCourse: "₹10,000 · Bridge Course (1 Month)",
+      foundationCourse: "Rs. 10,000 - Bridge Course (1 Month)",
 
-      intermediateCourse: "₹40,000 · Intermediate Level",
+      intermediateCourse: "Rs. 40,000 - Intermediate Level",
 
-      expertCourse: "₹70,000 · Expert Level",
+      expertCourse: "Rs. 70,000 - Expert Level",
     },
 
     eligibility: [
@@ -2466,7 +2466,7 @@ export const programmes = [
 
     category: "Certificate",
 
-    duration: "1–3 Months",
+    duration: "1-3 Months",
 
     image: "/images/programmes/certificate-robotics-image.png",
 
@@ -2476,14 +2476,14 @@ export const programmes = [
       "Future-oriented automation certification programme focused on robotic process automation, intelligent workflows, digital transformation, and enterprise automation technologies.",
 
     description:
-      "JG University’s Robotic Process Automation (RPA) Certification programme is designed for students and professionals aiming to build expertise in automation technologies that are transforming modern businesses. The programme introduces learners to software bots, workflow automation, process optimisation, data handling, and intelligent automation systems that improve operational efficiency and customer experience. Through hands-on projects, practical cloud lab access, and collaboration opportunities with industry professionals, participants gain real-world exposure to modern automation tools and emerging enterprise technologies.",
+      "JG University's Robotic Process Automation (RPA) Certification programme is designed for students and professionals aiming to build expertise in automation technologies that are transforming modern businesses. The programme introduces learners to software bots, workflow automation, process optimisation, data handling, and intelligent automation systems that improve operational efficiency and customer experience. Through hands-on projects, practical cloud lab access, and collaboration opportunities with industry professionals, participants gain real-world exposure to modern automation tools and emerging enterprise technologies.",
 
     feeStructure: {
-      foundationCourse: "₹10,000 · Bridge Course (1 Month)",
+      foundationCourse: "Rs. 10,000 - Bridge Course (1 Month)",
 
-      intermediateCourse: "₹40,000 · Intermediate Level",
+      intermediateCourse: "Rs. 40,000 - Intermediate Level",
 
-      expertCourse: "₹60,000 · Expert Level",
+      expertCourse: "Rs. 60,000 - Expert Level",
     },
 
     eligibility: [
@@ -2591,7 +2591,7 @@ export const programmes = [
 
     category: "Certificate",
 
-    duration: "1–3 Months",
+    duration: "1-3 Months",
 
     image: "/images/programmes/certificate-azure-image.png",
 
@@ -2601,14 +2601,14 @@ export const programmes = [
       "Cloud and DevOps certification programme focused on software development workflows, automation pipelines, cloud deployment, and modern DevOps engineering practices.",
 
     description:
-      "JG University’s Azure DevOps Certification programme is designed for students and professionals seeking expertise in modern software development and cloud-based DevOps practices. The programme introduces participants to development pipelines, version control systems, continuous integration and delivery, cloud deployment strategies, and project management workflows using Azure DevOps technologies. Through practical projects, hands-on cloud lab access, and collaboration opportunities with industry professionals, learners gain industry-ready skills aligned with the growing demand for cloud engineering and DevOps specialists.",
+      "JG University's Azure DevOps Certification programme is designed for students and professionals seeking expertise in modern software development and cloud-based DevOps practices. The programme introduces participants to development pipelines, version control systems, continuous integration and delivery, cloud deployment strategies, and project management workflows using Azure DevOps technologies. Through practical projects, hands-on cloud lab access, and collaboration opportunities with industry professionals, learners gain industry-ready skills aligned with the growing demand for cloud engineering and DevOps specialists.",
 
     feeStructure: {
-      foundationCourse: "₹10,000 · Bridge Course (1 Month)",
+      foundationCourse: "Rs. 10,000 - Bridge Course (1 Month)",
 
-      intermediateCourse: "₹40,000 · Intermediate Level",
+      intermediateCourse: "Rs. 40,000 - Intermediate Level",
 
-      expertCourse: "₹70,000 · Expert Level",
+      expertCourse: "Rs. 70,000 - Expert Level",
     },
 
     eligibility: [
@@ -2716,7 +2716,7 @@ export const programmes = [
 
     category: "Certificate",
 
-    duration: "1–3 Months",
+    duration: "1-3 Months",
 
     image: "/images/programmes/certificate-IoT-image.png",
 
@@ -2726,14 +2726,14 @@ export const programmes = [
       "Industry-oriented Industrial IoT certification programme focused on smart manufacturing, connected systems, automation technologies, and Industry 4.0 transformation.",
 
     description:
-      "JG University’s Industrial IoT (IIoT) Certification programme is designed for students and professionals who want to build expertise in intelligent connectivity, smart manufacturing, and Industry 4.0 technologies. The programme introduces learners to industrial automation systems, connected devices, robotics integration, digital transformation workflows, and data-driven industrial operations. Through hands-on practical projects, cloud lab access, and collaboration opportunities with industry professionals, participants gain future-ready technical skills aligned with the growing demand for smart industry and automation technologies.",
+      "JG University's Industrial IoT (IIoT) Certification programme is designed for students and professionals who want to build expertise in intelligent connectivity, smart manufacturing, and Industry 4.0 technologies. The programme introduces learners to industrial automation systems, connected devices, robotics integration, digital transformation workflows, and data-driven industrial operations. Through hands-on practical projects, cloud lab access, and collaboration opportunities with industry professionals, participants gain future-ready technical skills aligned with the growing demand for smart industry and automation technologies.",
 
     feeStructure: {
-      foundationCourse: "₹10,000 · Bridge Course (1 Month)",
+      foundationCourse: "Rs. 10,000 - Bridge Course (1 Month)",
 
-      intermediateCourse: "₹35,000 · Intermediate Level",
+      intermediateCourse: "Rs. 35,000 - Intermediate Level",
 
-      expertCourse: "₹50,000 · Expert Level",
+      expertCourse: "Rs. 50,000 - Expert Level",
     },
 
     eligibility: [
@@ -2841,7 +2841,7 @@ export const programmes = [
 
     category: "Certificate",
 
-    duration: "1–3 Months",
+    duration: "1-3 Months",
 
     image: "/images/programmes/certificate-cybersecurity-image.png",
 
@@ -2851,14 +2851,14 @@ export const programmes = [
       "Advanced cybersecurity certification programme focused on digital security, ethical protection systems, cyber threat prevention, and modern information security practices.",
 
     description:
-      "JG University’s Cyber Security Certification programme is designed for students and professionals who want to build expertise in protecting digital systems, networks, and sensitive information from modern cyber threats. The programme introduces learners to cybersecurity principles, network protection, digital risk management, cyber defence systems, and emerging security technologies through practical and industry-oriented learning. Participants gain hands-on experience through project-based training, cloud lab access, and collaboration opportunities with industry professionals while developing future-ready cybersecurity skills.",
+      "JG University's Cyber Security Certification programme is designed for students and professionals who want to build expertise in protecting digital systems, networks, and sensitive information from modern cyber threats. The programme introduces learners to cybersecurity principles, network protection, digital risk management, cyber defence systems, and emerging security technologies through practical and industry-oriented learning. Participants gain hands-on experience through project-based training, cloud lab access, and collaboration opportunities with industry professionals while developing future-ready cybersecurity skills.",
 
     feeStructure: {
-      foundationCourse: "₹10,000 · Bridge Course (1 Month)",
+      foundationCourse: "Rs. 10,000 - Bridge Course (1 Month)",
 
-      intermediateCourse: "₹35,000 · Intermediate Level",
+      intermediateCourse: "Rs. 35,000 - Intermediate Level",
 
-      expertCourse: "₹80,000 · Expert Level",
+      expertCourse: "Rs. 80,000 - Expert Level",
     },
 
     eligibility: [

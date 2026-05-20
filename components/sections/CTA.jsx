@@ -20,7 +20,7 @@ export default function CTA() {
           {/* BACKGROUND IMAGE */}
           <Image
             src="/images/extra/group-image.png"
-            alt="JG University"
+            alt="JG University students"
             fill
             className="object-contain bg-[#111111] lg:object-cover lg:bg-transparent"
           />
@@ -61,11 +61,9 @@ export default function CTA() {
                     href="https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x395e8353dee254bb:0x6909d82c9319e0a0!3e0?g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="min-w-0 flex-1 basis-0 lg:flex-none lg:basis-auto"
+                    className="min-w-0 flex-1 basis-0 lg:flex-none lg:basis-auto inline-flex h-9 w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-4 text-[11px] leading-none tracking-wide text-white shadow-[0_4px_20px_rgba(0,0,0,0.65)] backdrop-blur-xl transition-all duration-500 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white lg:h-auto lg:w-auto lg:px-8 lg:py-4 lg:text-sm"
                   >
-                    <button className="w-full h-9 px-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl text-white text-[11px] leading-none tracking-wide hover:bg-white/20 transition-all duration-500 shadow-[0_4px_20px_rgba(0,0,0,0.65)] lg:w-auto lg:h-auto lg:px-8 lg:py-4 lg:text-sm">
-                      Visit Campus
-                    </button>
+                    Visit Campus
                   </a>
                 </div>
               </div>

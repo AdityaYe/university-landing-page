@@ -1,4 +1,5 @@
 import { programmes } from "../../../data/programmes";
+import AdmissionModal from "../../../components/ui/AdmissionModal";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -47,9 +48,7 @@ export default async function ProgrammePage({ params }) {
               {programme.duration}
             </div>
 
-            <button className="px-5 md:px-7 py-2.5 md:py-3 rounded-full bg-[#D4A514] text-black text-sm md:text-base hover:opacity-90 transition">
-              Apply Now
-            </button>
+            <AdmissionModal className="h-auto px-5 py-2.5 text-sm text-black md:px-7 md:py-3 md:text-base" />
           </div>
         </div>
       </section>
@@ -79,10 +78,10 @@ export default async function ProgrammePage({ params }) {
       {programme.stats && (
         <section className="pb-14 md:pb-32">
           <div className="w-[92%] max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {programme.stats.map((stat, index) => (
+            {programme.stats.map((stat) => (
               <div
-                key={index}
-              className="rounded-[1.25rem] md:rounded-[2rem] bg-white p-4 md:p-10 border border-black/5"
+                key={stat.label}
+                className="rounded-[1.25rem] md:rounded-[2rem] bg-white p-4 md:p-10 border border-black/5"
               >
                 <h3 className="text-2xl md:text-5xl font-light">
                   {stat.value}
@@ -108,9 +107,9 @@ export default async function ProgrammePage({ params }) {
             </h2>
 
             <div className="mt-7 md:mt-16 flex flex-wrap gap-2.5 md:gap-4">
-              {programme.specialisations.map((item, index) => (
+              {programme.specialisations.map((item) => (
                 <div
-                  key={index}
+                  key={item}
                   className="px-4 md:px-6 py-2.5 md:py-4 rounded-full bg-white border border-black/5 text-sm md:text-lg"
                 >
                   {item}
@@ -124,8 +123,8 @@ export default async function ProgrammePage({ params }) {
                 <h3 className="text-xl md:text-2xl font-light mb-4 md:mb-6">Important Notes</h3>
 
                 <div className="space-y-4">
-                  {programme.electiveNotes.map((note, index) => (
-                    <p key={index} className="text-black/70 leading-relaxed">
+                  {programme.electiveNotes.map((note) => (
+                    <p key={note} className="text-black/70 leading-relaxed">
                       {note}
                     </p>
                   ))}
@@ -191,15 +190,17 @@ export default async function ProgrammePage({ params }) {
                 Eligibility
               </span>
 
-              <div className="mt-6 md:mt-10 space-y-4 md:space-y-5">
-                {programme.eligibility.map((item, index) => (
-                  <div key={index} className="flex gap-4 text-white/80">
-                    <div className="w-2 h-2 rounded-full bg-[#D4A514] mt-3 shrink-0" />
+              <ul className="mt-6 md:mt-10 space-y-4 md:space-y-5">
+                {programme.eligibility.map((item) => (
+                  <li key={item} className="flex gap-4 text-white/80">
+                    <span className="w-2 h-2 rounded-full bg-[#D4A514] mt-3 shrink-0" />
 
-                    <p className="text-sm md:text-base leading-relaxed">{item}</p>
-                  </div>
+                    <span className="text-sm md:text-base leading-relaxed">
+                      {item}
+                    </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           )}
         </div>
@@ -218,9 +219,9 @@ export default async function ProgrammePage({ params }) {
             </h2>
 
             <div className="mt-7 md:mt-16 grid sm:grid-cols-2 xl:grid-cols-3 gap-3.5 md:gap-6">
-              {programme.highlights.map((item, index) => (
+              {programme.highlights.map((item) => (
                 <div
-                  key={index}
+                  key={item}
                   className="rounded-[1.25rem] md:rounded-[2rem] bg-white p-4 md:p-10 border border-black/5"
                 >
                   <p className="text-sm md:text-lg leading-relaxed text-black/70">
@@ -246,8 +247,8 @@ export default async function ProgrammePage({ params }) {
             </h2>
 
             <div className="mt-7 md:mt-16 grid sm:grid-cols-2 xl:grid-cols-3 gap-3.5 md:gap-6">
-              {programme.advantages.map((item, index) => (
-                <div key={index} className="rounded-[1.25rem] md:rounded-[2rem] bg-[#EFEAE2] p-4 md:p-10">
+              {programme.advantages.map((item) => (
+                <div key={item.title} className="rounded-[1.25rem] md:rounded-[2rem] bg-[#EFEAE2] p-4 md:p-10">
                   <h3 className="text-xl md:text-2xl font-light">{item.title}</h3>
 
                   <p className="mt-3 md:mt-6 text-sm md:text-base leading-relaxed text-black/70">
@@ -271,7 +272,7 @@ export default async function ProgrammePage({ params }) {
             <div className="mt-7 md:mt-16 space-y-3.5 md:space-y-6">
               {programme.admissionProcess.map((step, index) => (
                 <div
-                  key={index}
+                  key={step}
                   className="flex gap-4 md:gap-8 items-start rounded-[1.25rem] md:rounded-[2rem] bg-white p-4 md:p-8 border border-black/5"
                 >
                   <div className="text-3xl md:text-5xl font-light text-[#D4A514]">
@@ -301,9 +302,9 @@ export default async function ProgrammePage({ params }) {
             </h2>
 
             <div className="mt-7 md:mt-16 flex flex-wrap gap-2.5 md:gap-4">
-              {programme.careers.map((career, index) => (
+              {programme.careers.map((career) => (
                 <div
-                  key={index}
+                  key={career}
                   className="px-4 md:px-6 py-2.5 md:py-4 rounded-full bg-[#111111] text-white text-sm md:text-base"
                 >
                   {career}
@@ -327,9 +328,7 @@ export default async function ProgrammePage({ params }) {
             </h2>
 
             <div className="mt-6 md:mt-12 flex flex-wrap justify-center gap-3 md:gap-5">
-              <button className="px-5 md:px-8 py-3 md:py-4 rounded-full bg-[#D4A514] text-black text-sm md:text-base">
-                Apply Now
-              </button>
+              <AdmissionModal className="h-auto px-5 py-3 text-sm text-black md:px-8 md:py-4 md:text-base" />
 
               <Link
                 href="/"

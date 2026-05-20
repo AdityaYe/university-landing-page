@@ -56,6 +56,7 @@ export default function Partners() {
     const container = scrollRef.current;
 
     if (!container) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     let animationFrame;
 
@@ -107,7 +108,7 @@ export default function Partners() {
             <div className="flex w-max items-center gap-9 py-8 pr-6 sm:gap-12">
               {[...partners, ...partners].map((partner, index) => (
                 <div
-                  key={index}
+                  key={`${partner.name}-mobile-${index}`}
                   className="relative h-20 w-40 shrink-0 sm:h-24 sm:w-52"
                 >
                   <Image
@@ -134,7 +135,7 @@ export default function Partners() {
             >
               {[...partners, ...partners].map((partner, index) => (
                 <div
-                  key={index}
+                  key={`${partner.name}-desktop-${index}`}
                   className={`relative shrink-0 ${
                     partner.width || "w-36 sm:w-48 lg:w-80"
                   } ${partner.height || "h-20 sm:h-24 lg:h-40"}`}

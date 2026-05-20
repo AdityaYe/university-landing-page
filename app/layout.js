@@ -14,16 +14,19 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata = {
-  title: "JG University",
-  description: "Modern University Experience",
+  title: {
+    default: "JG University",
+    template: "%s | JG University",
+  },
+  description:
+    "Future-focused university education in Ahmedabad shaped by innovation, industry collaboration, and real-world learning.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${cormorant.variable}`}
-      > <Navbar />
+      <body className={`${inter.variable} ${cormorant.variable}`}>
+        <Navbar />
         {children}
       </body>
     </html>

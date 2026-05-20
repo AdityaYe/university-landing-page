@@ -65,6 +65,8 @@ export default function Navbar() {
   }, [menuOpen]);
 
   // SECTION NAVIGATION
+  const closeMenu = () => setMenuOpen(false);
+
   const handleSectionNavigation = (sectionId) => {
     setMenuOpen(false);
 
@@ -95,10 +97,17 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <nav className="w-[92%] max-w-7xl mx-auto h-20 lg:h-24 flex items-center justify-between">
+        <nav
+          className="w-[92%] max-w-7xl mx-auto h-20 lg:h-24 flex items-center justify-between"
+          aria-label="Primary navigation"
+        >
           {/* LEFT */}
           <div className="relative flex items-center">
-            <Link href="/#hero">
+            <Link
+              href="/#hero"
+              aria-label="JG University home"
+              className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A514]"
+            >
               {/* HERO LOGO */}
               <div
                 className={`absolute left-0 top-0 transition-all duration-500 ${
@@ -143,20 +152,28 @@ export default function Navbar() {
           >
             {navLinks.map((link) => (
               <li key={link.label}>
-                <button
-                  onClick={() => {
-                    if (link.route) {
-                      window.location.href = link.route;
-                    } else {
-                      handleSectionNavigation(link.section);
-                    }
-                  }}
-                  className={`text-sm tracking-wide transition-all duration-300 ${
-                    scrolled ? "hover:text-[#B68D40]" : "hover:text-white/70"
-                  }`}
-                >
-                  {link.label}
-                </button>
+                {link.route ? (
+                  <Link
+                    href={link.route}
+                    className={`text-sm tracking-wide transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A514] ${
+                      scrolled ? "hover:text-[#B68D40]" : "hover:text-white/70"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => handleSectionNavigation(link.section)}
+                    className={`text-sm tracking-wide transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A514] ${
+                      scrolled
+                        ? "hover:text-[#B68D40]"
+                        : "hover:text-white/70"
+                    }`}
+                  >
+                    {link.label}
+                  </button>
+                )}
               </li>
             ))}
           </ul>
@@ -173,6 +190,7 @@ export default function Navbar() {
             >
               <Search
                 size={18}
+                aria-hidden="true"
                 className={`shrink-0 transition-colors duration-300 ${
                   scrolled ? "text-[#1B1B1B]" : "text-white"
                 }`}
@@ -181,6 +199,7 @@ export default function Navbar() {
               <input
                 type="text"
                 placeholder="Search..."
+                aria-label="Search the JG University website"
                 className={`bg-transparent outline-none ml-4 w-full text-sm transition-colors duration-300 ${
                   scrolled
                     ? "text-[#1B1B1B] placeholder:text-black/40"
@@ -190,33 +209,37 @@ export default function Navbar() {
             </div>
 
             {/* ADMISSION */}
-            <Link href="/admissions">
-              <button
-                className={`px-7 py-3 rounded-full transition-all duration-500 ${
-                  scrolled
-                    ? "bg-[#D4A514] text-white hover:opacity-90"
-                    : "border border-white/20 bg-white/10 text-white hover:bg-white/20"
-                }`}
-              >
-                Admission
-              </button>
+            <Link
+              href="/admissions"
+              className={`rounded-full px-7 py-3 transition-all duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A514] ${
+                scrolled
+                  ? "bg-[#D4A514] text-white hover:opacity-90"
+                  : "border border-white/20 bg-white/10 text-white hover:bg-white/20"
+              }`}
+            >
+              Admission
             </Link>
           </div>
 
           {/* MOBILE MENU BUTTON */}
           <button
+            type="button"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
+            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             className={`xl:hidden transition-colors duration-300 ${
               scrolled ? "text-[#1B1B1B]" : "text-white"
             }`}
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <Menu size={30} />
+            <Menu size={30} aria-hidden="true" />
           </button>
         </nav>
       </header>
 
       {/* MOBILE DROPDOWN */}
       <div
+        id="mobile-navigation"
         className={`fixed top-20 left-0 w-full xl:hidden z-[9998] transition-all duration-500 overflow-hidden ${
           menuOpen ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
         }`}
@@ -224,31 +247,37 @@ export default function Navbar() {
         <div className="bg-[#111111]/95 backdrop-blur-2xl border-t border-white/10">
           <div className="w-[92%] mx-auto py-8">
             {/* LINKS */}
-            <div className="flex flex-col">
-              {navLinks.map((link, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setMenuOpen(false);
-
-                    if (link.route) {
-                      window.location.href = link.route;
-                    } else {
-                      handleSectionNavigation(link.section);
-                    }
-                  }}
-                  className="h-16 border-b border-white/10 text-left text-white text-lg hover:text-[#D4A514] transition-all duration-300"
-                >
-                  {link.label}
-                </button>
+            <ul className="flex flex-col">
+              {navLinks.map((link) => (
+                <li key={link.label}>
+                  {link.route ? (
+                    <Link
+                      href={link.route}
+                      onClick={closeMenu}
+                      className="flex h-16 items-center border-b border-white/10 text-left text-lg text-white transition-all duration-300 hover:text-[#D4A514] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#D4A514]"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => handleSectionNavigation(link.section)}
+                      className="h-16 w-full border-b border-white/10 text-left text-lg text-white transition-all duration-300 hover:text-[#D4A514] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#D4A514]"
+                    >
+                      {link.label}
+                    </button>
+                  )}
+                </li>
               ))}
-            </div>
+            </ul>
 
             {/* CTA */}
-            <Link href="/admissions" onClick={() => setMenuOpen(false)}>
-              <button className="w-full mt-7 h-14 rounded-full bg-[#D4A514] text-white">
-                Apply for Admission
-              </button>
+            <Link
+              href="/admissions"
+              onClick={closeMenu}
+              className="mt-7 flex h-14 w-full items-center justify-center rounded-full bg-[#D4A514] text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A514]"
+            >
+              Apply for Admission
             </Link>
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Search, ArrowRight } from "lucide-react";
 
 const filters = [
@@ -253,7 +254,7 @@ export default function Programmes() {
 
           <p className="text-sm sm:text-[15px] md:text-lg leading-relaxed text-[#5F5F5F] max-w-xl lg:ml-auto">
             From engineering and computing to business, law, and emerging
-            technologies — explore industry-focused programmes built for the
+            technologies  -  explore industry-focused programmes built for the
             future.
           </p>
         </div>
@@ -262,10 +263,15 @@ export default function Programmes() {
         <div className="mt-7 md:mt-16 flex flex-col xl:flex-row gap-4 md:gap-6 xl:items-center xl:justify-between">
           {/* SEARCH */}
           <div className="flex items-center h-11 md:h-16 px-4 md:px-6 rounded-full border border-black/5 bg-white shadow-sm w-full xl:max-w-xl">
-            <Search size={16} className="text-[#6B6B6B] md:size-[18px]" />
+            <Search
+              size={16}
+              aria-hidden="true"
+              className="text-[#6B6B6B] md:size-[18px]"
+            />
 
             <input
               type="text"
+              aria-label="Search programmes"
               placeholder="Search for a programme..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
@@ -278,6 +284,8 @@ export default function Programmes() {
             {filters.map((filter) => (
               <button
                 key={filter}
+                type="button"
+                aria-pressed={activeFilter === filter}
                 onClick={() => setActiveFilter(filter)}
                 className={`shrink-0 px-4 md:px-5 py-2 md:py-2.5 text-xs md:text-sm rounded-full transition-all duration-300 ${
                   activeFilter === filter
@@ -294,8 +302,8 @@ export default function Programmes() {
         {/* GRID */}
         <div className="mt-8 md:mt-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6">
           {displayedProgrammes.map((programme) => (
-            <a
-              key={programme.title}
+            <Link
+              key={programme.slug}
               href={`/programmes/${programme.slug}`}
               className="group relative h-[230px] sm:h-[340px] lg:h-[440px] overflow-hidden rounded-[1.35rem] sm:rounded-[1.75rem] md:rounded-[2.5rem]"
             >
@@ -338,12 +346,16 @@ export default function Programmes() {
                         Explore Programme
                       </span>
 
-                      <ArrowRight size={16} className="md:size-[18px]" />
+                      <ArrowRight
+                        size={16}
+                        aria-hidden="true"
+                        className="md:size-[18px]"
+                      />
                     </div>
                   </div>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

@@ -54,10 +54,9 @@ export default function AdmissionsPage() {
                   href="/brochures/jg-university-brochure.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-flex h-10 w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-4 text-xs text-white backdrop-blur-md transition-all duration-500 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:h-14 md:w-auto md:px-7 md:text-base"
                 >
-                  <button className="h-10 w-full px-4 md:h-14 md:w-auto md:px-7 rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-white text-xs md:text-base hover:bg-white/15 transition-all duration-500">
-                    Download Brochure
-                  </button>
+                  Download Brochure
                 </a>
               </div>
             </motion.div>
@@ -89,9 +88,11 @@ export default function AdmissionsPage() {
                   title: "Ph.D Programmes",
                   subtitle: "Research & Doctoral Studies",
                 },
-              ].map((item, index) => (
+              ].map((item) => (
                 <button
-                  key={index}
+                  key={item.id}
+                  type="button"
+                  aria-pressed={activeProgramme === item.id}
                   onClick={() => setActiveProgramme(item.id)}
                   className={`group relative min-w-[168px] flex-1 overflow-hidden rounded-[1rem] md:min-w-0 md:rounded-[2rem] px-3.5 md:px-8 py-3 md:py-8 text-left transition-all duration-500 ${
                     activeProgramme === item.id
@@ -132,7 +133,7 @@ export default function AdmissionsPage() {
                       className={`mt-3 md:mt-8 h-[2px] w-full transition-all duration-500 ${
                         activeProgramme === item.id
                           ? "bg-[#D4A514]"
-                          : "bg-black/8 group-hover:bg-[#B68D40]"
+                          : "bg-black/10 group-hover:bg-[#B68D40]"
                       }`}
                     />
                   </div>
@@ -206,7 +207,7 @@ export default function AdmissionsPage() {
                   },
                 ].map((item, index) => (
                   <div
-                    key={index}
+                    key={item.number}
                     className={`rounded-[1.15rem] md:rounded-[2.5rem] p-3.5 md:p-8 min-h-[148px] md:min-h-[320px] flex flex-col justify-between ${
                       index % 2 === 0 ? "bg-[#111111] text-white" : "bg-white"
                     }`}
@@ -312,9 +313,9 @@ export default function AdmissionsPage() {
                     description:
                       "Seats are secured after successful fee payment.",
                   },
-                ].map((item, index) => (
+                ].map((item) => (
                   <div
-                    key={index}
+                    key={item.number}
                     className="bg-white rounded-[1.15rem] md:rounded-[2.5rem] p-3.5 md:p-8 min-h-[140px] md:min-h-[290px] flex flex-col justify-between"
                   >
                     <span className="text-xs md:text-sm text-black/30">{item.number}</span>
@@ -384,7 +385,7 @@ export default function AdmissionsPage() {
                     },
                   ].map((item, index) => (
                     <div
-                      key={index}
+                      key={item.title}
                       className="border border-white/10 rounded-[1rem] md:rounded-[2rem] p-3.5 md:p-7"
                     >
                       <div className="flex items-start justify-between gap-5">
@@ -456,10 +457,9 @@ export default function AdmissionsPage() {
                   href="/brochures/jg-university-brochure.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-flex h-10 w-full items-center justify-center rounded-full border border-white/20 px-4 text-xs text-white backdrop-blur-sm transition-all hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:h-16 md:w-auto md:px-8 md:text-base"
                 >
-                  <button className="h-10 w-full px-4 md:h-16 md:w-auto md:px-8 rounded-full border border-white/20 text-white text-xs md:text-base backdrop-blur-sm hover:bg-white/10 transition-all">
-                    Download Brochure
-                  </button>
+                  Download Brochure
                 </a>
               </div>
             </div>

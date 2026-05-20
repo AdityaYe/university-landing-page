@@ -31,32 +31,33 @@ export default function About() {
           </h2>
 
           <div className="mt-5 overflow-hidden rounded-[1.25rem] bg-[#ECE8E1] md:mt-0 md:hidden">
-          <div className="relative">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster="/images/about/about-preview.png"
-              className="block w-full scale-125 object-contain"
-            >
-              <source src="/videos/about/about-video.mp4" type="video/mp4" />
-            </video>
-
-            {/* BUTTON INSIDE VIDEO */}
-            <div className="absolute bottom-3 left-1/2">
-              <a
-                href="https://www.youtube.com/watch?v=QuRupPh1kAU&t=97s"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-11 items-center justify-center gap-2.5 rounded-full bg-black/20 px-5 text-sm text-white/80 backdrop-blur-xs transition-all duration-500"
+            <div className="relative">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster="/images/about/about-preview.png"
+                className="block w-full scale-125 object-contain"
+                aria-label="JG University campus and student life video"
               >
-                <Play size={16} fill="currentColor" />
-                Watch Full Story
-              </a>
+                <source src="/videos/about/about-video.mp4" type="video/mp4" />
+              </video>
+
+              {/* BUTTON INSIDE VIDEO */}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
+                <a
+                  href="https://www.youtube.com/watch?v=QuRupPh1kAU&t=97s"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-11 items-center justify-center gap-2.5 whitespace-nowrap rounded-full bg-black/20 px-5 text-sm text-white/80 backdrop-blur-sm transition-all duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >
+                  <Play size={16} fill="currentColor" aria-hidden="true" />
+                  Watch Full Story
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
           <p className="mt-4 text-sm leading-relaxed text-black/60">
             JG University is a tech-driven institution focused on innovation,
@@ -89,14 +90,15 @@ export default function About() {
           </p>
         </div>
 
-        <div className="relative hidden min-h-105 overflow-hidden rounded-[2.5rem] md:block lg:h-[70vh] lg:min-h-[650px]">
+        <div className="relative hidden min-h-[500px] overflow-hidden rounded-[2.5rem] md:block lg:h-[70vh] lg:min-h-[650px]">
           <video
             autoPlay
             muted
             loop
             playsInline
             poster="/images/about/about-preview.png"
-            className="absolute inset-0 h-full w-full object-cover object-center scale-125 lg:scale-125"
+            className="absolute inset-0 h-full w-full object-cover object-center scale-125 lg:scale-115"
+            aria-label="JG University campus and student life video"
           >
             <source src="/videos/about/about-video.mp4" type="video/mp4" />
           </video>
@@ -139,7 +141,7 @@ export default function About() {
                   rel="noopener noreferrer"
                   className="mt-10 inline-flex items-center justify-center gap-3 rounded-full border border-white/20 bg-white/10 px-7 py-4 text-base text-white backdrop-blur-xl transition-all duration-500 hover:bg-white hover:text-black lg:mt-14"
                 >
-                  <Play size={18} fill="currentColor" />
+                  <Play size={18} fill="currentColor" aria-hidden="true" />
                   Watch Full Story
                 </a>
               </div>
